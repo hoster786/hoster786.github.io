@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/fancybook/",
+   base: '/hoster786.github.io/',
  // 👈 ADD THIS LINE
   server: {
     host: "::",
