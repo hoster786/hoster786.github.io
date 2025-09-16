@@ -853,7 +853,7 @@ const Index = () => {
           {/* Language Selector & Categories Button */}
           <div className="flex items-center space-x-3">
             {/* Language Dropdown */}
-            <div className="relative">
+            <div className="hidden sm:flex relative">
               <select
                 value={currentLanguage}
                 onChange={(e) => handleLanguageChange(e.target.value as keyof typeof languageConfig)}
@@ -871,7 +871,7 @@ const Index = () => {
             {/* Categories Toggle Button */}
             <button
               onClick={toggleSidebar}
-              className="p-2 bg-green-700 text-white rounded-lg shadow-lg hover:bg-green-800 transition-colors"
+              className="p-3 sm:p-2 border border-gray-500 text-gray-600 rounded-lg shadow-lg hover:bg-gray-100 transition-colors"
               title={t.browseCategories}
             >
               <BookOpen className="w-5 h-5" />
@@ -880,7 +880,7 @@ const Index = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden mt-4 flex space-x-2">
+        {/* <div className="md:hidden mt-4 flex space-x-2">
           <button
             onClick={() => handlePageChange("home")}
             className={`flex-1 px-3 py-2 rounded-lg text-sm transition-colors ${
@@ -911,7 +911,7 @@ const Index = () => {
           >
             {t.contact}
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile Overlay */}
@@ -1082,24 +1082,24 @@ const Index = () => {
 
         {/* Categories Sidebar */}
         <div
-          className={`fixed right-0 top-20 h-[calc(100vh-5rem)] bg-green-700 text-white flex flex-col transition-all duration-300 ease-in-out z-40 ${
+          className={`fixed right-0 border-s  top-0 h-[100vh] bg-white text-gray-900 flex flex-col z-40 ${
             sidebarCollapsed ? "w-0 overflow-hidden" : "w-80"
           } ${isMobile && sidebarCollapsed ? "translate-x-full" : ""}`}
         >
           {/* Sidebar Header with Close Button */}
-          <div className="p-4 md:p-6 border-b border-green-600">
-            <div className="flex items-center justify-between mb-4">
+          <div className="p-1 md:p-2 border-b border-gray-600">
+            <div className="flex items-center justify-between mb-1">
               <div className="flex items-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-green-600 rounded mr-3">
+                {/* <div className="flex items-center justify-center w-12 h-12 bg-green-600 rounded mr-3">
                   <BookOpen className="w-6 h-6" />
-                </div>
-                <div className="bg-white text-green-800 px-3 py-1 rounded text-sm font-medium">
+                </div> */}
+                <h3 className="text-black px-3 py-1 text-lg font-bold">
                   {t.browseCategories}
-                </div>
+                </h3>
               </div>
               <button
                 onClick={closeSidebar}
-                className="p-2 hover:bg-green-600 rounded-lg transition-colors"
+                className="p-2 rounded-lg transition-colors"
                 title={t.closeSidebar}
               >
                 <X className="w-5 h-5" />
@@ -1117,7 +1117,7 @@ const Index = () => {
                   placeholder="Search categories..."
                   value={categorySearchQuery}
                   onChange={(e) => setCategorySearchQuery(e.target.value)}
-                  className="w-full px-3 py-2 text-sm border border-green-500 rounded bg-green-600 text-white placeholder-green-200 focus:outline-none focus:border-green-300"
+                  className="w-full px-3 py-2 text-sm border border-gray-500 rounded bg-gray-100 text-black placeholder-gray-600 focus:outline-none focus:border-gray-800"
                 />
                 <Search className="absolute right-2 top-1/2 transform -translate-y-1/2 text-green-200 w-4 h-4" />
               </div>
@@ -1128,7 +1128,7 @@ const Index = () => {
               <h3 className="text-lg md:text-xl font-bold">{t.filterByCategory}</h3>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-2 overflow-auto h-[50vh]">
               {filteredCategories.map((category) => {
                 const bookCount =
                   category.id === "all"
@@ -1148,8 +1148,8 @@ const Index = () => {
                       trackUserFlow("category_sidebar_select", "navigation", category.name)
                       handleCategorySelect(category.id)
                     }}
-                    className={`w-full text-left px-3 py-3 rounded text-sm hover:bg-green-600 transition-colors ${
-                      selectedCategory === category.id ? "bg-green-600" : ""
+                    className={`w-full text-left px-3 py-3 rounded text-sm hover:bg-gray-100 transition-colors ${
+                      selectedCategory === category.id ? "bg-gray-100" : ""
                     }`}
                     style={{
                       WebkitTapHighlightColor: "transparent",
@@ -1163,7 +1163,7 @@ const Index = () => {
                         <category.icon className="w-4 h-4 mr-2 flex-shrink-0" />
                         <span className="truncate">{category.name}</span>
                       </div>
-                      <span className="text-xs bg-green-600 px-2 py-1 rounded ml-2 flex-shrink-0">{bookCount}</span>
+                      <span className="text-xs bg-gray-600 text-white px-2 py-1 rounded ml-2 flex-shrink-0">{bookCount}</span>
                     </div>
                   </button>
                 )
@@ -1176,38 +1176,38 @@ const Index = () => {
           </div>
 
           {/* Contact & Social Media Links */}
-          <div className="p-4 md:p-6 border-t border-green-600">
-            <div className="text-xs text-green-200 mb-3">{t.contactSocialMedia}</div>
+          <div className="p-4 md:p-6 border-t border-gray-600">
+            <div className="text-xs text-black mb-3">{t.contactSocialMedia}</div>
             <div className="flex justify-between gap-2 mb-4">
               <div
-                className="w-16 h-8 bg-blue-600 rounded flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors"
+                className="w-16 h-8 border border-gray-300 rounded flex items-center justify-center cursor-pointer hover:bg-gray-300"
                 onClick={() => trackUserFlow("social_click", "interaction", "facebook")}
               >
                 <Facebook className="w-4 h-4" />
               </div>
               <div
-                className="w-16 h-8 bg-red-600 rounded flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors"
+                className="w-16 h-8 border border-gray-300 rounded flex items-center justify-center cursor-pointer hover:bg-gray-300"
                 onClick={() => trackUserFlow("social_click", "interaction", "youtube")}
               >
                 <Youtube className="w-4 h-4" />
               </div>
               <div
-                className="w-16 h-8 bg-black rounded flex items-center justify-center cursor-pointer hover:bg-gray-800 transition-colors"
+                className="w-16 h-8 border border-gray-300 rounded flex items-center justify-center cursor-pointer hover:bg-gray-300"
                 onClick={() => trackUserFlow("social_click", "interaction", "twitter")}
               >
                 <Twitter className="w-4 h-4" />
               </div>
               <div
-                className="w-16 h-8 bg-sky-500 rounded flex items-center justify-center cursor-pointer hover:bg-sky-600 transition-colors"
+                className="w-16 h-8 border border-gray-300 rounded flex items-center justify-center cursor-pointer hover:bg-gray-300"
                 onClick={() => trackUserFlow("social_click", "interaction", "bluesky")}
               >
-                <span className="text-xs font-bold">☁</span>
+                <span className="text-sm mt-1 pt-1 font-bold">☁</span>
               </div>
             </div>
 
-            <div className="p-3 bg-green-600 rounded">
-              <div className="text-xs text-green-200 mb-2">{t.contactInfo}</div>
-              <div className="text-xs text-white">{t.email}</div>
+            <div className="p-3 rounded">
+              <h3 className="text-md text-black mb-2">{t.contactInfo}</h3>
+              <div className="text-xs text-black">{t.email}</div>
             </div>
           </div>
         </div>
