@@ -7,6 +7,7 @@ import { Search, BookOpen, Facebook, Youtube, Twitter, Info, Mail, Home, Globe, 
 import BookReader from "@/components/BookReader"
 import ContactPage from "@/components/ContactPage"
 import AboutPage from "@/components/AboutPage"
+import MobileBottomNav from "@/components/common/MobileFixedBar"
 
 interface Book {
   title_ar: string
@@ -794,9 +795,10 @@ const Index = () => {
   console.log("📂 Current category:", selectedCategory)
 
   return (
-    <div className="min-h-screen bg-amber-50 flex flex-col relative">
-      {/* Top Navigation Bar */}
-      <div className="bg-white shadow-sm border-b border-amber-200 p-4 z-40 sticky top-0">
+   <div className="dm-wrapper p-0 m-0">
+   {/* SITE MAIN NAVBAR */}
+         {/* Top Navigation Bar */}
+      <div className="bg-white shadow-sm border-b border-amber-200 p-1 z-40 sticky top-0">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
@@ -807,8 +809,8 @@ const Index = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="text-left">
-              <h1 className="text-xl font-bold text-amber-900">{t.deenMastery}</h1>
+            <div className="text-start">
+              <p className="text-md font-bold text-amber-900">{t.deenMastery}</p>
               <p className="text-xs text-amber-600">{t.knowledgeMadeAccessible}</p>
             </div>
           </div>
@@ -871,7 +873,7 @@ const Index = () => {
             {/* Categories Toggle Button */}
             <button
               onClick={toggleSidebar}
-              className="p-3 sm:p-2 border border-gray-500 text-gray-600 rounded-lg shadow-lg hover:bg-gray-100 transition-colors"
+              className="p-3 border-none bg-none sm:p-2 border border-gray-500 text-gray-600 rounded-lg hover:bg-gray-100 transition-colors"
               title={t.browseCategories}
             >
               <BookOpen className="w-5 h-5" />
@@ -880,6 +882,9 @@ const Index = () => {
         </div>
 
         {/* Mobile Navigation */}
+
+       <MobileBottomNav currentPage={currentPage} onNavigate={handlePageChange}/>
+
         {/* <div className="md:hidden mt-4 flex space-x-2">
           <button
             onClick={() => handlePageChange("home")}
@@ -917,12 +922,18 @@ const Index = () => {
       {/* Mobile Overlay */}
       {isMobile && !sidebarCollapsed && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={handleOverlayClick}
           style={{ touchAction: "manipulation" }}
         />
       )}
 
+
+
+ 
+
+  {/* MAIN SITE CONTENT */}
+    <div className="min-h-screen bg-amber-50 flex flex-col relative w-full max-w-[1280px] mx-auto mt-2">
       {/* Main Content Area */}
       <div className="flex-1 flex">
         {selectedBook ? (
@@ -948,23 +959,23 @@ const Index = () => {
           // Landing Page - FIXED TO USE useMemo filteredBooks
           <div
             ref={mainContentRef}
-            className="flex-1 flex flex-col items-center justify-start px-4 md:px-8 pt-8 md:pt-16 overflow-auto"
+            className="flex-1 flex flex-col items-center justify-start px-4 md:px-8 pt-2 md:pt-4 overflow-auto"
           >
             {/* Logo and Branding */}
-            <div className="text-center mb-8 md:mb-12">
-              <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 mb-4 md:mb-6">
+            <div className="text-center mb-3 md:mb-5">
+              <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 mb-1 md:mb-2">
                 <img
                   src="/lovable-uploads/92c79d95-bbb5-40d0-9b0f-37bccec10dcd.png"
                   alt="Deen Mastery Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-amber-900 mb-2">{t.deenMastery}</h1>
+              <h1 className="text-2xl md:text-4xl font-bold text-amber-900 mb-2">{t.deenMastery}</h1>
               <p className="text-amber-700 text-base md:text-lg italic">{t.knowledgeMadeAccessible}</p>
             </div>
 
             {/* Search Section */}
-            <div className="w-full max-w-md mb-6 md:mb-8">
+            <div className="w-[90%] mx-auto mb-6 md:mb-8 text-center">
               <div className="relative">
                 <input
                   ref={searchInputRef}
@@ -1087,7 +1098,7 @@ const Index = () => {
           } ${isMobile && sidebarCollapsed ? "translate-x-full" : ""}`}
         >
           {/* Sidebar Header with Close Button */}
-          <div className="p-1 md:p-2 border-b border-gray-600">
+          <div className="md:p-2 border-b border-gray-600">
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center">
                 {/* <div className="flex items-center justify-center w-12 h-12 bg-green-600 rounded mr-3">
@@ -1108,7 +1119,7 @@ const Index = () => {
           </div>
 
           {/* Categories Section with Search */}
-          <div className="p-4 md:p-6 flex-1 overflow-y-auto">
+          <div className="p-4 md:p-6 flex-1">
             {/* Category Search */}
             <div className="mb-4">
               <div className="relative">
@@ -1124,11 +1135,11 @@ const Index = () => {
             </div>
 
             {/* Categories Header */}
-            <div className="flex items-center justify-between mb-4">
+            <div className="hidden lg:flex  items-center justify-between mb-4">
               <h3 className="text-lg md:text-xl font-bold">{t.filterByCategory}</h3>
             </div>
 
-            <div className="space-y-2 overflow-auto h-[50vh]">
+            <div className="space-y-2 overflow-auto h-[40vh] lg:h-[50vh]">
               {filteredCategories.map((category) => {
                 const bookCount =
                   category.id === "all"
@@ -1174,10 +1185,14 @@ const Index = () => {
               <div className="text-center text-green-200 mt-4">No categories found for "{categorySearchQuery}"</div>
             )}
           </div>
+ 
 
           {/* Contact & Social Media Links */}
-          <div className="p-4 md:p-6 border-t border-gray-600">
-            <div className="text-xs text-black mb-3">{t.contactSocialMedia}</div>
+          <div className="p-4 md:p-6 border-t border-gray-600 text-start">
+
+ 
+
+            <p className="text-md text-black mb-2">{t.contactSocialMedia}</p>
             <div className="flex justify-between gap-2 mb-4">
               <div
                 className="w-16 h-8 border border-gray-300 rounded flex items-center justify-center cursor-pointer hover:bg-gray-300"
@@ -1205,14 +1220,53 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="p-3 rounded">
-              <h3 className="text-md text-black mb-2">{t.contactInfo}</h3>
-              <div className="text-xs text-black">{t.email}</div>
-            </div>
+
+
+           {/*SIDEBAR FOOTER */}
+           <footer className="flex justify-between mb-3">
+              <div className="text-start">
+                <p className="text-md text-black mb-2">{t.contactInfo}</p>
+                <div className="text-xs text-black">{t.email}</div>
+              </div>
+
+              <div className="block sm:hidden ms-1 mb-1">
+                {/* LANGUAGE ON MOBILE  */}
+                 <div className="flex sm:hidden items-center space-x-3">
+                  {/* Language Dropdown */}
+                  <div className="flex relative">
+                    <select
+                      value={currentLanguage}
+                      onChange={(e) => handleLanguageChange(e.target.value as keyof typeof languageConfig)}
+                      className="appearance-none bg-white border border-gray-200 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:border-gray-500 min-w-[120px]"
+                    >
+                      {Object.entries(languageConfig).map(([key, lang]) => (
+                        <option key={key} value={key}>
+                          {lang.name}
+                        </option>
+                      ))}
+                    </select>
+                    <Globe className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                  </div>
+                </div>
+            
+              </div>
+
+           </footer>
+
+                <hr />
+           <div className="mt-4">
+              <p className="text-xs text-gray-600">&copy; {new Date().getFullYear()} {t.deenMastery}</p>
+           </div>
+
+
+
           </div>
         </div>
       </div>
     </div>
+
+   </div>
+ 
   )
 }
 
