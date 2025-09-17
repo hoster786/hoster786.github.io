@@ -3,7 +3,8 @@
 import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
-import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X } from "lucide-react"
+import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X, StepBack, SkipBack, LucideDatabaseBackup, CircleArrowLeft } from "lucide-react"
+import DmAlert from "./common/DmAlert"
 
 interface Book {
   title_ar: string
@@ -708,20 +709,41 @@ const BookReader = ({
             onClick={handleCloseReader}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
           >
-            <Home className="w-5 h-5" />
-          </button>
+            <CircleArrowLeft className="w-5 h-5" />
+           </button>
 
-          {/* Page Display - Centered */}
-          <div className="text-center">
-            <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">Page {currentPage + 1}</h1>
-            <div className="w-full h-1 bg-amber-600 rounded"></div>
-          </div>
+
+            <div className="book-g-info flex gap-2 items-center">
+                      {/* Book Title */}
+                    <div className="text-start mt-2 pe-3 border-e border-gray-600">
+                      <h2 className="font-semibold text-gray-700 text-sm md:text-base truncate">
+                        {showArabic ? book.title_ar : book.title_en}
+                      </h2>
+                      <p className="text-xs text-gray-500 truncate">
+                        {showArabic ? `بقلم ${book.author_ar}` : `by ${book.author_en}`}
+                      </p>
+                    </div>
+
+                    <div>
+                        <p className="text-sm"> Page : <strong>{currentPage + 1}</strong> </p> 
+                        <p className="text-sm">ch : {currentPage + 1}/{totalPages} </p>
+                    </div>
+
+                    {/* Page Display - Centered */}
+                    {/* <div className="text-center">
+                      <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">Page {currentPage + 1}</h1>
+                      <div className="w-full h-1 bg-amber-600 rounded"></div>
+                    </div> */}
+            </div>
+
+
+
 
           <div className="flex items-center space-x-2 flex-shrink-0">
             {/* Magnifier Toggle */}
             <button
               onClick={toggleMagnifier}
-              className={`p-2 rounded-lg transition-colors ${
+              className={`hidden md:block p-2 rounded-lg transition-colors ${
                 magnifierActive ? "bg-amber-100 text-amber-700" : "hover:bg-gray-100"
               }`}
               title="Toggle Magnifier (M)"
@@ -730,7 +752,7 @@ const BookReader = ({
             </button>
 
             {/* Zoom Controls */}
-            <div className="flex items-center space-x-1 bg-gray-100 rounded-lg p-1">
+            <div className="hidden md:flex items-center space-x-1 bg-gray-100 rounded-lg p-1">
               <button
                 onClick={handleZoomOut}
                 className="p-2 hover:bg-white rounded transition-colors"
@@ -763,23 +785,15 @@ const BookReader = ({
             {/* Download Button */}
             <button
               onClick={handleDownload}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="text-gray-900 p-1 rounded-lg"
               title="Download Book"
             >
-              <Download className="w-4 h-4" />
+              <Download className="w-8 h-4 sm:w-4" />
             </button>
           </div>
         </div>
 
-        {/* Book Title */}
-        <div className="text-center mt-2">
-          <h2 className="font-semibold text-gray-700 text-sm md:text-base truncate">
-            {showArabic ? book.title_ar : book.title_en}
-          </h2>
-          <p className="text-xs text-gray-500 truncate">
-            {showArabic ? `بقلم ${book.author_ar}` : `by ${book.author_en}`}
-          </p>
-        </div>
+
       </div>
 
       {/* Reader Content */}
@@ -1002,8 +1016,15 @@ const BookReader = ({
             </button>
           </div>
 
+
+            {/* INSTRUCTION ALERT */}
+            <DmAlert
+              type="info"
+              message="Swipe left/right or use arrow keys to navigate • Press M for magnifier • Hover over Arabic words for translation."
+            />
+
           {/* Manual Page Input */}
-          <div className="flex items-center justify-center space-x-3">
+          <div className="hidden md:flex flex items-center justify-center space-x-3">
             <span className="text-sm text-gray-600">Page:</span>
             <div className="flex items-center space-x-2">
               <input
@@ -1033,20 +1054,24 @@ const BookReader = ({
           </div>
 
           {/* Chapter Info and Controls */}
-          <div className="text-center text-xs text-gray-500">
+          <div className="hidden md:flex text-center text-xs text-gray-500">
             <div>
-              Chapter {currentPage + 1} of {totalPages} • {chapters[currentPage]?.title || "Loading..."}
+              Chapter {currentPage + 1} of {totalPages} •
+               {chapters[currentPage]?.title || "Loading..."}
             </div>
-            <div className="mt-1 text-gray-400">
-              Swipe left/right or use arrow keys to navigate • Press M for magnifier • Hover over Arabic words for
-              translation
-            </div>
+
+
+
+
+            {/* <div className="mt-1 text-gray-400">
+              Swipe left/right or use arrow keys to navigate • Press M for magnifier • Hover over Arabic words for translation
+            </div> */}
           </div>
         </div>
       </div>
 
       {/* Custom Scrollbar Styles */}
-      <style jsx>{`
+      <style>{`
         .custom-scrollbar::-webkit-scrollbar {
           width: 12px;
         }

@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect, useRef, useMemo } from "react"
-import { Search, BookOpen, Facebook, Youtube, Twitter, Info, Mail, Home, Globe, X } from "lucide-react"
+import { Search, BookOpen, Facebook, Youtube, Twitter, Info, Mail, Home, Globe, X, List, Menu } from "lucide-react"
 import BookReader from "@/components/BookReader"
 import ContactPage from "@/components/ContactPage"
 import AboutPage from "@/components/AboutPage"
@@ -85,7 +85,7 @@ const Index = () => {
         byAuthor: "بقلم",
         featured: "مميز",
         home: "الرئيسية",
-        about: "عنا",
+        about: "من نحن ؟",
         contact: "اتصل بنا",
         language: "اللغة",
         browseCategories: "تصفح الفئات",
@@ -298,15 +298,18 @@ const Index = () => {
   useEffect(() => {
     const script1 = document.createElement("script")
     script1.async = true
+    // TO ADD GOOGLE Analytics  REPLACE G-XXXXXXXXXX WITH YOUR live Measurement ID
     script1.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
     document.head.appendChild(script1)
 
     const script2 = document.createElement("script")
+
+     // TO ADD GOOGLE Analytics  REPLACE G-XXXXXXXXXX WITH YOUR live Measurement ID
     script2.innerHTML = `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX', {
+      gtag('config', 'G-XXXXXXXXXX', { 
         page_title: 'Deen Mastery Library',
         page_location: window.location.href,
         custom_map: {
@@ -458,6 +461,18 @@ const Index = () => {
 
     loadBooks()
   }, [])
+
+
+
+  //BOOKS PAGINATION
+  const [currentBookPage, setCurrentBookPage] = useState(1);
+  const booksPerPage = 12; 
+
+
+
+
+
+
 
   // Load categories from books data
   useEffect(() => {
@@ -676,6 +691,17 @@ const Index = () => {
     return result
   }, [books, searchQuery, selectedCategory, categories, featuredBooks, currentLanguage])
 
+
+
+
+
+
+//SLICE filteredBooks TO THE DESIRED BOOKS PER PAGE
+const startIndex = (currentBookPage - 1) * booksPerPage;
+const endIndex = startIndex + booksPerPage;
+const currentBooks = filteredBooks.slice(startIndex, endIndex);
+
+
   // Filter categories based on search query
   const filteredCategories = categories.filter((category) =>
     category.name.toLowerCase().includes(categorySearchQuery.toLowerCase()),
@@ -718,14 +744,47 @@ const Index = () => {
     }
   }
 
+
+
+  //SET SIDEBAR OVERFLOW ON MOBILE
+  const setMobileYfllow = () => {
+    //SET THE MAIN CONTENT TO NON SCROLLABLE IF THE SIDEBAR IS PRESENTS
+    if(isMobile){
+      if(sidebarCollapsed){
+        document.body.classList.add('overflow-y-hidden');
+      }else{
+        if (document.body.classList.contains('overflow-y-hidden')) { document.body.classList.remove('overflow-y-hidden'); }
+
+      }
+    }
+  }
+
+
+
+
+  //SET PAGE DIRECTION
+ const [isRTL, setIsRTL] = useState(false);
+
+  useEffect(() => {
+    const dir = document.documentElement.getAttribute('dir');
+    setIsRTL(dir === 'rtl');
+  }, []);
+
+
+
+
   const toggleSidebar = () => {
     setSidebarCollapsed(!sidebarCollapsed)
-    trackUserFlow("sidebar_toggle", "interface", sidebarCollapsed ? "open" : "close")
+    trackUserFlow("sidebar_toggle", "interface", sidebarCollapsed ? "open" : "close");
+
+      setMobileYfllow();
   }
 
   const closeSidebar = () => {
     setSidebarCollapsed(true)
-    trackUserFlow("sidebar_close", "interface", "close_button")
+    trackUserFlow("sidebar_close", "interface", "close_button");
+        setMobileYfllow();
+
   }
 
   const handleCategorySelect = (categoryId: string) => {
@@ -750,6 +809,8 @@ const Index = () => {
     if (e.target === e.currentTarget) {
       setSidebarCollapsed(true)
     }
+
+     setMobileYfllow();
   }
 
   const handlePageChange = (page: "home" | "contact" | "about") => {
@@ -763,6 +824,23 @@ const Index = () => {
     }
   }
 
+
+ 
+ //SET THE DIRECTION FROM RIGHT TO LEFT IN CASE ARABIC-STYLE LANGUAGE IS SELECTED
+ const setDirectionFromRTL = (lang:string) => {
+    if(lang == 'arabic' || lang == 'urdu'){
+         document.body.setAttribute('dir', 'rtl');
+         setIsRTL(true);
+    }else{
+       document.body.setAttribute('dir', 'ltr');
+        setIsRTL(false);
+    }
+   
+
+ }
+
+
+
   const handleLanguageChange = (language: keyof typeof languageConfig) => {
     const previousLanguage = currentLanguage
     setCurrentLanguage(language)
@@ -770,6 +848,13 @@ const Index = () => {
       from_language: previousLanguage,
       to_language: language,
     })
+
+
+    //IF ARABIC STYLE LANGUAGE
+     setDirectionFromRTL(language);
+
+
+   
   }
 
   // Show loading state
@@ -800,20 +885,32 @@ const Index = () => {
          {/* Top Navigation Bar */}
       <div className="bg-white shadow-sm border-b border-amber-200 p-1 z-40 sticky top-0">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
-              <img
-                src="/lovable-uploads/92c79d95-bbb5-40d0-9b0f-37bccec10dcd.png"
-                alt="Deen Mastery Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="text-start">
-              <p className="text-md font-bold text-amber-900">{t.deenMastery}</p>
-              <p className="text-xs text-amber-600">{t.knowledgeMadeAccessible}</p>
-            </div>
-          </div>
+
+             <div className="flex gap-2">
+                    {/* Categories Toggle Button */}
+                    <button
+                      onClick={toggleSidebar}
+                      className="p-3 border-none bg-none sm:p-2 border border-gray-500 text-gray-600 rounded-lg hover:bg-gray-100 transition-colors"
+                      title={t.browseCategories}
+                    >
+                      <Menu className="w-5 h-5" />
+                    </button>
+
+                  {/* Logo */}
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+                      <img
+                        src="/lovable-uploads/92c79d95-bbb5-40d0-9b0f-37bccec10dcd.png"
+                        alt="Deen Mastery Logo"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="text-start">
+                      <p className="text-md font-bold text-amber-900">{t.deenMastery}</p>
+                      <p className="text-xs text-amber-600">{t.knowledgeMadeAccessible}</p>
+                    </div>
+                  </div>
+             </div>
 
           {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center space-x-6">
@@ -825,7 +922,7 @@ const Index = () => {
                   : "text-gray-600 hover:text-amber-700 hover:bg-amber-50"
               }`}
             >
-              <Home className="w-4 h-4" />
+              {/* <Home className="w-4 h-4" /> */}
               <span>{t.home}</span>
             </button>
             <button
@@ -836,7 +933,7 @@ const Index = () => {
                   : "text-gray-600 hover:text-amber-700 hover:bg-amber-50"
               }`}
             >
-              <Info className="w-4 h-4" />
+              {/* <Info className="w-4 h-4" /> */}
               <span>{t.about}</span>
             </button>
             <button
@@ -847,7 +944,7 @@ const Index = () => {
                   : "text-gray-600 hover:text-amber-700 hover:bg-amber-50"
               }`}
             >
-              <Mail className="w-4 h-4" />
+              {/* <Mail className="w-4 h-4" /> */}
               <span>{t.contact}</span>
             </button>
           </div>
@@ -870,14 +967,6 @@ const Index = () => {
               <Globe className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
             </div>
 
-            {/* Categories Toggle Button */}
-            <button
-              onClick={toggleSidebar}
-              className="p-3 border-none bg-none sm:p-2 border border-gray-500 text-gray-600 rounded-lg hover:bg-gray-100 transition-colors"
-              title={t.browseCategories}
-            >
-              <BookOpen className="w-5 h-5" />
-            </button>
           </div>
         </div>
 
@@ -1025,7 +1114,9 @@ const Index = () => {
 
               {/* BOOKS GRID - This now uses the useMemo filteredBooks which is guaranteed to work */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
-                {filteredBooks.map((book, index) => {
+   
+
+                {currentBooks.map((book, index) => {
                   const isFeatured =
                     featuredBooks.some((title) => book.title_ar.includes(title)) &&
                     !searchQuery.trim() &&
@@ -1038,7 +1129,7 @@ const Index = () => {
                         trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
                         handleBookSelect(book)
                       }}
-                      className={`bg-white border-2 rounded-lg p-3 md:p-4 hover:bg-amber-50 cursor-pointer transition-colors shadow-sm ${
+                      className={`flex flex-col justify-between bg-white border-2 rounded-lg p-3 md:p-4 h-[200px] hover:bg-amber-50 cursor-pointer transition-colors shadow-sm ${
                         isFeatured ? "border-amber-400 ring-2 ring-amber-200" : "border-amber-200"
                       }`}
                     >
@@ -1048,7 +1139,7 @@ const Index = () => {
                         </div>
                       )}
 
-                      <div className="font-medium text-amber-900 mb-2 text-sm md:text-base min-h-[2.5rem] flex items-start">
+                      <div className="font-medium text-amber-900 mb-2 text-sm md:text-base h-[60px] flex items-start">
                         <div className="leading-tight break-words w-full overflow-wrap-anywhere">
                           {getBookTitle(book)}
                         </div>
@@ -1088,14 +1179,47 @@ const Index = () => {
                 </div>
               )}
             </div>
+
+
+            {/* PAGINATION CONTROLL */}
+            <div className="flex justify-center mb-12 space-x-2">
+              <button
+                onClick={() => setCurrentBookPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentBookPage === 1}
+                className="px-3 py-1 w-[100px] bg-amber-200 rounded disabled:opacity-50"
+              >
+                Previous
+              </button>
+
+              <span className="px-3 py-1 text-amber-700">
+                Page {currentBookPage} of {Math.ceil(filteredBooks.length / booksPerPage)}
+              </span>
+
+              <button
+                onClick={() =>
+                  setCurrentBookPage((prev) =>
+                    Math.min(prev + 1, Math.ceil(filteredBooks.length / booksPerPage))
+                  )
+                }
+                disabled={currentBookPage >= Math.ceil(filteredBooks.length / booksPerPage)}
+                className="px-3 py-1 w-[100px] bg-amber-200 rounded disabled:opacity-50"
+              >
+                Next
+              </button>
+            </div>
+
+            <br />
+
           </div>
+
+        
         )}
 
         {/* Categories Sidebar */}
         <div
-          className={`fixed right-0 border-s  top-0 h-[100vh] bg-white text-gray-900 flex flex-col z-40 ${
+          className={`fixed ${isRTL ? 'right-0' : 'left-0'} border-e  top-0 h-[100vh] bg-white text-gray-900 flex flex-col z-40 ${
             sidebarCollapsed ? "w-0 overflow-hidden" : "w-80"
-          } ${isMobile && sidebarCollapsed ? "translate-x-full" : ""}`}
+          } ${isMobile && sidebarCollapsed && isRTL ? "translate-x-full" : ""}` }
         >
           {/* Sidebar Header with Close Button */}
           <div className="md:p-2 border-b border-gray-600">
@@ -1171,10 +1295,10 @@ const Index = () => {
                   >
                     <div className="flex items-center justify-between pointer-events-none">
                       <div className="flex items-center min-w-0 flex-1">
-                        <category.icon className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <category.icon className="w-4 h-4 me-2 flex-shrink-0" />
                         <span className="truncate">{category.name}</span>
                       </div>
-                      <span className="text-xs bg-gray-600 text-white px-2 py-1 rounded ml-2 flex-shrink-0">{bookCount}</span>
+                      <span className="text-xs bg-gray-600 text-white px-2 py-1 rounded ms-2 flex-shrink-0">{bookCount}</span>
                     </div>
                   </button>
                 )
