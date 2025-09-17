@@ -8,6 +8,10 @@ import BookReader from "@/components/BookReader"
 import ContactPage from "@/components/ContactPage"
 import AboutPage from "@/components/AboutPage"
 import MobileBottomNav from "@/components/common/MobileFixedBar"
+import BookCard from "@/components/common/BookCard"
+
+//TEST IMAGE COVER
+import CoverImg from "./../../assets/book.jpg";
 
 interface Book {
   title_ar: string
@@ -1022,7 +1026,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
  
 
   {/* MAIN SITE CONTENT */}
-    <div className="min-h-screen bg-amber-50 flex flex-col relative w-full max-w-[1280px] mx-auto mt-2">
+    <div className="min-h-screen bg-white flex flex-col relative w-full max-w-[1280px] mx-auto mt-2">
       {/* Main Content Area */}
       <div className="flex-1 flex">
         {selectedBook ? (
@@ -1113,49 +1117,53 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
               </div>
 
               {/* BOOKS GRID - This now uses the useMemo filteredBooks which is guaranteed to work */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-3 md:gap-4">
    
 
                 {currentBooks.map((book, index) => {
                   const isFeatured =
                     featuredBooks.some((title) => book.title_ar.includes(title)) &&
                     !searchQuery.trim() &&
-                    selectedCategory === "all"
+                    selectedCategory === "all";
 
                   return (
-                    <div
-                      key={`${book.id}-${index}`}
-                      onClick={() => {
-                        trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
-                        handleBookSelect(book)
-                      }}
-                      className={`flex flex-col justify-between bg-white border-2 rounded-lg p-3 md:p-4 h-[200px] hover:bg-amber-50 cursor-pointer transition-colors shadow-sm ${
-                        isFeatured ? "border-amber-400 ring-2 ring-amber-200" : "border-amber-200"
-                      }`}
-                    >
-                      {isFeatured && (
-                        <div className="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded mb-2 text-center font-medium">
-                          ⭐ {t.featured}
-                        </div>
-                      )}
+                                    // <div
+                                    //   key={`${book.id}-${index}`}
+                                    //   onClick={() => {
+                                    //     trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
+                                    //     handleBookSelect(book)
+                                    //   }}
+                                    //   className={`flex flex-col justify-between bg-white border-2 rounded-lg p-3 md:p-4 h-[200px] hover:bg-amber-50 cursor-pointer transition-colors shadow-sm ${
+                                    //     isFeatured ? "border-amber-400 ring-2 ring-amber-200" : "border-amber-200"
+                                    //   }`}
+                                    // >
+                                    //   {isFeatured && (
+                                    //     <div className="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded mb-2 text-center font-medium">
+                                    //       ⭐ {t.featured}
+                                    //     </div>
+                                    //   )}
 
-                      <div className="font-medium text-amber-900 mb-2 text-sm md:text-base h-[60px] flex items-start">
-                        <div className="leading-tight break-words w-full overflow-wrap-anywhere">
-                          {getBookTitle(book)}
-                        </div>
-                      </div>
+                                    //   <div className="font-medium text-amber-900 mb-2 text-sm md:text-base h-[60px] flex items-start">
+                                    //     <div className="leading-tight break-words w-full overflow-wrap-anywhere">
+                                    //       {getBookTitle(book)}
+                                    //     </div>
+                                    //   </div>
 
-                      <div className="text-xs md:text-sm text-amber-700 mb-2">
-                        {t.byAuthor} {getBookAuthor(book)}
-                      </div>
+                                    //   <div className="text-xs md:text-sm text-amber-700 mb-2">
+                                    //     {t.byAuthor} {getBookAuthor(book)}
+                                    //   </div>
 
-                      <div className="flex justify-between items-center">
-                        <div className="text-xs text-amber-600 uppercase">{book.type}</div>
-                        <div className="text-xs text-amber-600 capitalize bg-amber-100 px-2 py-1 rounded max-w-[120px] truncate">
-                          {book.category}
-                        </div>
-                      </div>
-                    </div>
+                                    //   <div className="flex justify-between items-center">
+                                    //     <div className="text-xs text-amber-600 uppercase">{book.type}</div>
+                                    //     <div className="text-xs text-amber-600 capitalize bg-amber-100 px-2 py-1 rounded max-w-[120px] truncate">
+                                    //       {book.category}
+                                    //     </div>
+                                    //   </div>
+                                    // </div>
+
+                         <BookCard cover={CoverImg} cat={book.category} title={getBookTitle(book)} description={'This is a testing description to check to see if the book is oke.'}
+                          isFeatured={isFeatured} author={getBookAuthor(book)}/>           
+
                   )
                 })}
               </div>
