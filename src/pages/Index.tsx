@@ -8,6 +8,10 @@ import BookReader from "@/components/BookReader"
 import ContactPage from "@/components/ContactPage"
 import AboutPage from "@/components/AboutPage"
 import MobileBottomNav from "@/components/common/MobileFixedBar"
+import BookCard from "@/components/common/BookCard"
+
+//TEST IMAGE COVER
+import CoverImg from "./../../assets/book.jpg";
 
 interface Book {
   title_ar: string
@@ -883,7 +887,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
    <div className="dm-wrapper p-0 m-0">
    {/* SITE MAIN NAVBAR */}
          {/* Top Navigation Bar */}
-      <div className="bg-white shadow-sm border-b border-amber-200 p-1 z-40 sticky top-0">
+      <div className="bg-white shadow-sm border-b border-amber-600 p-1 z-40 sticky top-0">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
 
              <div className="flex gap-2">
@@ -900,7 +904,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
                       <img
-                        src="/lovable-uploads/92c79d95-bbb5-40d0-9b0f-37bccec10dcd.png"
+                        src="/lovable-uploads/brand.png"
                         alt="Deen Mastery Logo"
                         className="w-full h-full object-contain"
                       />
@@ -1022,7 +1026,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
  
 
   {/* MAIN SITE CONTENT */}
-    <div className="min-h-screen bg-amber-50 flex flex-col relative w-full max-w-[1280px] mx-auto mt-2">
+    <div className="min-h-screen bg-white flex flex-col relative w-full max-w-[1280px] mx-auto mt-2">
       {/* Main Content Area */}
       <div className="flex-1 flex">
         {selectedBook ? (
@@ -1048,23 +1052,23 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
           // Landing Page - FIXED TO USE useMemo filteredBooks
           <div
             ref={mainContentRef}
-            className="flex-1 flex flex-col items-center justify-start px-4 md:px-8 pt-2 md:pt-4 overflow-auto"
+            className="flex-1 flex flex-col items-center justify-start px-4 md:px-8 pt-2 md:pt-2 overflow-auto"
           >
             {/* Logo and Branding */}
             <div className="text-center mb-3 md:mb-5">
               <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 mb-1 md:mb-2">
                 <img
-                  src="/lovable-uploads/92c79d95-bbb5-40d0-9b0f-37bccec10dcd.png"
+                  src="/lovable-uploads/brand.png"
                   alt="Deen Mastery Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h1 className="text-2xl md:text-4xl font-bold text-amber-900 mb-2">{t.deenMastery}</h1>
-              <p className="text-amber-700 text-base md:text-lg italic">{t.knowledgeMadeAccessible}</p>
+              <h1 className="text-1xl md:text-2xl font-bold text-amber-900 mb-0 pb-0 pt-0">{t.deenMastery}</h1>
+              <p className="text-amber-700 text-base md:text-md italic">{t.knowledgeMadeAccessible}</p>
             </div>
 
             {/* Search Section */}
-            <div className="w-[90%] mx-auto mb-6 md:mb-8 text-center">
+            <div className="w-[100%] mx-auto mb-6 md:mb-8 text-center">
               <div className="relative">
                 <input
                   ref={searchInputRef}
@@ -1088,6 +1092,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                 </div>
               </div>
             </div>
+
+             
 
             {/* Available Books Section - NOW CORRECTLY USES useMemo filteredBooks */}
             <div className="w-full max-w-6xl pb-16">
@@ -1113,49 +1119,59 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
               </div>
 
               {/* BOOKS GRID - This now uses the useMemo filteredBooks which is guaranteed to work */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-6">
    
 
                 {currentBooks.map((book, index) => {
                   const isFeatured =
                     featuredBooks.some((title) => book.title_ar.includes(title)) &&
                     !searchQuery.trim() &&
-                    selectedCategory === "all"
+                    selectedCategory === "all";
 
                   return (
-                    <div
-                      key={`${book.id}-${index}`}
-                      onClick={() => {
-                        trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
-                        handleBookSelect(book)
-                      }}
-                      className={`flex flex-col justify-between bg-white border-2 rounded-lg p-3 md:p-4 h-[200px] hover:bg-amber-50 cursor-pointer transition-colors shadow-sm ${
-                        isFeatured ? "border-amber-400 ring-2 ring-amber-200" : "border-amber-200"
-                      }`}
-                    >
-                      {isFeatured && (
-                        <div className="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded mb-2 text-center font-medium">
-                          ⭐ {t.featured}
-                        </div>
-                      )}
+                                    // <div
+                                    //   key={`${book.id}-${index}`}
+                                    //   onClick={() => {
+                                    //     trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
+                                    //     handleBookSelect(book)
+                                    //   }}
+                                    //   className={`flex flex-col justify-between bg-white border-2 rounded-lg p-3 md:p-4 h-[200px] hover:bg-amber-50 cursor-pointer transition-colors shadow-sm ${
+                                    //     isFeatured ? "border-amber-400 ring-2 ring-amber-200" : "border-amber-200"
+                                    //   }`}
+                                    // >
+                                    //   {isFeatured && (
+                                    //     <div className="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded mb-2 text-center font-medium">
+                                    //       ⭐ {t.featured}
+                                    //     </div>
+                                    //   )}
 
-                      <div className="font-medium text-amber-900 mb-2 text-sm md:text-base h-[60px] flex items-start">
-                        <div className="leading-tight break-words w-full overflow-wrap-anywhere">
-                          {getBookTitle(book)}
-                        </div>
-                      </div>
+                                    //   <div className="font-medium text-amber-900 mb-2 text-sm md:text-base h-[60px] flex items-start">
+                                    //     <div className="leading-tight break-words w-full overflow-wrap-anywhere">
+                                    //       {getBookTitle(book)}
+                                    //     </div>
+                                    //   </div>
 
-                      <div className="text-xs md:text-sm text-amber-700 mb-2">
-                        {t.byAuthor} {getBookAuthor(book)}
-                      </div>
+                                    //   <div className="text-xs md:text-sm text-amber-700 mb-2">
+                                    //     {t.byAuthor} {getBookAuthor(book)}
+                                    //   </div>
 
-                      <div className="flex justify-between items-center">
-                        <div className="text-xs text-amber-600 uppercase">{book.type}</div>
-                        <div className="text-xs text-amber-600 capitalize bg-amber-100 px-2 py-1 rounded max-w-[120px] truncate">
-                          {book.category}
-                        </div>
-                      </div>
-                    </div>
+                                    //   <div className="flex justify-between items-center">
+                                    //     <div className="text-xs text-amber-600 uppercase">{book.type}</div>
+                                    //     <div className="text-xs text-amber-600 capitalize bg-amber-100 px-2 py-1 rounded max-w-[120px] truncate">
+                                    //       {book.category}
+                                    //     </div>
+                                    //   </div>
+                                    // </div>
+
+                            <div onClick={ () => {
+                                 trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
+                                   handleBookSelect(book)
+                                  } }>
+                                       <BookCard cover={CoverImg} cat={book.category} title={getBookTitle(book)} description={'This is a testing description to check to see if the book is oke.'}
+                                        isFeatured={isFeatured} author={getBookAuthor(book)}/>           
+
+                            </div>
+
                   )
                 })}
               </div>
@@ -1254,7 +1270,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                   onChange={(e) => setCategorySearchQuery(e.target.value)}
                   className="w-full px-3 py-2 text-sm border border-gray-500 rounded bg-gray-100 text-black placeholder-gray-600 focus:outline-none focus:border-gray-800"
                 />
-                <Search className="absolute right-2 top-1/2 transform -translate-y-1/2 text-green-200 w-4 h-4" />
+                <Search className="absolute right-2 top-1/2 transform -translate-y-1/2 text-amber-900 w-4 h-4" />
               </div>
             </div>
 
@@ -1298,7 +1314,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                         <category.icon className="w-4 h-4 me-2 flex-shrink-0" />
                         <span className="truncate">{category.name}</span>
                       </div>
-                      <span className="text-xs bg-gray-600 text-white px-2 py-1 rounded ms-2 flex-shrink-0">{bookCount}</span>
+                      <span className="text-xs bg-amber-900 text-white px-2 py-1 rounded ms-2 flex-shrink-0">{bookCount}</span>
                     </div>
                   </button>
                 )

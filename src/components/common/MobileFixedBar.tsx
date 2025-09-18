@@ -44,8 +44,8 @@ function NavButton({ label, icon, active, onClick }: NavButtonProps): JSX.Elemen
   return (
     <button
       onClick={onClick}
-      className={`flex flex-col min-h-auto items-center text-xs transition-colors mt-[4px] ${
-        active ? 'text-amber-600' : 'text-gray-500 hover:text-amber-500'
+      className={`flex flex-col min-h-auto items-center text-sm font-bold transition-colors mt-[4px] ${
+        active ? 'text-amber-900' : 'text-gray-500 hover:text-amber-900'
       }`}
     >
       {icon}
