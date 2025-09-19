@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
-import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X, StepBack, SkipBack, LucideDatabaseBackup, CircleArrowLeft } from "lucide-react"
+import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X, StepBack, SkipBack, LucideDatabaseBackup, CircleArrowLeft, CircleArrowRight, EyeClosedIcon, CircleX } from "lucide-react"
 import DmAlert from "./common/DmAlert"
 
 interface Book {
@@ -95,6 +95,17 @@ const BookReader = ({
   // Touch handling for swipe navigation
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
+
+
+
+  //SET PAGE DIRECTION
+ const [isRTL, setIsRTL] = useState(false);
+
+  useEffect(() => {
+    const dir = document.documentElement.getAttribute('dir');
+    setIsRTL(dir === 'rtl');
+  }, []);
+
 
   const minSwipeDistance = 50
 
@@ -329,35 +340,70 @@ const BookReader = ({
 
   // Word-by-word translation implementation
   useEffect(() => {
-    const handleWordHover = (e: MouseEvent) => {
-      const target = e.target as HTMLElement
-      if (target.classList.contains("hoverable-word")) {
-        const word = target.getAttribute("data-word")
-        if (word && wordTranslations[word]) {
-          setHoveredWord(word)
-          setHoverPosition({ x: e.clientX, y: e.clientY })
-          onUserAction?.("word_hover", "reading", word, 0, {
-            translation: wordTranslations[word].translation,
-          })
+    // const handleWordHover = (e: MouseEvent) => {
+    //   const target = e.target as HTMLElement
+    //   if (target.classList.contains("hoverable-word")) {
+    //     const word = target.getAttribute("data-word")
+    //     if (word && wordTranslations[word]) {
+    //       setHoveredWord(word)
+    //       setHoverPosition({ x: e.clientX, y: e.clientY })
+    //       onUserAction?.("word_hover", "reading", word, 0, {
+    //         translation: wordTranslations[word].translation,
+    //       })
+    //     }
+    //   }
+    // }
+
+    // const handleWordLeave = (e: MouseEvent) => {
+    //   const target = e.target as HTMLElement
+    //   if (target.classList.contains("hoverable-word")) {
+    //     setHoveredWord(null)
+    //   }
+    // }
+
+
+
+    //HANDLE WORD BY WORD translation
+    const handleWordTranslation = (e: MouseEvent) => {
+          const target = e.target as HTMLElement
+
+
+        if (target.classList.contains("hoverable-word")) {
+          setHoveredWord(null)
         }
-      }
+
+          if (target.classList.contains("hoverable-word")) {
+            const word = target.getAttribute("data-word")
+            if (word && wordTranslations[word]) {
+              setHoveredWord(word)
+              setHoverPosition({ x: e.clientX - 100 , y: e.clientY + 30 })
+              onUserAction?.("word_hover", "reading", word, 0, {
+                translation: wordTranslations[word].translation,
+              })
+            }
+          }      
     }
 
-    const handleWordLeave = (e: MouseEvent) => {
-      const target = e.target as HTMLElement
-      if (target.classList.contains("hoverable-word")) {
-        setHoveredWord(null)
-      }
-    }
+
+    //DOCUMENT CLICKED
+    document.body.addEventListener("click", (e: MouseEvent) => {
+  
+    });
+
 
     const contentElement = contentRef.current
     if (contentElement) {
-      contentElement.addEventListener("mouseover", handleWordHover)
-      contentElement.addEventListener("mouseleave", handleWordLeave)
+       contentElement.addEventListener("click", handleWordTranslation)
+
+      // contentElement.addEventListener("mouseover", handleWordHover)
+      // contentElement.addEventListener("mouseleave", handleWordLeave)
+
+      //CONTENT ELEMENT 
+      console.log("HOVER BUTTON ON WORD" , contentElement)
 
       return () => {
-        contentElement.removeEventListener("mouseover", handleWordHover)
-        contentElement.removeEventListener("mouseleave", handleWordLeave)
+        // contentElement.removeEventListener("mouseover", handleWordHover)
+        // contentElement.removeEventListener("mouseleave", handleWordLeave)
       }
     }
   }, [chapters, currentPage, wordTranslations])
@@ -709,7 +755,7 @@ const BookReader = ({
             onClick={handleCloseReader}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
           >
-            <CircleArrowLeft className="w-5 h-5" />
+            { isRTL ? <CircleArrowLeft className="w-5 h-5" /> : <CircleArrowLeft className="w-5 h-5" /> }
            </button>
 
 
@@ -923,13 +969,20 @@ const BookReader = ({
       {/* Word Translation Tooltip - Enhanced */}
       {hoveredWord && wordTranslations[hoveredWord] && (
         <div
-          className="fixed z-50 bg-gray-900 text-white p-4 rounded-lg shadow-xl max-w-xs pointer-events-none border border-gray-700"
+          className="fixed z-100 bg-gray-900 text-white p-4 rounded-lg shadow-xl max-w-xs border border-gray-700"
           style={{
             left: hoverPosition.x + 10,
             top: hoverPosition.y - 10,
             transform: hoverPosition.x > window.innerWidth - 250 ? "translateX(-100%)" : "none",
           }}
         >
+
+       {/* CLOSE WINDOW */}
+        <button type="button" className="cursor-pointer absolute end-0 top-0" onClick={ () =>  setHoveredWord(null)}>
+            <X />
+        </button>
+
+
           <div className="font-bold text-base mb-2 text-amber-300">{hoveredWord}</div>
           <div className="text-sm mb-2 text-green-300">{wordTranslations[hoveredWord].translation}</div>
           {wordTranslations[hoveredWord].transliteration && (

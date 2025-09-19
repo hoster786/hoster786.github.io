@@ -47,6 +47,32 @@ interface Book {
   featured?: boolean
 }
 
+
+
+
+
+//APP LANG
+const LANGUAGE_KEY = 'DM_def_lang';
+
+
+const getStoredLanguage = () => {
+  const lang = localStorage.getItem(LANGUAGE_KEY);
+  return lang || 'english'; // default to English if not found
+};
+
+ const setStoredLanguage = (lang:string) => {
+  localStorage.setItem(LANGUAGE_KEY, lang);
+};
+
+
+
+
+
+
+
+
+
+
 // Google Analytics 4 Configuration
 declare global {
   interface Window {
@@ -102,6 +128,13 @@ const Index = () => {
         closeSidebar: "إغلاق الشريط الجانبي",
         searchingFor: "البحث عن:",
         clearSearch: "مسح البحث",
+
+        //OTHER TRANSLATIONS
+        next: "التالي",
+        page: "الصحيفة",
+        of:"من",
+        previous: "السابقة",
+
       },
     },
     english: {
@@ -129,6 +162,11 @@ const Index = () => {
         closeSidebar: "Close Sidebar",
         searchingFor: "Searching for:",
         clearSearch: "Clear Search",
+        //OTHER TRANSLATIONS
+        next: "Next",
+        page: "Page",
+        of:"of",
+        previous: "Previous",
       },
     },
     spanish: {
@@ -156,6 +194,11 @@ const Index = () => {
         closeSidebar: "Cerrar Barra Lateral",
         searchingFor: "Buscando:",
         clearSearch: "Limpiar Búsqueda",
+        // OTRAS TRADUCCIONES
+        next: "Siguiente",
+        page: "Página",
+        of: "de",
+        previous: "Anterior",
       },
     },
     german: {
@@ -183,6 +226,11 @@ const Index = () => {
         closeSidebar: "Seitenleiste schließen",
         searchingFor: "Suche nach:",
         clearSearch: "Suche löschen",
+        // ANDERE ÜBERSETZUNGEN
+        next: "Weiter",
+        page: "Seite",
+        of: "von",
+        previous: "Zurück",
       },
     },
     portuguese: {
@@ -210,6 +258,11 @@ const Index = () => {
         closeSidebar: "Fechar Barra Lateral",
         searchingFor: "Procurando por:",
         clearSearch: "Limpar Pesquisa",
+        // OUTRAS TRADUÇÕES
+        next: "Seguinte",
+        page: "Página",
+        of: "de",
+        previous: "Anterior",
       },
     },
     urdu: {
@@ -237,6 +290,11 @@ const Index = () => {
         closeSidebar: "سائیڈ بار بند کریں",
         searchingFor: "تلاش:",
         clearSearch: "تلاش صاف کریں",
+        // دیگر تراجم
+        next: "اگلا",
+        page: "صفحہ",
+        of: "کا",
+        previous: "پچھلا",
       },
     },
     turkish: {
@@ -264,6 +322,11 @@ const Index = () => {
         closeSidebar: "Kenar Çubuğunu Kapat",
         searchingFor: "Aranıyor:",
         clearSearch: "Aramayı Temizle",
+        // DİĞER ÇEVİRİLER
+        next: "İleri",
+        page: "Sayfa",
+        of: "üzerinden",
+        previous: "Geri",
       },
     },
     bahasa: {
@@ -291,12 +354,27 @@ const Index = () => {
         closeSidebar: "Tutup Sidebar",
         searchingFor: "Mencari:",
         clearSearch: "Hapus Pencarian",
+        // TERJEMAHAN LAIN
+        next: "Berikutnya",
+        page: "Halaman",
+        of: "dari",
+        previous: "Sebelumnya",
       },
     },
   }
 
   // Get current translations
-  const t = languageConfig[currentLanguage].translations
+  const t = languageConfig[getStoredLanguage()].translations
+
+
+//SET DEFAULT DIRECTION
+  useEffect(() => {
+    const lang = localStorage.getItem(LANGUAGE_KEY) || 'english';
+
+    // Set page direction based on language
+    const direction = ['arabic', 'urdu'].includes(lang) ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('dir', direction);
+  }, []);
 
   // Google Analytics 4 setup
   useEffect(() => {
@@ -835,9 +913,11 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
     if(lang == 'arabic' || lang == 'urdu'){
          document.body.setAttribute('dir', 'rtl');
          setIsRTL(true);
-    }else{
+
+     }else{
        document.body.setAttribute('dir', 'ltr');
         setIsRTL(false);
+ 
     }
    
 
@@ -848,6 +928,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
   const handleLanguageChange = (language: keyof typeof languageConfig) => {
     const previousLanguage = currentLanguage
     setCurrentLanguage(language)
+    //STORE LANG
+    setStoredLanguage(language)
     trackUserFlow("language_change", "interface", language, 0, {
       from_language: previousLanguage,
       to_language: language,
@@ -855,7 +937,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
 
 
     //IF ARABIC STYLE LANGUAGE
-     setDirectionFromRTL(language);
+     setDirectionFromRTL(getStoredLanguage());
 
 
    
@@ -887,7 +969,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
    <div className="dm-wrapper p-0 m-0">
    {/* SITE MAIN NAVBAR */}
          {/* Top Navigation Bar */}
-      <div className="bg-white shadow-sm border-b border-amber-600 p-1 z-40 sticky top-0">
+      <div className="px-4 bg-white shadow-sm border-b border-amber-600 p-1 z-40 sticky top-0">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
 
              <div className="flex gap-2">
@@ -958,7 +1040,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
             {/* Language Dropdown */}
             <div className="hidden sm:flex relative">
               <select
-                value={currentLanguage}
+                value={getStoredLanguage()}
                 onChange={(e) => handleLanguageChange(e.target.value as keyof typeof languageConfig)}
                 className="appearance-none bg-white border border-amber-200 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:border-amber-500 min-w-[120px]"
               >
@@ -1076,7 +1158,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                   placeholder={t.searchPlaceholder}
                   value={searchQuery}
                   onChange={handleSearchChange}
-                  className="w-full px-4 py-3 text-base md:text-lg border-2 border-amber-800 rounded-lg focus:outline-none focus:border-amber-600 bg-white pl-4 pr-20 text-left"
+                  className="w-full px-4 py-3 text-base md:text-lg border-2 border-amber-800 rounded-lg focus:outline-none focus:border-amber-600 bg-white pl-4 pr-20 text-start"
                 />
                 <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center space-x-1">
                   {searchQuery.trim() && (
@@ -1204,11 +1286,11 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                 disabled={currentBookPage === 1}
                 className="px-3 py-1 w-[100px] bg-amber-200 rounded disabled:opacity-50"
               >
-                Previous
+                {t.previous}
               </button>
 
               <span className="px-3 py-1 text-amber-700">
-                Page {currentBookPage} of {Math.ceil(filteredBooks.length / booksPerPage)}
+                {t.page} {currentBookPage} {t.of} {Math.ceil(filteredBooks.length / booksPerPage)}
               </span>
 
               <button
@@ -1220,7 +1302,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                 disabled={currentBookPage >= Math.ceil(filteredBooks.length / booksPerPage)}
                 className="px-3 py-1 w-[100px] bg-amber-200 rounded disabled:opacity-50"
               >
-                Next
+                {t.next}
               </button>
             </div>
 
@@ -1264,20 +1346,22 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
             <div className="mb-4">
               <div className="relative">
                 <input
+                style={{paddingInlineStart: '2rem'}}
                   type="text"
-                  placeholder="Search categories..."
+                  placeholder={t.filterByCategory}
                   value={categorySearchQuery}
                   onChange={(e) => setCategorySearchQuery(e.target.value)}
-                  className="w-full px-3 py-2 text-sm border border-gray-500 rounded bg-gray-100 text-black placeholder-gray-600 focus:outline-none focus:border-gray-800"
+                  className="w-full py-2 text-sm border border-gray-500 rounded bg-gray-100 text-black placeholder-gray-600
+                             focus:outline-none focus:border-gray-800"
                 />
-                <Search className="absolute right-2 top-1/2 transform -translate-y-1/2 text-amber-900 w-4 h-4" />
+                <Search className="absolute start-2 top-1/2 transform -translate-y-1/2 text-amber-900 w-4 h-4" />
               </div>
             </div>
 
             {/* Categories Header */}
-            <div className="hidden lg:flex  items-center justify-between mb-4">
+            {/* <div className="hidden lg:flex  items-center justify-between mb-4">
               <h3 className="text-lg md:text-xl font-bold">{t.filterByCategory}</h3>
-            </div>
+            </div> */}
 
             <div className="space-y-2 overflow-auto h-[40vh] lg:h-[50vh]">
               {filteredCategories.map((category) => {
@@ -1328,7 +1412,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
  
 
           {/* Contact & Social Media Links */}
-          <div className="p-4 md:p-6 border-t border-gray-600 text-start">
+          <div className="h-auto overflow-y-auto p-4 md:p-6 border-t border-gray-600 text-start">
 
  
 
