@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface ContactPageProps {
   onBack: () => void
@@ -23,6 +23,8 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+
+ 
 
   // Language configurations with translations - NO LANGUAGE SWITCHING
   const languageConfig = {
@@ -430,18 +432,11 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
   }
 
   return (
-    <div className="min-h-screen bg-amber-50 flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Main Content */}
       <div className="flex-1 p-4 md:p-8">
         <div className="max-w-6xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-600 text-white rounded-full mb-6">
-              <Mail className="w-10 h-10" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">{t.getInTouch}</h2>
-            <p className="text-xl text-amber-700 mb-6 max-w-3xl mx-auto leading-relaxed">{t.contactDescription}</p>
-          </div>
+ 
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -450,7 +445,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
                 <CardHeader>
                   <CardTitle className="text-amber-900 flex items-center text-2xl">
                     <MessageSquare className="w-6 h-6 mr-3" />
-                    {t.sendMessage}
+                    {t.sendMessaddge}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

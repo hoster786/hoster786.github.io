@@ -14,7 +14,7 @@ function DmAlert({ type = 'info', message, instruction }: AlertProps) {
   if (!visible) return null;
 
   const baseStyle =
-    'flex items-start justify-between p-1 rounded-md mb-1 text-sm sm:w-[360px]';
+    'flex items-start justify-between p-1 rounded-md mb-1 text-sm sm:w-[360px] fixed z-20 bottom-2 left-2';
 
   const typeStyles: Record<AlertType, string> = {
     success: 'bg-green-100 text-green-800',
@@ -25,7 +25,7 @@ function DmAlert({ type = 'info', message, instruction }: AlertProps) {
 
   return (
     <div className={`${baseStyle} ${typeStyles[type]}`}>
-      <div className="flex-1 text-start">
+      <div className="flex-1 text-start ">
         <p>{message}</p>
         {instruction && (
           <p className="text-xs text-gray-600 mt-1">{instruction}</p>
