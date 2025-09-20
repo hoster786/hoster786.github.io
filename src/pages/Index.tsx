@@ -904,6 +904,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
     if (isMobile) {
       setSidebarCollapsed(true)
     }
+
+    
   }
 
 
@@ -1002,10 +1004,10 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
           <div className="hidden md:flex items-center space-x-6">
             <button
               onClick={() => handlePageChange("home")}
-              className={`px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 ${
+              className={`w-[100px] text-center px-4 py-2 rounded-lg space-x-2 ${
                 currentPage === "home"
-                  ? "bg-amber-100 text-amber-800 font-medium"
-                  : "text-gray-600 hover:text-amber-700 hover:bg-amber-50"
+                  ? "font-bold text-amber-900"
+                  : "text-gray-600 hover:text-amber-900"
               }`}
             >
               {/* <Home className="w-4 h-4" /> */}
@@ -1013,10 +1015,10 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
             </button>
             <button
               onClick={() => handlePageChange("about")}
-              className={`px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 ${
+              className={`w-[100px] text-center px-4 py-2 rounded-lg space-x-2 ${
                 currentPage === "about"
-                  ? "bg-amber-100 text-amber-800 font-medium"
-                  : "text-gray-600 hover:text-amber-700 hover:bg-amber-50"
+                  ? "font-bold text-amber-900"
+                  : "text-gray-600 hover:text-amber-900 "
               }`}
             >
               {/* <Info className="w-4 h-4" /> */}
@@ -1024,10 +1026,10 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
             </button>
             <button
               onClick={() => handlePageChange("contact")}
-              className={`px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 ${
+              className={`w-[100px] text-center px-4 py-2 rounded-lg space-x-2 ${
                 currentPage === "contact"
-                  ? "bg-amber-100 text-amber-800 font-medium"
-                  : "text-gray-600 hover:text-amber-700 hover:bg-amber-50"
+                  ? "font-bold text-amber-900"
+                  : "text-gray-600 hover:text-amber-900"
               }`}
             >
               {/* <Mail className="w-4 h-4" /> */}
@@ -1042,7 +1044,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
               <select
                 value={getStoredLanguage()}
                 onChange={(e) => handleLanguageChange(e.target.value as keyof typeof languageConfig)}
-                className="appearance-none bg-white border border-amber-200 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:border-amber-500 min-w-[120px]"
+                className="appearance-none bg-white border border-gray-200 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:border-amber-500 min-w-[120px]"
               >
                 {Object.entries(languageConfig).map(([key, lang]) => (
                   <option key={key} value={key}>
@@ -1123,12 +1125,12 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
             filename={getBookFilename(selectedBook)}
           />
         ) : currentPage === "contact" ? (
-          <ContactPage onBack={() => handlePageChange("home")} currentLanguage={currentLanguage} />
+          <ContactPage onBack={() => handlePageChange("home")} currentLanguage={getStoredLanguage()} />
         ) : currentPage === "about" ? (
           <AboutPage
             onBack={() => handlePageChange("home")}
             onCategorySelect={handleCategorySelect}
-            currentLanguage={currentLanguage}
+            currentLanguage={getStoredLanguage()}
           />
         ) : (
           // Landing Page - FIXED TO USE useMemo filteredBooks
@@ -1249,7 +1251,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                                  trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
                                    handleBookSelect(book)
                                   } }>
-                                       <BookCard cover={CoverImg} cat={book.category} title={getBookTitle(book)} description={'This is a testing description to check to see if the book is oke.'}
+                                       <BookCard key={index} cover={CoverImg} cat={book.category} title={getBookTitle(book)} description={'This is a testing description to check to see if the book is oke.'}
                                         isFeatured={isFeatured} author={getBookAuthor(book)}/>           
 
                             </div>
@@ -1459,7 +1461,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                   {/* Language Dropdown */}
                   <div className="flex relative">
                     <select
-                      value={currentLanguage}
+                      value={getStoredLanguage()}
                       onChange={(e) => handleLanguageChange(e.target.value as keyof typeof languageConfig)}
                       className="appearance-none bg-white border border-gray-200 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:border-gray-500 min-w-[120px]"
                     >

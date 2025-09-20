@@ -97,14 +97,136 @@ const BookReader = ({
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
 
-
+    //APP LANG
+const LANGUAGE_KEY = 'DM_def_lang';
   //SET PAGE DIRECTION
- const [isRTL, setIsRTL] = useState(false);
+ 
 
-  useEffect(() => {
-    const dir = document.documentElement.getAttribute('dir');
-    setIsRTL(dir === 'rtl');
-  }, []);
+    const getStoredLanguage = () => {
+      const lang = localStorage.getItem(LANGUAGE_KEY);
+      return lang || 'english'; // default to English if not found
+    };
+
+
+   // Language configurations with translations
+  const languageConfig = {
+    arabic: {
+      code: "ar",
+      name: "العربية",
+      translations: {
+        //OTHER TRANSLATIONS
+        next: "التالي",
+        page: "الصحيفة",
+        of: "من",
+        previous: "السابقة",
+        first: "الأولى",
+        last: "الأخيرة",
+        chapter: "الفصل",
+      },
+    },
+    english: {
+      code: "en",
+      name: "English",
+      translations: {
+        //OTHER TRANSLATIONS
+        next: "Next",
+        page: "Page",
+        of: "of",
+        previous: "Previous",
+        first: "First",
+        last: "Last",
+        chapter: "Chapter",
+      },
+    },
+    spanish: {
+      code: "es",
+      name: "Español",
+      translations: {
+        // OTRAS TRADUCCIONES
+        next: "Siguiente",
+        page: "Página",
+        of: "de",
+        previous: "Anterior",
+        first: "Primera",
+        last: "Última",
+        chapter: "Capítulo",
+      },
+    },
+    german: {
+      code: "de",
+      name: "Deutsch",
+      translations: {
+        // ANDERE ÜBERSETZUNGEN
+        next: "Weiter",
+        page: "Seite",
+        of: "von",
+        previous: "Zurück",
+        first: "Erste",
+        last: "Letzte",
+        chapter: "Kapitel",
+      },
+    },
+    portuguese: {
+      code: "pt",
+      name: "Português",
+      translations: {
+        // OUTRAS TRADUÇÕES
+        next: "Seguinte",
+        page: "Página",
+        of: "de",
+        previous: "Anterior",
+        first: "Primeira",
+        last: "Última",
+        chapter: "Capítulo",
+      },
+    },
+    urdu: {
+      code: "ur",
+      name: "اردو",
+      translations: {
+        // دیگر تراجم
+        next: "اگلا",
+        page: "صفحہ",
+        of: "کا",
+        previous: "پچھلا",
+        first: "پہلا",
+        last: "آخری",
+        chapter: "باب",
+      },
+    },
+    turkish: {
+      code: "tr",
+      name: "Türkçe",
+      translations: {
+        // DİĞER ÇEVİRİLER
+        next: "İleri",
+        page: "Sayfa",
+        of: "üzerinden",
+        previous: "Geri",
+        first: "İlk",
+        last: "Son",
+        chapter: "Bölüm",
+      },
+    },
+    bahasa: {
+      code: "id",
+      name: "Bahasa",
+      translations: {
+        // TERJEMAHAN LAIN
+        next: "Berikutnya",
+        page: "Halaman",
+        of: "dari",
+        previous: "Sebelumnya",
+        first: "Pertama",
+        last: "Terakhir",
+        chapter: "Bab",
+      },
+    },
+  }
+
+
+  // Get current translations
+  const t = languageConfig[getStoredLanguage()].translations
 
 
   const minSwipeDistance = 50
@@ -755,14 +877,14 @@ const BookReader = ({
             onClick={handleCloseReader}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
           >
-            { isRTL ? <CircleArrowLeft className="w-5 h-5" /> : <CircleArrowLeft className="w-5 h-5" /> }
+            { getStoredLanguage() == 'arabic' || getStoredLanguage() == 'urdu' ? <CircleArrowRight className="w-5 h-5" /> : <CircleArrowLeft className="w-5 h-5" /> }
            </button>
 
 
             <div className="book-g-info flex gap-2 items-center">
                       {/* Book Title */}
                     <div className="text-start mt-2 pe-3 border-e border-gray-600">
-                      <h2 className="font-semibold text-gray-700 text-sm md:text-base truncate">
+                      <h2 className="font-semibold text-gray-700 text-sm md:text-base truncate w-[160px] sm:w-auto">
                         {showArabic ? book.title_ar : book.title_en}
                       </h2>
                       <p className="text-xs text-gray-500 truncate">
@@ -1018,7 +1140,7 @@ const BookReader = ({
               className="px-3 py-1 text-sm hover:bg-gray-100 rounded transition-colors"
               disabled={currentPage <= 0}
             >
-              First
+              {t.first}
             </button>
 
             <button
@@ -1026,7 +1148,7 @@ const BookReader = ({
               className="px-3 py-1 text-sm hover:bg-gray-100 rounded transition-colors"
               disabled={currentPage <= 0}
             >
-              Previous
+              {t.previous}
             </button>
 
             {/* Enhanced Draggable Progress Bar */}
@@ -1057,7 +1179,7 @@ const BookReader = ({
               className="px-3 py-1 text-sm hover:bg-gray-100 rounded transition-colors"
               disabled={currentPage >= totalPages - 1}
             >
-              Next
+              {t.next}
             </button>
 
             <button
@@ -1065,7 +1187,7 @@ const BookReader = ({
               className="px-3 py-1 text-sm hover:bg-gray-100 rounded transition-colors"
               disabled={currentPage >= totalPages - 1}
             >
-              Last
+              {t.last}
             </button>
           </div>
 
@@ -1074,11 +1196,12 @@ const BookReader = ({
             <DmAlert
               type="info"
               message="Swipe left/right or use arrow keys to navigate • Press M for magnifier • Hover over Arabic words for translation."
+              
             />
 
           {/* Manual Page Input */}
           <div className="hidden md:flex flex items-center justify-center space-x-3">
-            <span className="text-sm text-gray-600">Page:</span>
+            <span className="text-sm text-gray-600">{t.page}:</span>
             <div className="flex items-center space-x-2">
               <input
                 type="number"
@@ -1096,7 +1219,7 @@ const BookReader = ({
                 className="w-16 px-2 py-1 text-sm text-center border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                 placeholder="1"
               />
-              <span className="text-sm text-gray-500">of {totalPages}</span>
+              <span className="text-sm text-gray-500">{t.of} {totalPages}</span>
             </div>
             <button
               onClick={handleGoToPage}
@@ -1109,7 +1232,7 @@ const BookReader = ({
           {/* Chapter Info and Controls */}
           <div className="hidden md:flex text-center text-xs text-gray-500">
             <div>
-              Chapter {currentPage + 1} of {totalPages} •
+              Chapter {currentPage + 1} {t.of} {totalPages} •
                {chapters[currentPage]?.title || "Loading..."}
             </div>
 

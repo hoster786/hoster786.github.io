@@ -477,32 +477,32 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
   }
 
   return (
-    <div className="min-h-screen bg-amber-50 flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Main Content */}
       <div className="flex-1 p-4 md:p-8">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-600 text-white rounded-full mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-900 text-white rounded-full mb-6">
               <BookOpen className="w-10 h-10" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">{t.aboutDeenMastery}</h2>
-            <p className="text-xl text-amber-700 mb-6 max-w-4xl mx-auto leading-relaxed">{t.panLingualLibrary}</p>
+            <p className="text-md text-gray-900 mb-6 max-w-4xl mx-auto leading-relaxed">{t.panLingualLibrary}</p>
           </div>
 
           {/* Main Description */}
-          <div className="bg-white rounded-lg shadow-sm border border-amber-200 p-8 mb-12">
-            <p className="text-gray-700 leading-relaxed mb-6">{t.shamela}</p>
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-12">
+            <p className="text-gray-900 text-lg font-bold leading-relaxed mb-6">{t.shamela}</p>
 
             {/* Language Support - NO SWITCHING */}
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-amber-900 mb-4 flex items-center">
-                <Languages className="w-5 h-5 mr-2" />
+                <Languages className="w-5 h-5 me-2" />
                 {t.supportedLanguages}
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {t.languageList.map((lang, index) => (
-                  <div key={index} className="px-3 py-2 rounded-lg text-center font-medium bg-amber-50 text-amber-800">
+                  <div key={index} className="px-3 py-2 rounded-lg text-center font-medium bg-gray-50 text-gray-800">
                     {lang}
                   </div>
                 ))}
@@ -512,29 +512,32 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
             <p className="text-gray-700 leading-relaxed mb-6">{t.legacy}</p>
 
             {/* Target Audience */}
-            <div className="bg-amber-50 rounded-lg p-6 mb-6">
-              <h4 className="font-semibold text-amber-900 mb-4">{t.whetherYouAre}</h4>
-              <ul className="space-y-3 text-gray-700">
+            <div className="bg-white rounded-lg p-6 mb-6 text-start">
+              <h4 className="font-bold text-gray-900 ms-4 mb-4">{t.whetherYouAre}</h4>
+              <ul className="space-y-3 text-gray-700 p-0 m-0">
                 <li className="flex items-start">
-                  <Heart className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <Heart className="w-5 h-5 text-gray-600 mr-3 mt-0.5 flex-shrink-0" />
+                  &nbsp;
                   <span>{t.parent}</span>
                 </li>
                 <li className="flex items-start">
-                  <Award className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <Award className="w-5 h-5 text-gray-600 mr-3 mt-0.5 flex-shrink-0" />
+                    &nbsp;
                   <span>{t.academic}</span>
                 </li>
                 <li className="flex items-start">
-                  <Target className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <Target className="w-5 h-5 text-gray-600 mr-3 mt-0.5 flex-shrink-0" />
+                    &nbsp;
                   <span>{t.learner}</span>
                 </li>
               </ul>
-              <p className="mt-4 font-bold text-amber-900">{t.designedForYou}</p>
+              <p className="mt-6 ms-4 font-bold text-gray-900">{t.designedForYou}</p>
             </div>
           </div>
 
           {/* Quality & Accuracy Section */}
           <div className="mb-12">
-            <Card className="border-amber-200">
+            <Card className="border-gray-200">
               <CardHeader>
                 <CardTitle className="text-amber-900 flex items-center text-2xl">
                   <Shield className="w-6 h-6 mr-3" />
@@ -542,9 +545,9 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-gray-700 leading-relaxed">{t.currentDevelopment}</p>
+                <p className="text-gray-700 text-start leading-relaxed">{t.currentDevelopment}</p>
 
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <div className="bg-green-50 border border-green-200 text-start rounded-lg p-4">
                   <div className="flex items-center mb-2">
                     <Zap className="w-5 h-5 text-green-600 mr-2" />
                     <span className="font-semibold text-green-800">{t.currentAccuracy}</span>
@@ -552,26 +555,29 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
                   <p className="text-green-700 text-sm">{t.hallucinations}</p>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3 text-start">
                   <h4 className="font-semibold text-gray-900">{t.knownIssues}</h4>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-amber-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                       &nbsp;
                       <span>{t.issue1}</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-amber-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      &nbsp;
                       <span>{t.issue2}</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-amber-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                       &nbsp;
                       <span>{t.issue3}</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                  <p className="text-amber-800 leading-relaxed">{t.patience}</p>
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-start">
+                  <p className="text-gray-800 leading-relaxed">{t.patience}</p>
                 </div>
               </CardContent>
             </Card>
@@ -581,30 +587,30 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
           <div className="mb-12">
             <h3 className="text-3xl font-bold text-amber-900 mb-8 text-center">{t.whatMakesDifferent}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="border-amber-200 text-center">
+              <Card className="border-gray-200 text-center">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Globe className="w-6 h-6 text-amber-600" />
+                  <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Globe className="w-6 h-6 text-gray-600" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">{t.panLingualAccess}</h4>
                   <p className="text-gray-600 text-sm">{t.breakingBarriers}</p>
                 </CardContent>
               </Card>
 
-              <Card className="border-amber-200 text-center">
+              <Card className="border-gray-200 text-center">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-6 h-6 text-amber-600" />
+                  <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-6 h-6 text-gray-600" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">{t.externallyValidated}</h4>
                   <p className="text-gray-600 text-sm">{t.rigorousValidation}</p>
                 </CardContent>
               </Card>
 
-              <Card className="border-amber-200 text-center">
+              <Card className="border-gray-200 text-center">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-6 h-6 text-amber-600" />
+                  <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-6 h-6 text-gray-600" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">{t.forAllLevels}</h4>
                   <p className="text-gray-600 text-sm">{t.beginnersToScholars}</p>
@@ -630,7 +636,7 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
                 <button
                   key={category}
                   onClick={() => handleCategoryClick(category)}
-                  className="bg-white border border-amber-200 p-3 rounded-lg hover:bg-amber-50 hover:border-amber-300 transition-colors text-amber-800 font-medium text-sm"
+                  className="bg-white border border-gray-200 p-3 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-colors text-gray-800 font-medium text-sm"
                 >
                   {category}
                 </button>
@@ -639,33 +645,33 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
           </div>
 
           {/* Technology Section */}
-          <div className="bg-white rounded-lg shadow-sm border border-amber-200 p-8 mb-12">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-12">
             <h3 className="text-2xl font-bold text-amber-900 mb-6 text-center flex items-center justify-center">
               <Zap className="w-6 h-6 mr-3" />
               {t.poweredByAI}
             </h3>
             <p className="text-gray-700 text-center mb-6 leading-relaxed">{t.aiDescription}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="p-4 bg-amber-50 rounded-lg">
-                <div className="font-semibold text-amber-900 mb-1">{t.contextualUnderstanding}</div>
-                <div className="text-sm text-amber-700">{t.advancedComprehension}</div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <div className="font-semibold text-gray-900 mb-1">{t.contextualUnderstanding}</div>
+                <div className="text-sm text-gray-700">{t.advancedComprehension}</div>
               </div>
-              <div className="p-4 bg-amber-50 rounded-lg">
-                <div className="font-semibold text-amber-900 mb-1">{t.continuousLearning}</div>
-                <div className="text-sm text-amber-700">{t.improvingModels}</div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <div className="font-semibold text-gray-900 mb-1">{t.continuousLearning}</div>
+                <div className="text-sm text-gray-700">{t.improvingModels}</div>
               </div>
-              <div className="p-4 bg-amber-50 rounded-lg">
-                <div className="font-semibold text-amber-900 mb-1">{t.qualityAssurance}</div>
-                <div className="text-sm text-amber-700">{t.multiLayerValidation}</div>
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <div className="font-semibold text-gray-900 mb-1">{t.qualityAssurance}</div>
+                <div className="text-sm text-gray-700">{t.multiLayerValidation}</div>
               </div>
             </div>
           </div>
 
           {/* Call to Action */}
-          <div className="text-center bg-amber-100 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-amber-900 mb-4">{t.joinMission}</h3>
-            <p className="text-amber-800 mb-6 max-w-2xl mx-auto">{t.helpDemocratize}</p>
-            <Button onClick={onBack} className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
+          <div className="text-center bg-gray-100 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.joinMission}</h3>
+            <p className="text-gray-800 mb-6 max-w-2xl mx-auto">{t.helpDemocratize}</p>
+            <Button onClick={onBack} className="bg-amber-900 hover:bg-gray-700 text-white px-8 py-3">
               {t.exploreLibrary}
             </Button>
           </div>

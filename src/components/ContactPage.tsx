@@ -454,31 +454,31 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
   }
 
   return (
-    <div className="min-h-screen bg-amber-50 flex flex-col" dir={isRTL ? "rtl" : "ltr"}>
+    <div className="min-h-screen bg-white flex flex-col" dir={isRTL ? "rtl" : "ltr"}>
       {/* Main Content */}
       <div className="flex-1 p-4 md:p-8">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-600 text-white rounded-full mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-900 text-white rounded-full mb-6">
               <Mail className="w-10 h-10" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">{t.getInTouch}</h2>
-            <p className="text-xl text-amber-700 mb-6 max-w-3xl mx-auto leading-relaxed">{t.contactDescription}</p>
+            <p className="text-md text-gray-900 mb-6 max-w-3xl mx-auto leading-relaxed">{t.contactDescription}</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <Card className="border-amber-200">
+              <Card className="border-gray-200">
                 <CardHeader>
                   <CardTitle className="text-amber-900 flex items-center text-2xl">
-                    <MessageSquare className="w-6 h-6 mr-3" />
+                    <MessageSquare className="w-6 h-6 ms-3" />
                     {t.sendMessage}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6 text-start">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -491,7 +491,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="border-amber-200 focus:border-amber-500"
+                          className="border-gray-200 focus:gray-amber-500"
                           placeholder={t.fullNamePlaceholder}
                           dir={isRTL ? "rtl" : "ltr"}
                         />
@@ -507,8 +507,8 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="border-amber-200 focus:border-amber-500"
-                          placeholder={t.emailPlaceholder}
+                          className="border-gray-200 text-end focus:border-gray-500"
+                          placeholder={t.emailAddress}
                           dir="ltr"
                         />
                       </div>
@@ -525,7 +525,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
                         required
                         value={formData.subject}
                         onChange={handleInputChange}
-                        className="border-amber-200 focus:border-amber-500"
+                        className="border-gray-200 focus:border-gray-500"
                         placeholder={t.subjectPlaceholder}
                         dir={isRTL ? "rtl" : "ltr"}
                       />
@@ -542,7 +542,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
                         rows={6}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="border-amber-200 focus:border-amber-500"
+                        className="border-gray-200 focus:border-gray-500"
                         placeholder={t.messagePlaceholder}
                         dir={isRTL ? "rtl" : "ltr"}
                       />
@@ -563,7 +563,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3"
+                      className="w-full bg-amber-900 hover:bg-amber-800 text-white py-3"
                     >
                       {isSubmitting ? (
                         <>
@@ -585,7 +585,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
             {/* Contact Information */}
             <div className="space-y-6">
               {/* Language Selection */}
-              <Card className="border-amber-200">
+              <Card className="border-gray-200">
                 <CardHeader>
                   <CardTitle className="text-amber-900 flex items-center text-xl">
                     <Globe className="w-5 h-5 mr-3" />
@@ -603,14 +603,14 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
                       { key: "turkish", name: "Türkçe" },
                       { key: "bahasa", name: "Bahasa" },
                       { key: "arabic", name: "العربية" },
-                    ].map((lang) => (
+                    ].map((lang , index) => (
                       <button
-                        key={lang.key}
+                        key={index}
                         onClick={() => handleLanguageClick(lang.key)}
                         className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                           currentLanguage === lang.key
-                            ? "bg-amber-600 text-white"
-                            : "bg-amber-50 text-amber-800 hover:bg-amber-100"
+                            ? "bg-amber-900 text-white"
+                            : "bg-gray-50 text-gray-800 hover:bg-gray-100"
                         }`}
                       >
                         {lang.name}
@@ -621,16 +621,16 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
               </Card>
 
               {/* Contact Details */}
-              <Card className="border-amber-200">
+              <Card className="border-gray-200 text-start">
                 <CardHeader>
                   <CardTitle className="text-amber-900 flex items-center text-xl">
-                    <Phone className="w-5 h-5 mr-3" />
+                    <Phone className="w-5 h-5 ms-0" /> &nbsp;
                     {t.contactInformation}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <Mail className="w-5 h-5 text-amber-600 mt-1 flex-shrink-0" />
+                    <Mail className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0 pe-1" />
                     <div>
                       <p className="font-medium text-gray-900">{t.email}</p>
                       <p className="text-gray-600">{t.emailContact}</p>
@@ -639,7 +639,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Clock className="w-5 h-5 text-amber-600 mt-1 flex-shrink-0" />
+                    <Clock className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0 pe-1" />
                     <div>
                       <p className="font-medium text-gray-900">{t.responseTime}</p>
                       <p className="text-gray-600">{t.responseTimeDetails}</p>
@@ -648,7 +648,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Globe className="w-5 h-5 text-amber-600 mt-1 flex-shrink-0" />
+                    <Globe className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0 pe-1" />
                     <div>
                       <p className="font-medium text-gray-900">{t.languages}</p>
                       <p className="text-gray-600">{t.languagesList}</p>
@@ -659,7 +659,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
               </Card>
 
               {/* FAQ Section */}
-              <Card className="border-amber-200">
+              <Card className="border-gray-200 text-start">
                 <CardHeader>
                   <CardTitle className="text-amber-900 text-xl">{t.faq}</CardTitle>
                 </CardHeader>
@@ -687,26 +687,26 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
               </Card>
 
               {/* Social Media */}
-              <Card className="border-amber-200">
+              <Card className="border-gray-200">
                 <CardHeader>
-                  <CardTitle className="text-amber-900 text-xl">{t.followUs}</CardTitle>
+                  <CardTitle className="text-amber-900 text-xl text-start">{t.followUs}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
-                      <Facebook className="w-6 h-6 text-white" />
+                  <div className="flex gap-2 mb-4">
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer">
+                      <Facebook className="w-6 h-6 text-gray-900" />
                     </div>
-                    <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors">
-                      <Youtube className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer">
+                      <Youtube className="w-6 h-6 text-gray-900" />
                     </div>
-                    <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-800 transition-colors">
-                      <Twitter className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer">
+                      <Twitter className="w-6 h-6 text-gray-900" />
                     </div>
-                    <div className="w-12 h-12 bg-sky-500 rounded-lg flex items-center justify-center cursor-pointer hover:bg-sky-600 transition-colors">
-                      <span className="text-white font-bold">☁</span>
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center cursor-pointer">
+                      <span className=" text-gray-900 font-bold">☁</span>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600">{t.socialMediaDescription}</p>
+                  <p className="text-sm text-gray-600 text-start">{t.socialMediaDescription}</p>
                 </CardContent>
               </Card>
             </div>
