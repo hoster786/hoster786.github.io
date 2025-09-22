@@ -1,0 +1,54 @@
+[
+  {
+    "title_ar": "الورقة النحوية",
+    "author_ar": "حازم خنفر",
+    "title_tr": "al-urqah al-nahwiyah",
+    "author_tr": "Hâzim Khnafir",
+    "filename_tr": "Buku Gramatika - Hazem Khneffer.epub",
+    "filename_ar": "الورقة-النحوية_حازم-خنفر.epub",
+    "id": "الورقة-النحوية_حازم-خنفر",
+    "type": "epub",
+    "source": "url",
+    "category": "النحو والصرف",
+    "featured": false
+  },
+  {
+    "title_ar": "الكلام على حديث الإستلقاء لأبي موسى المديني - مخطوط (ن)",
+    "author_ar": "المديني، أبو موسى",
+    "title_tr": "Pembicaraan tentang Hadits Istilqah oleh Abu Musa al-Madini - Naskhah Tangan (N)",
+    "author_tr": "Al-Mudayni, Abu Musa",
+    "filename_tr": "Pembahasan mengenai hadis tentang tiduran oleh Abu Musa al-Madini - Naskah tangan (N) -- Madini, Abu Musa.epub",
+    "filename_ar": "الكلام-على-حديث-الإستلقاء-لأبي-موسى-المديني_مخطوط-ن_المديني-أبو-موسى.epub",
+    "id": "الكلام-على-حديث-الإستلقاء-لأبي-موسى-المديني_مخطوط-ن_المديني-أبو-موسى",
+    "type": "epub",
+    "source": "url",
+    "category": "مخطوطات حديثية",
+    "featured": false
+  },
+  {
+    "title_ar": "حديث المصافحة للسلفي",
+    "author_ar": "أبو طاهر السلفي",
+    "title_tr": "Hadits Salam Pemeliharaan",
+    "author_tr": "Abu Tahir Al-Salafi",
+    "filename_tr": "Cerita Salam Dengan Menggenggam Tangan untuk Salfiyah - Abu Thahir as-Salafi.epub",
+    "filename_ar": "حديث-المصافحة-للسلفي_أبو-طاهر-السلفي.epub",
+    "id": "حديث-المصافحة-للسلفي_أبو-طاهر-السلفي",
+    "type": "epub",
+    "source": "url",
+    "category": "الأجزاء الحديثية",
+    "featured": false
+  },
+  {
+    "title_ar": "التبري من معرة المعري",
+    "author_ar": "السيوطي",
+    "title_tr": "Menyatakan bebas dari malu yang ditimbulkan oleh al-Ma'arri.",
+    "author_tr": "Al-Siyooti",
+    "filename_tr": "Pengampunan dari Malu al-Ma'arri - asy-Sya'utiy. epub",
+    "filename_ar": "التبري-من-معرة-المعري_السيوطي.epub",
+    "id": "التبري-من-معرة-المعري_السيوطي",
+    "type": "epub",
+    "source": "url",
+    "category": "الأدب والبلاغة",
+    "featured": false
+  }
+]
