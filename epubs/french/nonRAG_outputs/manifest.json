@@ -1,0 +1,58 @@
+[
+  {
+    "title_ar": "الورقة النحوية",
+    "author_ar": "حازم خنفر",
+    "title_en": "Grammatical sheet",
+    "author_en": "Hâzim Khnafir",
+    "filename_en": "Grammatical sheet - Hazem Khnifer.epub",
+    "filename_ar": "الورقة-النحوية_حازم-خنفر.epub",
+    "coverText": "Adventure",
+    "id": "الورقة-النحوية_حازم-خنفر",
+    "type": "epub",
+    "source": "url",
+    "category": "النحو والصرف",
+    "featured": false
+  },
+  {
+    "title_ar": "الكلام على حديث الإستلقاء لأبي موسى المديني - مخطوط (ن)",
+    "author_ar": "المديني، أبو موسى",
+    "title_en": "La parole sur le hadith d'Al-Istilqâ 'pour Abou Moussa Al-Medini - Manuscrit (N)",
+    "author_en": "Al-Madini, Abu Musa",
+    "filename_en": "Le discours sur le hadith de l'extase d'Abu Moussa al-Medini - Manuscrit (N) — Al-Medini, Abu Moussa.",
+    "filename_ar": "الكلام-على-حديث-الإستلقاء-لأبي-موسى-المديني_مخطوط-ن_المديني-أبو-موسى.epub",
+    "coverText": "Adventure",
+    "id": "الكلام-على-حديث-الإستلقاء-لأبي-موسى-المديني_مخطوط-ن_المديني-أبو-موسى",
+    "type": "epub",
+    "source": "url",
+    "category": "مخطوطات حديثية",
+    "featured": false
+  },
+  {
+    "title_ar": "حديث المصافحة للسلفي",
+    "author_ar": "أبو طاهر السلفي",
+    "title_en": "Hadith de la poignée de main pour le Salafi",
+    "author_en": "Abu Ta'hir as-Salafi",
+    "filename_en": "Hadith de la poignée de main du Salafiyya - Abu Tahir al-Salafiyy",
+    "filename_ar": "حديث-المصافحة-للسلفي_أبو-طاهر-السلفي.epub",
+    "coverText": "Adventure",
+    "id": "حديث-المصافحة-للسلفي_أبو-طاهر-السلفي",
+    "type": "epub",
+    "source": "url",
+    "category": "الأجزاء الحديثية",
+    "featured": false
+  },
+  {
+    "title_ar": "التبري من معرة المعري",
+    "author_ar": "السيوطي",
+    "title_en": "L'exonération de la honte de l'ignorance",
+    "author_en": "Al-Suyūṭī",
+    "filename_en": "L'édition de Tibrî d'Al-Ma'arri, par As-Suyûtî. .epub",
+    "filename_ar": "التبري-من-معرة-المعري_السيوطي.epub",
+    "coverText": "Adventure",
+    "id": "التبري-من-معرة-المعري_السيوطي",
+    "type": "epub",
+    "source": "url",
+    "category": "الأدب والبلاغة",
+    "featured": false
+  }
+]
