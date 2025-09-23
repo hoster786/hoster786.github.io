@@ -13,6 +13,8 @@ import BookCard from "@/components/common/BookCard"
 //TEST IMAGE COVER
 import CoverImg from "./../../assets/book.jpg";
 
+
+
 interface Book {
   title_ar: string
   author_ar: string
@@ -30,6 +32,9 @@ interface Book {
   author_tr?: string
   title_id?: string
   author_id?: string
+  cover?: string
+  description_ar?: string
+  description_en?: string
   filename: string
   filename_ar?: string
   filename_en?: string
@@ -381,7 +386,7 @@ const Index = () => {
     const script1 = document.createElement("script")
     script1.async = true
     // TO ADD GOOGLE Analytics  REPLACE G-XXXXXXXXXX WITH YOUR live Measurement ID
-    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=GTM-5T55452N"
     document.head.appendChild(script1)
 
     const script2 = document.createElement("script")
@@ -391,7 +396,7 @@ const Index = () => {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX', { 
+      gtag('config', 'GTM-5T55452N', { 
         page_title: 'Deen Mastery Library',
         page_location: window.location.href,
         custom_map: {
@@ -510,6 +515,9 @@ const Index = () => {
           title_ur: book.title_ur || book.title_ar,
           author_ur: book.author_ur || book.author_ar,
           title_tr: book.title_tr || book.title_en || book.title_ar,
+          cover: book.cover,
+          description_ar: book.description_ar || "",
+          description_en: book.description_en || "",
           author_tr: book.author_tr || book.author_en || book.author_ar,
           title_id: book.title_id || book.title_en || book.title_ar,
           author_id: book.author_id || book.author_en || book.author_ar,
@@ -616,7 +624,7 @@ const Index = () => {
 
   // Get book title and author based on current language
   const getBookTitle = (book: Book) => {
-    switch (currentLanguage) {
+    switch (getStoredLanguage()) {
       case "arabic":
         return book.title_ar
       case "english":
@@ -639,7 +647,7 @@ const Index = () => {
   }
 
   const getBookAuthor = (book: Book) => {
-    switch (currentLanguage) {
+    switch (getStoredLanguage()) {
       case "arabic":
         return book.author_ar
       case "english":
@@ -662,7 +670,7 @@ const Index = () => {
   }
 
   const getBookFilename = (book: Book) => {
-    switch (currentLanguage) {
+    switch (getStoredLanguage()) {
       case "arabic":
         return book.filename_ar || book.filename
       case "english":
@@ -683,6 +691,49 @@ const Index = () => {
         return book.filename_en || book.filename
     }
   }
+
+
+  //GET BOOK COVER
+  const getBookCover = (book:Book) => {
+    
+    const publicCoverPath = './../public/books-covers/';
+
+      if(book.cover === undefined || book.cover === null || book.cover === ''){
+          return publicCoverPath+'cover-not-found.png'; // Return default cover if none is specified
+      }else{
+        return publicCoverPath+book.cover; // Return the specified cover
+      }
+  }
+
+  //GET BOOK DESCRIPTION
+  const getBookDescription = (book:Book) => { 
+      const nullableBookValue = {
+          english: "No description available for this book yet. Please add a description.",
+          arabic: "لا يوجد وصف لهذا الكتاب حتى الآن. يرجى إضافة وصف.",
+          spanish: "No hay descripción disponible para este libro todavía. Por favor, agregue una descripción.",
+          german: "Für dieses Buch ist noch keine Beschreibung verfügbar. Bitte fügen Sie eine Beschreibung hinzu.",
+          portuguese: "Nenhuma descrição disponível para este livro ainda. Por favor, adicione uma descrição.",
+          urdu: "اس کتاب کی ابھی تک کوئی وضاحت دستیاب نہیں ہے۔ براہ کرم وضاحت شامل کریں۔",
+          turkish: "Bu kitap için henüz açıklama yok. Lütfen bir açıklama ekleyin.",
+          bahasa: "Belum ada deskripsi untuk buku ini. Silakan tambahkan deskripsi.",
+      }
+
+      if(book.description_en === undefined || book.description_en === null || book.description_en === ''){
+          return nullableBookValue[getStoredLanguage() as keyof typeof nullableBookValue]; // Return default message if none is specified
+      }else{
+                switch (getStoredLanguage()) {
+                  case "arabic":
+                   return book.description_ar
+                  case "english":
+                    return book.description_en
+                }
+      }
+ 
+
+ 
+
+  }
+      
 
   // ROBUST FILTERING USING useMemo - This ensures the filtering always works
   const filteredBooks = useMemo(() => {
@@ -1251,8 +1302,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                                  trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
                                    handleBookSelect(book)
                                   } }>
-                                       <BookCard key={index} cover={CoverImg} cat={book.category} title={getBookTitle(book)} description={'This is a testing description to check to see if the book is oke.'}
-                                        isFeatured={isFeatured} author={getBookAuthor(book)}/>           
+                                       <BookCard key={index} cover={getBookCover(book)} cat={book.category} title={getBookTitle(book)} description={getBookDescription(book)}
+                                        isFeatured={isFeatured} author={getBookAuthor(book)} translations={t}/>           
 
                             </div>
 
