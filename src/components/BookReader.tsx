@@ -375,6 +375,18 @@ const LANGUAGE_KEY = 'DM_def_lang';
     onClose()
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
   // Load word translations - Enhanced with extended translations
   useEffect(() => {
     const loadWordTranslations = async () => {
@@ -544,9 +556,12 @@ const LANGUAGE_KEY = 'DM_def_lang';
 
         // Use the provided filename or fallback to book filename
         const epubFilename = filename || book.filename
+    const epubBookUrlSegments = `/epubs/${getStoredLanguage()}/nonRAG_outputs`;
+
+    console.log("BOOK NAME $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$",`${epubBookUrlSegments}/${epubFilename}`);
 
         // Fetch the EPUB file
-        const response = await fetch(`/epubs/${epubFilename}`)
+        const response = await fetch(`${epubBookUrlSegments}/${epubFilename}`)
         if (!response.ok) {
           throw new Error(`Failed to fetch EPUB file: ${response.status}. The file may be missing or corrupted.`)
         }

@@ -71,6 +71,12 @@ const getStoredLanguage = () => {
 
 
 
+  // PLAY AUDIO FILE
+  // PLAY AUDIO FILE
+  const playAudio  = () => {
+    alert('playable');
+  }
+
 
 
 
@@ -485,16 +491,21 @@ const Index = () => {
     loadFeaturedBooks()
   }, [])
 
-  // Load books from manifest.json
+   
   useEffect(() => {
+
+    const epubBookUrlSegments = `/epubs/${getStoredLanguage()}/nonRAG_outputs/manifest.json`;
+
     const loadBooks = async () => {
       try {
         setLoading(true)
         console.log("Loading books from manifest...")
         trackUserFlow("data_load_start", "library", "books_loading")
 
-        const response = await fetch("/epubs/manifest.json")
+        const response = await fetch(epubBookUrlSegments)
         if (!response.ok) {
+                  console.log("FAILED TO FETCH +++++++++++++++++++++++++++++++++++",response)
+
           throw new Error(`Failed to fetch manifest: ${response.status}`)
         }
 
