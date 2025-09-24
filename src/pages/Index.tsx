@@ -696,7 +696,7 @@ const Index = () => {
   //GET BOOK COVER
   const getBookCover = (book:Book) => {
     
-    const publicCoverPath = './../public/books-covers/';
+    const publicCoverPath = './../books-covers/';
 
       if(book.cover === undefined || book.cover === null || book.cover === ''){
           return publicCoverPath+'cover-not-found.png'; // Return default cover if none is specified
