@@ -6,6 +6,20 @@ import { useState, useEffect, useRef } from "react"
 import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X, StepBack, SkipBack, LucideDatabaseBackup, CircleArrowLeft, CircleArrowRight, EyeClosedIcon, CircleX } from "lucide-react"
 import DmAlert from "./common/DmAlert"
 
+
+
+
+
+    //APP LANG
+const LANGUAGE_KEY = 'DM_def_lang';
+  //SET PAGE DIRECTION
+ 
+
+    const getStoredLanguage = () => {
+      const lang = localStorage.getItem(LANGUAGE_KEY);
+      return lang || 'english'; // default to English if not found
+    };
+
 interface Book {
   title_ar: string
   author_ar: string
@@ -70,7 +84,7 @@ const BookReader = ({
   showArabic = false,
   scrollPosition = 0,
   onUserAction,
-  currentLanguage = "english",
+  currentLanguage = getStoredLanguage(),
   filename,
 }: BookReaderProps) => {
   const [currentPage, setCurrentPage] = useState(0)
@@ -97,15 +111,7 @@ const BookReader = ({
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
 
 
-    //APP LANG
-const LANGUAGE_KEY = 'DM_def_lang';
-  //SET PAGE DIRECTION
- 
 
-    const getStoredLanguage = () => {
-      const lang = localStorage.getItem(LANGUAGE_KEY);
-      return lang || 'english'; // default to English if not found
-    };
 
 
    // Language configurations with translations
@@ -399,9 +405,9 @@ const LANGUAGE_KEY = 'DM_def_lang';
         }
 
         if (response.ok) {
-          const translations = await response.json()
-          setWordTranslations(translations)
-          console.log("Word translations loaded:", Object.keys(translations).length, "words")
+          const fetchedTranslations = await response.json()
+          setWordTranslations(fetchedTranslations)
+          console.log("Word translations loaded:", Object.keys(fetchedTranslations).length, "words")
         }
       } catch (error) {
         console.warn("Could not load word translations:", error)
