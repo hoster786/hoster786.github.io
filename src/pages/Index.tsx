@@ -1004,6 +1004,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
      setDirectionFromRTL(getStoredLanguage());
 
 
+     window.location.reload(); //RELOAD THE PAGE TO AVOID MANIFEST FETCHING ISSUES
    
   }
 
@@ -1313,7 +1314,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                                  trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
                                    handleBookSelect(book)
                                   } }>
-                                       <BookCard key={index} cover={getBookCover(book)} cat={book.category} title={getBookTitle(book)} description={getBookDescription(book)}
+                                       <BookCard key={index} cover={getBookCover(book)} cat={book.category} title={book.title_tr} description={getBookDescription(book)}
                                         isFeatured={isFeatured} author={getBookAuthor(book)} translations={t}/>           
 
                             </div>
