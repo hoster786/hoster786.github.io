@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useMemo } from "react"
 import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X, StepBack, SkipBack, LucideDatabaseBackup, CircleArrowLeft, CircleArrowRight, EyeClosedIcon, CircleX } from "lucide-react"
 import DmAlert from "./common/DmAlert"
 
@@ -78,6 +78,13 @@ interface WordTranslation {
   }
 }
 
+
+
+
+
+
+
+
 const BookReader = ({
   book,
   onClose,
@@ -114,6 +121,78 @@ const BookReader = ({
 
 
 
+//HIGHTLIGHT MATCHING WORDS
+//HIGHTLIGHT MATCHING WORDS
+function highlightMatches(content: string, query: string): [string, number] {
+  if (!query) return [content, 0]
+
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(content, "text/html")
+
+  let matchCount = 0
+
+  const walk = (node: Node) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent
+      if (!text) return
+
+      const escapedQuery = query.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
+      const regex = new RegExp(`(${escapedQuery})`, 'gi')
+
+      if (regex.test(text)) {
+        matchCount++
+
+        const span = document.createElement('span')
+        span.innerHTML = text.replace(regex, `<span class="bg-yellow-300 font-semibold">$1</span>`)
+        
+        if (node.parentNode) {
+          node.parentNode.replaceChild(span, node)
+        }
+      }
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes) {
+      node.childNodes.forEach(walk)
+    }
+  }
+
+  doc.body.childNodes.forEach(walk)
+
+  return [doc.body.innerHTML, matchCount]
+}
+
+
+  const [highlightedChapters, setHighlightedChapters] = useState<Chapter[]>([])
+
+const [searchQuery, setSearchQuery] = useState("")
+const [searchResultsCount, setSearchResultsCount] = useState(0)
+
+
+const currentChapter = highlightedChapters[currentPage] || { content: "", title: "" }
+
+const [highlightedContent, matchCount] = useMemo(() => {
+  return highlightMatches(currentChapter.content, searchQuery)
+}, [currentChapter.content, searchQuery])
+
+useEffect(() => {
+  if (chapters.length === 0) return
+
+  let totalMatches = 0
+
+  const updatedChapters = chapters.map((chapter) => {
+    const [highlightedContent, matchCount] = highlightMatches(chapter.content, searchQuery)
+    totalMatches += matchCount
+
+    return {
+      ...chapter,
+      content: highlightedContent,
+    }
+  })
+
+  setSearchResultsCount(totalMatches)
+  setHighlightedChapters(updatedChapters)
+}, [chapters, searchQuery])
+
+
+ 
    // Language configurations with translations
   const languageConfig = {
     arabic: {
@@ -480,26 +559,26 @@ const BookReader = ({
 
   // Word-by-word translation implementation
   useEffect(() => {
-    // const handleWordHover = (e: MouseEvent) => {
-    //   const target = e.target as HTMLElement
-    //   if (target.classList.contains("hoverable-word")) {
-    //     const word = target.getAttribute("data-word")
-    //     if (word && wordTranslations[word]) {
-    //       setHoveredWord(word)
-    //       setHoverPosition({ x: e.clientX, y: e.clientY })
-    //       onUserAction?.("word_hover", "reading", word, 0, {
-    //         translation: wordTranslations[word].translation,
-    //       })
-    //     }
-    //   }
-    // }
+    const handleWordHover = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      if (target.classList.contains("hoverable-word")) {
+        const word = target.getAttribute("data-word")
+        if (word && wordTranslations[word]) {
+          setHoveredWord(word)
+          setHoverPosition({ x: e.clientX, y: e.clientY })
+          onUserAction?.("word_hover", "reading", word, 0, {
+            translation: wordTranslations[word].translation,
+          })
+        }
+      }
+    }
 
-    // const handleWordLeave = (e: MouseEvent) => {
-    //   const target = e.target as HTMLElement
-    //   if (target.classList.contains("hoverable-word")) {
-    //     setHoveredWord(null)
-    //   }
-    // }
+    const handleWordLeave = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      if (target.classList.contains("hoverable-word")) {
+        setHoveredWord(null)
+      }
+    }
 
 
 
@@ -507,6 +586,8 @@ const BookReader = ({
     const handleWordTranslation = (e: MouseEvent) => {
           const target = e.target as HTMLElement
 
+
+           console.log("CLICKED ON WORD" , target)
 
         if (target.classList.contains("hoverable-word")) {
           setHoveredWord(null)
@@ -669,13 +750,13 @@ const BookReader = ({
               .trim()
 
             // Add word hover functionality for Arabic text (word-by-word translation)
-            if (showArabic) {
+          
               cleanContent = cleanContent.replace(
                 /[\u0600-\u06FF\u0750-\u077F]+/g,
                 (match) =>
                   `<span class="hoverable-word cursor-pointer hover:bg-yellow-200 hover:shadow-sm transition-all duration-200 px-1 rounded" data-word="${match}" style="line-height: 1.6;">${match}</span>`,
               )
-            }
+          
 
             if (cleanContent) {
               extractedChapters.push({
@@ -891,6 +972,20 @@ const BookReader = ({
 
   return (
     <div className="fixed inset-0 bg-gray-900 z-50 flex flex-col">
+
+    <div className="fixed top-20 left-10 z-20">
+      <input
+        type="text"
+        placeholder="Search in book..."
+        className="border p-2 rounded w-[300px] mt-4"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+      {searchResultsCount > 0 && (
+        <p className="text-sm text-gray-600 mt-1">{searchResultsCount} result(s) found</p>
+      )}
+    </div>
+
       {/* Header with Page Display */}
       <div className="bg-white shadow-lg border-b border-gray-200 p-4">
         <div className="flex items-center justify-between">
@@ -1040,17 +1135,17 @@ const BookReader = ({
                         fontFamily: showArabic ? "'Amiri', 'Noto Sans Arabic', Arial, sans-serif" : "Georgia, serif",
                         lineHeight: "1.8",
                       }}
-                      key={`chapter-${currentPage}-${zoom}`} // Force re-render when page or zoom changes
-                      dangerouslySetInnerHTML={{
-                        __html: chapters[currentPage]?.content || "",
-                      }}
-                    />
+                  key={`chapter-${currentPage}-${zoom}-${searchQuery}`} // Add searchQuery to force re-render on match
+                  dangerouslySetInnerHTML={{
+                    __html: currentChapter.content,
+                  }}
+        />
                   </div>
                 )}
               </div>
             </div>
           )}
-
+ 
           {/* Enhanced Working Magnifier for ALL pages */}
           {magnifierActive && (
             <div

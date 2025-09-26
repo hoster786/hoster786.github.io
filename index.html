@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+ 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/lovable-uploads/92c79d95-bbb5-40d0-9b0f-37bccec10dcd.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -110,8 +111,13 @@
         padding-left: 0 !important;
       }
     </style>
+
+ 
+
   </head>
   <body>
+ 
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
@@ -183,9 +189,8 @@
 
                                                                 currentAudio.play()
                                                                     .then(() => {
-                                                                        btnContainer.innerHTML = 'Stop audio';
-                                                                        console.log('Audio is playing...');
-                                                                    })
+                                                                        btnContainer.innerHTML = 'Pause';
+                                                                     })
                                                                     .catch(error => {
                                                                         console.error('Playback failed:', error);
                                                                         currentAudio = null;

@@ -33,6 +33,7 @@ interface Book {
   title_id?: string
   author_id?: string
   cover?: string
+  description?: string
   description_ar?: string
   description_en?: string
   filename: string
@@ -111,6 +112,9 @@ const Index = () => {
   const [sessionId] = useState(() => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`)
   const mainContentRef = useRef<HTMLDivElement>(null)
   const searchInputRef = useRef<HTMLInputElement>(null)
+
+
+
 
   // Language configurations with translations
   const languageConfig = {
@@ -528,7 +532,7 @@ const Index = () => {
           title_tr: book.title_tr || book.title_en || book.title_ar,
           cover: book.cover,
           description_ar: book.description_ar || "",
-          description_en: book.description_en || "",
+          description: book.description || "",
           author_tr: book.author_tr || book.author_en || book.author_ar,
           title_id: book.title_id || book.title_en || book.title_ar,
           author_id: book.author_id || book.author_en || book.author_ar,
@@ -572,6 +576,8 @@ const Index = () => {
 
 
 
+  //CURRENT PAGE INPUT
+  const [inputSetPage, setInputSetPage] = useState(currentBookPage);
 
 
 
@@ -729,15 +735,11 @@ const Index = () => {
           bahasa: "Belum ada deskripsi untuk buku ini. Silakan tambahkan deskripsi.",
       }
 
-      if(book.description_en === undefined || book.description_en === null || book.description_en === ''){
+      if(book.description === undefined || book.description === null || book.description === ''){
           return nullableBookValue[getStoredLanguage() as keyof typeof nullableBookValue]; // Return default message if none is specified
       }else{
-                switch (getStoredLanguage()) {
-                  case "arabic":
-                   return book.description_ar
-                  case "english":
-                    return book.description_en
-                }
+                   return book.description; 
+
       }
  
 
@@ -781,8 +783,8 @@ const Index = () => {
 
       result = result.filter((book) => {
         // Get current language title and author
-        const currentTitle = getBookTitle(book).toLowerCase()
-        const currentAuthor = getBookAuthor(book).toLowerCase()
+        const currentTitle = book.title_tr.toLowerCase()
+        const currentAuthor = book.author_tr.toLowerCase()
 
         // Also search in Arabic (original) title and author
         const arabicTitle = book.title_ar.toLowerCase()
@@ -1314,8 +1316,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                                  trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
                                    handleBookSelect(book)
                                   } }>
-                                       <BookCard key={index} cover={getBookCover(book)} cat={book.category} title={book.title_tr} description={getBookDescription(book)}
-                                        isFeatured={isFeatured} author={getBookAuthor(book)} translations={t}/>           
+                                       <BookCard key={index} cover={getBookCover(book)} cat={book.category} title={book.title_tr} description={book.description}
+                                        isFeatured={isFeatured} author={book.author_tr} translations={t}/>           
 
                             </div>
 
@@ -1347,7 +1349,13 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
             {/* PAGINATION CONTROLL */}
             <div className="flex justify-center mb-12 space-x-2">
               <button
-                onClick={() => setCurrentBookPage((prev) => Math.max(prev - 1, 1))}
+                onClick={() => setCurrentBookPage(
+                  (prev:number) => {
+                    setInputSetPage(Math.max(prev - 1, 1))
+                    return Math.max(prev - 1, 1)
+                  }
+
+                )}
                 disabled={currentBookPage === 1}
                 className="px-3 py-1 w-[100px] bg-amber-200 rounded disabled:opacity-50"
               >
@@ -1355,13 +1363,28 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
               </button>
 
               <span className="px-3 py-1 text-amber-700">
-                {t.page} {currentBookPage} {t.of} {Math.ceil(filteredBooks.length / booksPerPage)}
+                {t.page} 
+                  <input
+                      type="text"
+                      value={inputSetPage}
+                      onChange={ (e) => setInputSetPage(parseInt(e.target.value)) }
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          setCurrentBookPage(inputSetPage);
+                        }
+                      }}
+                      className="w-12 text-center border border-amber-400 rounded me-1 ms-1"
+                    />
+                 {t.of} {Math.ceil(filteredBooks.length / booksPerPage)}
               </span>
 
               <button
                 onClick={() =>
-                  setCurrentBookPage((prev) =>
-                    Math.min(prev + 1, Math.ceil(filteredBooks.length / booksPerPage))
+                  setCurrentBookPage(
+                    (prev) => {
+                      setInputSetPage(Math.min(prev + 1, Math.ceil(filteredBooks.length / booksPerPage)))
+                       return Math.min(prev + 1, Math.ceil(filteredBooks.length / booksPerPage))
+                    }
                   )
                 }
                 disabled={currentBookPage >= Math.ceil(filteredBooks.length / booksPerPage)}
