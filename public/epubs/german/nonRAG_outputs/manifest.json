@@ -10,7 +10,8 @@
     "type": "epub",
     "source": "url",
     "category": "النحو والصرف",
-    "featured": false
+    "featured": false,
+    "description": "This book provides an in-depth exploration of Arabic grammar, covering fundamental concepts such as parts of speech (nouns, verbs, particles), inflection types, and noun/verb states. It details plural forms, rules for imperfect verbs, and the distinction between definite and indefinite nouns, offering a thorough understanding of the language's structure."
   },
   {
     "title_ar": "الكلام على حديث الإستلقاء لأبي موسى المديني - مخطوط (ن)",
@@ -23,7 +24,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into various hadiths, providing deep insights and analysis. One section focuses on a hadith where Prophet Muhammad describes God's divine posture and forbids creatures from imitating it. A related anecdote involves Qatada squeezing Abu Sa'id's foot during a discussion about Islamic conduct based on the hadith."
   },
   {
     "title_ar": "حديث المصافحة للسلفي",
@@ -36,7 +38,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores a hadith about the importance of shaking hands within the Salafi tradition, detailing its chain of narrators to establish authenticity. It describes Prophet Muhammad's hand as soft, like leather or wool, and underscores the need for preserving such traditions accurately."
   },
   {
     "title_ar": "التبري من معرة المعري",
@@ -49,7 +52,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأدب والبلاغة",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into linguistic aspects related to dogs, addressing misunderstandings about Abu al-'Ala' al-Ma'arri's statement on seventy dog names. It includes a poem enumerating various dog names."
   },
   {
     "title_ar": "الأربعون حديثا في حق الفقراء لأبي طاهر السلفي - مخطوط (ن)",
@@ -62,7 +66,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores forty significant hadiths highlighting the poor's rights and the virtue of poverty, particularly focusing on Ahl al-Suffa. Authored by Abu Tahir al-Salafi in the 6th century AH, it traces the transmission of these teachings from Prophet Muhammad through scholars. The text begins with an invocation to Allah and includes stories about the garment of poverty, emphasizing its importance as a virtuous state."
   },
   {
     "title_ar": "مسند عثمان بن عفان لأبي القاسم البغوي",
@@ -75,7 +80,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles various hadiths and incidents related to the companion 'Uthman ibn Affan. It details his interactions with Prophet Muhammad, including prayers over a deceased person, advice against composing poetry, recommendations on using kohl for eye health, and preferring Banu Hashim due to their kinship with the Prophet. Additionally, it highlights 'Uthman's adherence to the Sunnah by following 'Umar ibn al-Khattab's practice of performing Eid prayers without adhan or iqamah."
   },
   {
     "title_ar": "الأول من الخلعيات",
@@ -88,7 +94,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the manuscript 'The Khil'ay,' exploring themes like monotheism and divine mercy. It examines hadiths and Quranic verses, emphasizing proper recitation of the testimony of faith ('There is no god but Allah') while addressing accountability and gratitude towards Allah."
   },
   {
     "title_ar": "الطبقات للنسائي",
@@ -101,7 +108,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "In 'The Layers,' an-Nasā'ī examines the various tiers of narrators and scholars involved in Hadith transmission. The book categorizes them based on their reliability and connection to authoritative sources, providing detailed insights into each scholar's contributions and positioning within these layers."
   },
   {
     "title_ar": "نواقض الإسلام",
@@ -114,7 +122,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This book explores ten key beliefs and actions that can lead a Muslim to apostasy in Islam. The author discusses each nullifier, such as associating partners with Allah, doubting polytheists' disbelief, preferring non-Islamic guidance, hating parts of the Prophet's message, mocking religious teachings, practicing magic, aiding polytheists, rejecting Sharia, and neglecting the religion. It underscores the importance of adhering to Islamic principles to maintain faith."
   },
   {
     "title_ar": "حديث العثماني للديباجي",
@@ -127,7 +136,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "[Combined description]"
   },
   {
     "title_ar": "مسلسل العيدين للصيرفي",
@@ -140,7 +150,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book, edited by Dr. Mohammed bin Turki al-Turki and introduced by Dr. Ahmed Ma'bad, focuses on a series of hadiths related to the two Eids (Eid al-Fitr and Eid al-Adha). It traces the transmission chain of these narrations through various scholars from different eras. The book is part of a collection aimed at preserving and presenting serialized hadiths for the Eids, emphasizing their importance in Islamic tradition. The text includes detailed accounts of how these hadiths were transmitted over time, highlighting the meticulous process of hadith verification and compilation."
   },
   {
     "title_ar": "الجزء الثاني من حديث أبي محمد حاجب بن أحمد الطوسي- مخطوط (ن)",
@@ -153,7 +164,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This volume collects hadiths by Abu Muhammad Hajib bin Ahmad al-Tusi, focusing on themes like gratitude, unity, Zakat, trials, and repentance. It emphasizes Islamic traditions and values through various narrations."
   },
   {
     "title_ar": "المدينة المنورة النبوية فضلها، فضل ساكنيها، زيارتها",
@@ -166,7 +178,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "In 'The Noble City of Medina,' Abu Bakr al-Jazari reveres the holy site where the Prophet established the first Islamic state. He underscores the sanctity of the city and the virtue of its people, cautioning against disrespect and urging adherence to religious guidelines."
   },
   {
     "title_ar": "نكتة الإعراب",
@@ -179,7 +192,8 @@
     "type": "epub",
     "source": "url",
     "category": "النحو والصرف",
-    "featured": false
+    "featured": false,
+    "description": "This book provides an in-depth exploration of grammatical analysis across three chapters. Chapter 1 introduces foundational concepts, while Chapter 2 examines sentence structures, including nominal, verbal, minor, and major sentences, as well as their roles in predicates and clauses. Chapter 3 focuses on adverbs, conjunctions, and particles, elucidating their grammatical rules. The text simplifies complex theories for students."
   },
   {
     "title_ar": "المنهج الشرعي في بيان حقيقة الجهاد وضوابطه",
@@ -192,7 +206,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the legal framework surrounding jihad, emphasizing adherence to Islamic principles. The authors provide fatwas addressing issues like attacks on foreign tourists and assassinations or bombings, stressing that such actions are impermissible as they harm Muslims and violate Islamic teachings. Instead, they advocate for Jihad through legitimate means, such as establishing armies and following the Prophet's teachings."
   },
   {
     "title_ar": "حديث الضب الذي تكلم بين يدي النبي للطبراني",
@@ -205,7 +220,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "حديث التقي بن المجد",
@@ -218,7 +234,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores various hadiths, their transmission chains, and Islamic teachings. It covers themes such as avoiding Prophet deification, personal hygiene, anger management for judges, and accurate knowledge conveyance."
   },
   {
     "title_ar": "حقائق حول المولد النبوي",
@@ -231,7 +248,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This book explores differing scholarly views on the birth details of Prophet Muhammad, including debates about the year, month, day, and time of his birth. It highlights historical discussions among scholars and experts while emphasizing that Muslims are not required to know the exact date but should focus on following the Prophet's teachings. The author also critiques the celebration of the Prophet's birthday as an innovation without Quranic or Sunnah basis."
   },
   {
     "title_ar": "المنظومة البيقونية",
@@ -244,7 +262,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم الحديث",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into al-Bayquni's work, focusing on hadith classification and evaluation through his poem. It outlines criteria for authentic, good, weak, and fabricated traditions, emphasizing reliable narration chains. The poem serves as a concise guide to hadith studies, aiding scholars in discerning the validity of transmissions."
   },
   {
     "title_ar": "حديثان أحدهما في فضل رجب لأبي معشر الطبري",
@@ -257,7 +276,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the virtues of the Islamic month of Rajab, delving into various hadiths that highlight special practices recommended during this time. It emphasizes fasting and specific prayers for forgiveness and blessings, underscoring Rajab's significance in Islamic tradition and its deep connection to divine mercy."
   },
   {
     "title_ar": "منتقى حديث أبي نعيم الأزهري",
@@ -270,7 +290,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This collection, edited by Muashhar bin Hasan al-Salman and published by House of Ibn Hazm in Beirut in 2001, gathers authentic Hadiths from the ninth-century Islamic scholar Abu Nu'aim al-Azdi. The book covers important themes such as avoiding debt, supporting the oppressed, the role of scholars, and fearing Allah, offering timeless guidance based on the Prophet Muhammad's teachings."
   },
   {
     "title_ar": "منهج أهل السنة والجماعة في السمع والطاعة",
@@ -283,7 +304,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the principles and practices upheld by Ahl as-Sunna wal-Jama'a, emphasizing adherence to the Sunnah in both belief and action. Ibn Baz underscores the importance of unity, stability, and loyalty to legitimate Islamic authorities, drawing on Quranic verses and Hadiths. He warns against division and dissent, advocating for a united Muslim community under lawful leadership."
   },
   {
     "title_ar": "مجلس من أمالي أبي بكر الشيرازي - مخطوط (ن)",
@@ -296,7 +318,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book is a detailed account of a manuscript containing notes from Abu Bakr al-Shirazi, a scholar from Neyshabur. It includes various sessions and narrations by different scholars, with references to hadiths and discussions on Islamic jurisprudence and faith. The manuscript also mentions the transmission of knowledge through generations, highlighting the importance of scholarly lineage in preserving religious teachings."
   },
   {
     "title_ar": "القواعد الأربع (مطبوع ضمن مؤلفات الشيخ مجمد بن عبد الوهاب، الجزء الأول)",
@@ -309,7 +332,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This book presents four key principles centered around monotheism and the rejection of polytheism. It discusses how disbelievers acknowledge Allah's creation but reject Islam, highlights the futility of seeking intercession through others besides Allah, details Prophet Muhammad's opposition to idolatry, including worship of angels, prophets, stones, and celestial bodies, and warns against modern polytheists who consistently practice shirk."
   },
   {
     "title_ar": "ترجمة مسلمة بن مخلد للمزي",
@@ -322,7 +346,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the companionship of Muslim ibn Makhlu'd al-Mazzi with Prophet Muhammad ﷺ, examining his status as a Companion or Successor. It explores his relationship with Uqba bin 'Amr and evaluates the authenticity of a hadith he transmitted regarding silk wear. The work references scholars like Ibn al-Bukhari and Imam Ahmad ibn Hanbal to support its arguments, providing a comprehensive analysis of Muslama's contributions and historical context."
   },
   {
     "title_ar": "جزء فيه ثلاثة أحاديث مسلسلة",
@@ -335,7 +360,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores three hadiths from Sa'd al-Din Abu Thahir al-Salafi's manuscript, focusing on mercy and sincerity. The first two emphasize the importance of showing mercy, highlighting that those who are merciful will receive divine mercy. The third discusses ikhlas (sincerity), tracing its meaning through scholars back to the Prophet Muhammad and a divine secret revealed by Allah."
   },
   {
     "title_ar": "منهج الدعوة والحسبة بين أهل السنة وأهل البدعة",
@@ -348,7 +374,8 @@
     "type": "epub",
     "source": "url",
     "category": "الفتاوى",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "عشرة أحاديث من الجزء المنتقى الأول والثاني من حديث الليث",
@@ -361,7 +388,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles ten hadiths attributed to Prophet Muhammad, covering various aspects of Islamic practices. It includes guidance on ritual purification, permissible perfumes during pilgrimage, managing bewitchment, seeking refuge in Allah from evil, menstruation rituals, caring for female infants, and interpreting dreams."
   },
   {
     "title_ar": "عقود الهمز",
@@ -374,7 +402,8 @@
     "type": "epub",
     "source": "url",
     "category": "النحو والصرف",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the intricate rules of hamzah in Arabic grammar, covering its various states and applications. Through detailed examples, it guides readers on how to correctly use hamzah as an opener, embedded within words, or at their end. The text emphasizes adhering to common usage for clarity and precision."
   },
   {
     "title_ar": "معنى لا إله إلا الله - محمد بن عبد الوهاب",
@@ -387,7 +416,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the Islamic principle of monotheism, exploring the concept of 'La ilaha illallah' through letters by Sheikh Muhammad bin 'Abd al-Wahhab. It emphasizes the centrality of this declaration in Islam, distinguishing true belief from disbelief. The author asserts that it involves both rejecting any other divine beings and affirming Allah's sole divinity. He warns against seeking intermediaries like saints or prophets for help, as this constitutes polytheism. The book highlights how disbelievers acknowledge Allah's lordship yet reject Him due to their worship of others alongside Him. It underscores the importance of sincere belief without intermediaries, aligning with the Prophet Muhammad's teachings and cautioning against hypocrisy."
   },
   {
     "title_ar": "خمسة أحاديث من أمالي الحافظ العراقي",
@@ -400,7 +430,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores six chapters dedicated to hadiths about prayer in Islam. It covers prayer obligations, the importance of valid excuses, proper adhan recitation, teaching children prayer at specific ages, and the number of obligatory prayers set by Allah. The authenticated hadiths emphasize their reliability through various narrators."
   },
   {
     "title_ar": "نبذ في الصيام",
@@ -413,7 +444,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the fundamentals of fasting in Islam, highlighting its significance during Ramadan. It covers obligations and exemptions for various individuals, such as adults, children, the sick, travelers, and those with specific conditions. The text also details what invalidates a fast, including eight primary invalidators and permissible actions."
   },
   {
     "title_ar": "الحسبة لابن المبرد",
@@ -426,7 +458,8 @@
     "type": "epub",
     "source": "url",
     "category": "السياسة الشرعية والقضاء",
-    "featured": false
+    "featured": false,
+    "description": "This historical text explores the trades and professions in Damascus during the tenth century AH, highlighting ethical standards and Islamic rulings to ensure accountability and integrity across all sectors."
   },
   {
     "title_ar": "الجزء 13 من حديث أبي طاهر الذهلي انتقاء الدارقطي- مخطوط (ن)",
@@ -439,7 +472,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles ten selected hadiths from Abu Tha'ir al-Dhahli's work, focusing on the Prophet's interactions with desert tribesmen, his character, and guidance on prayer and conduct. It highlights key events in Islamic history, including Uhud and companionship with 'Aishah and Abu Bakr."
   },
   {
     "title_ar": "من حديث ابن حذلم",
@@ -452,7 +486,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "تخريج مساجلة علمية",
@@ -465,7 +500,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب الألباني",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into a scholarly debate between two prominent imams, al-'Az bin 'Abd as-Salam and Ibn as-Salah, concerning the innovated prayer of ar-Raghaib. Authored by Mohammad Nasir al-Din al-Albani, it was published in Beirut in its second edition (1405 AH). The text examines various hadiths related to prayer, fasting, and their merits, some classified as weak or authentic. It underscores the importance of adhering to established religious practices and avoiding innovations."
   },
   {
     "title_ar": "أحاديث منتخبة من مشيخة ابن صصري - مخطوط (ن)",
@@ -478,7 +514,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles Hadiths from various Islamic scholars and leaders. It includes narrations on Quranic interpretation, prayer practices, the significance of intentions, and emotional themes like love and longing. The manuscript offers insights into early Islamic thought and its transmission through generations."
   },
   {
     "title_ar": "الروض الأنيق في فضل الصديق",
@@ -491,7 +528,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This section highlights Abu Bakr al-Siddiq, a prominent companion of Prophet Muhammad. It emphasizes his virtues through various hadiths, detailing his closeness to the Prophet, leadership qualities, and role in significant events like the migration (Hijra). Abu Bakr is presented as a model of faith and righteousness within Islamic tradition."
   },
   {
     "title_ar": "حديث ابن أبي المكارم",
@@ -504,7 +542,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores Islamic practices and ethics through various Hadiths. It examines themes like prayer routines, lawful and unlawful actions, and the importance of avoiding doubtful matters. Compiled from narrations passed down through generations, it emphasizes religious discipline and moral conduct."
   },
   {
     "title_ar": "ترجمة الإمام مسلم ورواة صحيحه",
@@ -517,7 +556,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "جزء يعلى بن عباد",
@@ -530,7 +570,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This compilation by Ya'la bin 'Ubad presents a collection of Hadiths and Islamic teachings. It covers essential topics such as prayer etiquette, moral conduct, supplication, and maintaining harmonious relationships. The book underscores key Islamic values including mercy, modesty, and mindfulness in worship."
   },
   {
     "title_ar": "تسمية فقهاء الأمصار",
@@ -543,7 +584,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book provides an extensive overview of prominent Islamic jurists, scholars, and companions of Prophet Muhammad (Peace Be Upon Him) from various cities like Mecca, Madinah, Kufa, Basra, Egypt, and Khurasan. It highlights the contributions of key figures such as Umar bin al-Khattab, Zaid bin Thabit, Malik ibn Anas, and Ahmad ibn Hanbal to Islamic jurisprudence and Hadith transmission. The book is organized into chapters that categorize these individuals based on their geographical origins and historical periods, offering a comprehensive understanding of the development of Islamic legal thought."
   },
   {
     "title_ar": "المورد في عمل المولد",
@@ -556,7 +598,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This book examines the Islamic practice of celebrating the Prophet Muhammad's birthday, known as mawlid. The author argues that this tradition lacks basis in the Quran and Hadith, labeling it an innovation contrary to traditional Islamic teachings. He criticizes associated activities like singing, dancing, and luxury indulgence, deeming them improper."
   },
   {
     "title_ar": "الزيادات على كتاب الكبائر للبرديجي للضياء المقدسي",
@@ -569,7 +612,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "جزء طراد بن محمد الزينبي",
@@ -582,7 +626,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book offers an extensive exploration of various narrations and hadiths from Islamic literature. It delves into details about authors, publishers, editions, and transmissions by scholars. Topics include the Messenger of Allah's characteristics, interactions, and significant events, highlighting their importance in Islamic tradition."
   },
   {
     "title_ar": "الإتباع للسيوطي",
@@ -595,7 +640,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب اللغة",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the intricacies of Arabic grammar, focusing on 'ittibaa', a linguistic tool that emphasizes following one word with another for heightened expression. It provides definitions, examples, and discussions of scholarly opinions about its function and relation to other forms of emphasis in speech."
   },
   {
     "title_ar": "من حديث البغوي وابن صاعد والهاشمي لابن زنبور الوراق",
@@ -608,7 +654,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book is a compilation of hadiths from diverse sources, structured into chapters that explore themes like modesty as a component of faith, the significance of charity and knowledge, the repercussions of envy, and guidance on treating others kindly. It underscores moral values and provides practical advice for believers."
   },
   {
     "title_ar": "أتوعد سنات الرسول بمحوها",
@@ -621,7 +668,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأدب والبلاغة",
-    "featured": false
+    "featured": false,
+    "description": "This collection explores themes of loyalty to the Prophet's traditions, opposition to religious innovations, and resistance against those who challenge Islamic unity. It recounts challenges faced by adherents of traditional practices, emphasizing divine support for their cause. The work also conveys personal longing and the broader struggles of maintaining faith amidst adversity."
   },
   {
     "title_ar": "مجلس من أمالي النجاد رواية ابن مخلد - مخطوط (ن)",
@@ -634,7 +682,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This compilation gathers various sayings attributed to the Prophet Muhammad, emphasizing key themes such as the importance of Allah's ninety-nine names for entering Paradise. It provides guidance on proper conduct during fasting and prayer, marriage, and interprets dreams as part of prophethood. The manuscript also discusses permissible and forbidden foods, highlighting adherence to religious principles."
   },
   {
     "title_ar": "الاستعانة بالفاتحة على نجاح الأمور",
@@ -647,7 +696,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the significance of Surah Al-Fatihah in Islamic worship and daily life. It delves into its role as a spiritual remedy, supported by historical anecdotes about companions who used it for healing. The text emphasizes understanding its deep meanings related to Tawhid and religious principles, asserting that mastering Al-Fatihah can unlock both worldly and eternal treasures, though its profound secrets remain hidden from many."
   },
   {
     "title_ar": "من حديث أبي منصور محمد بن محمد بن عثمان السواق - مخطوط (ن)",
@@ -660,7 +710,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "الغرر في فضائل عمر",
@@ -673,7 +724,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This compilation by Abdulrahman bin Abi Bakr as-Suyuti features forty authenticated hadiths highlighting the exemplary qualities and contributions of 'Umar ibn al-Khattab. The book underscores his pivotal role in Islamic history, including his wisdom, justice, and unwavering commitment to the Prophet Muhammad's teachings, emphasizing his leadership as a key figure in strengthening Islam, his unique relationship with the Prophet, and his significant impact on the early Muslim community."
   },
   {
     "title_ar": "حديث السكن بن جميع",
@@ -686,7 +738,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles hadiths from Al-Sakn ibn Jumay', edited and introduced by Dr. 'Umar 'Abd al-Salam Tadmuri. It explores themes like intercession at the Prophet's grave, humility, acts leading to prophethood, patience in social interactions, self-discipline, and seeking divine inspiration."
   },
   {
     "title_ar": "أحاديث عن 19 من أصحاب ابن طبرزد",
@@ -699,7 +752,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles hadiths narrated by 19 companions of Ibn Tabrizid, focusing on Islamic teachings with detailed isnads to ensure authenticity. Key themes include intention in actions, seeking rain during drought, divine retribution, and reflections on wealth's fleeting nature, offering insights into Islamic principles and practices."
   },
   {
     "title_ar": "تحقيق بداية السول",
@@ -712,7 +766,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب الألباني",
-    "featured": false
+    "featured": false,
+    "description": "This chapter explores the origins of the soul through authentic narrations about Prophet Muhammad's miracles and intercession on the Day of Resurrection. It features stories like the moaning tree trunk, water gushing from his hand for wudu', healing an injured eye, and his modesty in refusing divine favors such as turning Mecca into gold. These narratives highlight his unique status among prophets and profound impact on followers."
   },
   {
     "title_ar": "دفع التشنيع في مسألة التسميع",
@@ -725,7 +780,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the proper conduct during prayer, particularly focusing on recitations following the bowing position. It examines differing opinions among Islamic scholars regarding whether the imam and followers should combine certain phrases or recite them separately. The author references numerous Hadiths and scholarly arguments, concluding that the evidence supports both the imam and the follower combining the phrases 'Allah hears those who praise Him' and 'Our Lord, to You is the praise.' This conclusion is supported by several lines of reasoning, including explicit Hadiths, analogical reasoning, and principles of prayer etiquette."
   },
   {
     "title_ar": "حديث الدراج",
@@ -738,7 +794,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles hadiths and historical narratives, highlighting themes like divine mercy, righteous deeds, and moral conduct. It features stories such as Tha'labah ibn 'Abd al-Rahman's repentance and the Prophet Muhammad's teachings on seeking forgiveness through specific supplications. The text underscores the importance of good character and the rewards associated with virtuous actions in both this world and the Hereafter."
   },
   {
     "title_ar": "أحاديث مسلسلة رواية ابن ناقة",
@@ -751,7 +808,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This comprehensive work delves into various narrations and transmissions of hadiths by scholars like Ibn Naqqa, Bakran, al-Jawhari, and others. It explores topics such as Quranic attributes, proper prayer performance, and the significance of traditions in Islamic jurisprudence, emphasizing the importance of transmission chains to ensure authenticity."
   },
   {
     "title_ar": "حديث ذي النون المصري",
@@ -764,7 +822,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the life and profound teachings of Dhun-Nun al-Misri, a key Sufi figure. It recounts his travels from Egypt to Iraq, interactions with rulers like al-Mutawakkil, and his ascetic practices. The text is filled with his wise sayings, highlighting themes such as patience, contentment, and remembering Allah. Through anecdotes and teachings, the book captures Dhun-Nun's wisdom and lasting impact on Sufism."
   },
   {
     "title_ar": "نحو القلوب",
@@ -777,7 +836,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "In 'Towards the Hearts,' Al-Qushayri combines grammar with spirituality, exploring how language mirrors human intent. He examines speech components like nouns, verbs, and particles, linking them to inner states such as fear, hope, and closeness to Allah. Through linguistic analysis, he underscores the importance of self-awareness and submission to divine will, offering readers a path to both linguistic mastery and spiritual growth."
   },
   {
     "title_ar": "فوائد أبي سعد البغدادي",
@@ -790,7 +850,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the life and teachings of Abu Sa'ad Ahmad bin Muhammad bin Abi Sa'ad al-Baghdadi, focusing on his role as a scholar and teacher. It delves into various Hadiths and stories about him, emphasizing themes such as remembrance, seeking refuge in Allah, and the importance of beneficial actions. The text highlights key Hadiths, including one where the Prophet ﷺ discusses seeking refuge from loss and sudden punishment, and another on qualities leading to righteousness. It serves as a compilation of wisdom guiding Muslims toward righteousness and closeness to Allah."
   },
   {
     "title_ar": "الفجر فجران",
@@ -803,7 +864,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the Islamic practice of fasting, particularly focusing on the correct timing related to dawn. It clarifies when eating and drinking are allowed or prohibited, distinguishing between true and false dawn. The author addresses common misconceptions about the adhan calls and emphasizes following Quranic guidelines and Prophet Muhammad's traditions, cautioning against religious extremism."
   },
   {
     "title_ar": "المجلس 121 من أمالي أبي الفتح المقدسي",
@@ -816,7 +878,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into various narrations from scholars and jurists, recounting significant events related to Prophet Muhammad (peace be upon him), such as his death, supplications for rain in a prison camp, and intercession through prayer. These accounts emphasize the importance of faith, perseverance, and divine favor during challenging times."
   },
   {
     "title_ar": "المنتخب من أمالي ابن حجر من تخريج مختصر ابن الحاجب-مخطوط (ن)",
@@ -829,7 +892,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This work delves into various extracts from Ibn Hajar's notes on Ibn Hajib's Summary, focusing on Islamic law topics like sales, fasting, and adultery penalties. It includes numerous hadith chains (isnads) and discusses historical events such as the siege of Banu Qurayzah under Prophet Muhammad, highlighting the authority and authenticity through multiple narrators and scholars."
   },
   {
     "title_ar": "جزء أحمد بن عصام",
@@ -842,7 +906,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "The provided text is an excerpt from a book detailing various chapters..."
   },
   {
     "title_ar": "جزء القاضي الأشناني",
@@ -855,7 +920,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "The book, authored by Ibn al-Ashnani and commented on by Abu 'Ubaydah, is a collection of hadiths related to Islamic teachings. Published in Saudi Arabia and Lebanon, it covers topics such as the protection of Mecca and Medina from Dajjal, the importance of Friday prayers, funeral processions, charity, and gratitude towards Allah."
   },
   {
     "title_ar": "الجمل في المنطق",
@@ -868,7 +934,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم أخرى",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the core concepts of classical logic, examining propositions, their structure, and relationships between subjects and predicates. It explores categories like universal, particular, necessary, and possible propositions, along with syllogisms, conditional statements, quantifiers, and methods for drawing logical conclusions. Al-Khunji emphasizes understanding these principles to construct valid arguments and derive accurate conclusions."
   },
   {
     "title_ar": "من فوائد أبي القاسم ابن عليك - مخطوط (ن)",
@@ -881,7 +948,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript compiles hadiths from various scholars, including Anas ibn Malik and Jabir, covering topics like prayer etiquette, seeking knowledge, charity, and warnings against interest. It emphasizes Islamic principles through teachings attributed to Abu al-Qasim Ibn 'Uyyak."
   },
   {
     "title_ar": "قصيدة السلفي",
@@ -894,7 +962,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "A treatise on Islamic faith written in 576 AH by Abu Thahir al-Salafi, verified by Abu 'Abd al-Bari Rida Bu Shama al-Jazairi. It critiques anthropomorphists and those denying divine attributes, advocating for Imam al-Shafi'i's teachings. The poem praises scholars like Ibn Hanbal and urges adherence to the Sunnah."
   },
   {
     "title_ar": "أحاديث مسلسلات",
@@ -907,7 +976,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles various narrations and traditions from prominent Islamic scholars, covering topics such as hadith authenticity, good character, divine secrets, creation events, Marzangush plant, narcissus scent benefits, modesty, and a powerful Quranic verse for forgiveness."
   },
   {
     "title_ar": "فوائد ابن الباغبان",
@@ -920,7 +990,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the contributions of Ibn al-Baghaan as a scholar and religious figure. It discusses hadiths related to the Prophet ﷺ and his companions, such as 'Umar ibn al-Khattab's sermon and Abu Bakr's leadership during early Islamic history. The text emphasizes themes of divine refuge, preserving religious knowledge, and unity under just leadership."
   },
   {
     "title_ar": "فتييان تتعلقان بتكفير الجهمية",
@@ -933,7 +1004,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This book examines the declaration of the Jahmiyyah as unbelievers and its impact on prayer validity, while arguing against sects like Quburiyyah and Ibadhiyyah for their disbelief in core Islamic doctrines. It emphasizes the importance of following Salaf teachings to avoid misguidance."
   },
   {
     "title_ar": "حديث الضب للطريثيثي - مخطوط (ن)",
@@ -946,7 +1018,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book recounts a hadith where Prophet Muhammad demonstrates patience and wisdom with a Bedouin man who challenges him. The Prophet's calm demeanor and use of divine signs lead to the Bedouin embracing Islam, subsequently spreading it to his tribe and converting four thousand people. The narrative emphasizes the impact of divine intervention and the Prophet's leadership qualities."
   },
   {
     "title_ar": "جزء من حديث أبي إسحاق الحبال",
@@ -959,7 +1032,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript compiles hadiths focusing on themes like divine decree, companionship's influence on faith, and Ramadan. It features narratives from scholars, highlighting Islamic principles such as fate, companions' roles, and fasting."
   },
   {
     "title_ar": "حديث ابن رزقويه",
@@ -972,7 +1046,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript by Ibn Razzuwayh, a cloth merchant from Baghdad, compiles various hadiths narrated by prominent scholars. It highlights the significance of congregational prayers and the role of scholarly knowledge during trials. The book features narratives about companions like 'Umar bin al-Khattab and interactions between scholars such as Harun al-Rashid and Al-Husayn ibn Ali al-Ja'fi, emphasizing the transmission of authentic traditions."
   },
   {
     "title_ar": "رسالة في بيان ما لم يثبت فيه حديث صحيح للفيروزآبادي-مخطوط (ن)",
@@ -985,7 +1060,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript by al-Firuzabadi compiles chapters where hadiths were narrated but none were authenticated, critiquing topics like faith definitions, theological sects, Quranic excellence, and virtues of companions and scholars. Al-Firuzabadi identifies many narrations as fabricated or unfounded, emphasizing the need for authentic sources in Islamic tradition."
   },
   {
     "title_ar": "حديث الهميان",
@@ -998,7 +1074,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This captivating tale follows a Khurasani man on a quest to find a hidden treasure in Mecca during Hajj. With the help of an elderly sheikh, he overcomes challenges and distributes wealth fairly, emphasizing trust, generosity, and divine providence."
   },
   {
     "title_ar": "حلول التعب والآلام",
@@ -1011,7 +1088,8 @@
     "type": "epub",
     "source": "url",
     "category": "التاريخ",
-    "featured": false
+    "featured": false,
+    "description": "This historical account by Soliman al-Mahassani details the turmoil in Damascus during Abi al-Dhahab's arrival around 1185 AH. It describes military conflicts, looting, destruction of religious sites like the Umayyad Mosque, and the resilience of the local population seeking justice. The author critiques governance issues, emphasizing competent leadership to prevent disasters."
   },
   {
     "title_ar": "من حديث ابن المقرئ",
@@ -1024,7 +1102,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "Sahih al-Bukhari is a comprehensive collection of hadiths narrated by companions of the Prophet Muhammad (PBUH). Covering religious practices, moral conduct, and social responsibilities, each chapter meticulously documents chains of narration to ensure authenticity. This invaluable resource provides deep insights into Islamic teachings and traditions."
   },
   {
     "title_ar": "عقد الجمان في بيان شعب الإيمان",
@@ -1037,7 +1116,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This scholarly work by Sheikh Muhammad Murtada al-Zubaidi, edited by Muhammad Saleh Ya'qubi, explores the branches of faith. It categorizes faith into three main roots: belief in God, unseen matters (Ma'ash), and the Hereafter. Each root is subdivided into components such as purification, emptying, verbal and practical aspects, and urban and residential aspects, drawing on contributions from influential scholars."
   },
   {
     "title_ar": "تقريظ لابن حجر على الرد الوافر",
@@ -1050,7 +1130,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book explores Ibn Hajar's praise for a detailed response to Ibn Taymiyyah's scholarly work. It delves into the structure, authorship, and publication details while highlighting Ibn Taymiyyah's significant contributions despite controversies. The text examines his reputation as a great scholar, debates about his beliefs, and reactions from contemporary scholars who recognize his knowledge but caution against certain aspects of his teachings."
   },
   {
     "title_ar": "من المشكلات اللغوية في القرآن الكريم",
@@ -1063,7 +1144,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم القرآن",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the complex linguistic aspects of the Quran, examining grammatical irregularities such as mismatched genders and numbers, and differing interpretations among scholars. It also explores rhetorical devices like the repetition of 'Ahl' in Moses's story with Khidr, offering insights into the text's structure and meaning."
   },
   {
     "title_ar": "بيان الناسخ والمنسوخ من آي الذكر الحكيم - ضمن «محاضرات الشنقيطي» ط عالم الفوائد",
@@ -1076,7 +1158,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم القرآن",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the concept of abrogation (naskh) in the Noble Quran, examining how certain verses have been modified or replaced by later revelations. It delves into topics such as inheritance, fasting rules, marriage prohibitions, and legal procedures, showcasing the evolving nature of Islamic jurisprudence through scholarly analysis."
   },
   {
     "title_ar": "مجلس من إملاء أبي الفوارس الزينبي رواية الطوسي - مخطوط (ن)",
@@ -1089,7 +1172,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book is a detailed account of a manuscript session by Abu al-Fawaris Turayd al-Zaynabi, focusing on Islamic hadith studies. It includes various narrations by at-Tusi about Prophet Muhammad's actions and sayings, such as the destruction of idols in Mecca, supplications for refuge from trials, descriptions of Tahajjud prayers, and reflections on leadership responsibilities. The manuscript also details the transmission chain and authentication process, emphasizing its reliability through references to well-known scholars like Bukhari and Muslim."
   },
   {
     "title_ar": "قصيدة عنوان الحكم",
@@ -1102,7 +1186,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "In 'The Judgment', Abu al-Fath al-Busti crafts 62 poetic verses that delve into themes of materialism, morality, human relationships, and spiritual growth. The poem cautions against excessive attachment to wealth, emphasizing its transient nature and the importance of kindness, forgiveness, and faith. It also reflects on human frailty, the consequences of sin, and the necessity of seeking divine support, serving as a moral and spiritual guide urging readers to embrace virtues, maintain integrity, and pursue self-improvement."
   },
   {
     "title_ar": "الكلام على حديث امرأتي لا ترد يد لامس لابن حجر - مخطوط (ن)",
@@ -1115,7 +1200,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "The book examines a Hadith where a man complains about his wife not withdrawing her hand from strangers. The author evaluates the Hadith's authenticity, tracing its narrations through scholars like Abu Dawood and an-Nasaa'i. He discusses interpretations of the woman's behavior as immodest or generous, citing jurists' opinions. The work critiques narrator reliability and addresses chain weaknesses while supporting the Hadith's validity despite some doubts."
   },
   {
     "title_ar": "مسلسلات التيمي قوام السنة - مخطوط (ن)",
@@ -1128,7 +1214,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript by Ismail al-Asbahi compiles hadiths on religious practices and beliefs. It details traditions about nail trimming, greetings, and divine decree, tracing their transmission through scholars connected to Prophet Muhammad. The book emphasizes the authenticity of these traditions and the scholarly methods used in compiling them."
   },
   {
     "title_ar": "فضل يوم عرفة لأبي بكر الوراق",
@@ -1141,7 +1228,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the profound spiritual significance of the Day of Arafah in Islam. It delves into the merits of this day, including expiation for sins, through fasting and supplications. The author highlights narrations from the Prophet about its rewards, divine attributes, and the Sunnah of sacrifice. The book also recounts the Prophet's intense supplication for his nation, leading to divine forgiveness, and describes the morning prayer on Arafah, emphasizing reflection and glorification of Allah."
   },
   {
     "title_ar": "نفحات النسمات في وصول إهداء الثواب للأموات للسروجي",
@@ -1154,7 +1242,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the Islamic practice of dedicating rewards from virtuous acts, such as Quranic recitation and supplications, to deceased individuals. It compiles scholarly opinions and evidence from hadiths and Quran verses, emphasizing that these dedications benefit the departed. The author addresses differing interpretations among scholars regarding the influence of such actions on the afterlife, ultimately affirming their validity and comforting nature for the deceased."
   },
   {
     "title_ar": "مجلس من أمالي أبي الفتح المقدسي_2",
@@ -1167,7 +1256,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "الكنس الجواري في الحسان من الجواري",
@@ -1180,7 +1270,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأدب والبلاغة",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into al-Hizaji's collection of poetic expressions, celebrating his admiration for beautiful women with unique qualities like intelligence and grace. Themes of love, longing, and the transient nature of beauty are explored through personal anecdotes and scholarly references."
   },
   {
     "title_ar": "الثاني من الخلعيات",
@@ -1193,7 +1284,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the lives of the divested ones, exploring themes of spiritual detachment and the pursuit of Islamic knowledge. It examines various narrations about prayer, supplication, divine mercy, and repentance, with a focus on how angels support those seeking knowledge."
   },
   {
     "title_ar": "أحاديث أبي عبد الله الرازي",
@@ -1206,7 +1298,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles hadiths from various scholars like Abu al-Tahir Ismail bin Qasim al-Zayyat and Imam al-Khatib Abu al-Hasan Ali bin Muhammad bin Ali bin Jamil al-Ma'afari. It explores themes such as the responsibilities of scholars, prayer's significance, divine covenants, and consequences of religious negligence. The text includes hadiths from Prophet Muhammad and his companions, including Ali ibn Abi Talib, along with incidents involving early Islamic figures."
   },
   {
     "title_ar": "أهمية صلاة الاستسقاء في الإسلام والاستغاثة المشروعة",
@@ -1219,7 +1312,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the significance of Salat al-Istisqa, the Islamic prayer for rain. It discusses its legitimacy and the unfortunate lack of participation among Muslims due to unawareness of its importance. The authors stress that rainfall is a divine mercy from Allah and should be sought through legitimate supplication without resorting to false means or intermediaries. They support their arguments with hadiths, such as Al-Abbas ibn Abd al-Mutallib's successful supplication during Caliph Umar's time. The text also warns against shirk and encourages adherence to the Quran and Sunnah."
   },
   {
     "title_ar": "العبارة المختصرة في علة حديث إن هذه الحشوش محتضرة",
@@ -1232,7 +1326,8 @@
     "type": "epub",
     "source": "url",
     "category": "العلل والسؤالات",
-    "featured": false
+    "featured": false,
+    "description": "This book examines the hadith 'Indeed, these herbs are about to die,' attributed to Prophet Muhammad. It analyzes narrations from Anas bin Malik, Zaid bin Arqam, and Ibn Abbas, evaluating their transmission chains for reliability. Chapters 2-5 explore variations in Anas's transmissions, while Chapter 6 highlights Ibn Abbas's hadith irregularities. The conclusion favors 'Abd al-'Aziz bin Suhayb's chain through Anas as the most reliable, with Zaid's route remaining problematic."
   },
   {
     "title_ar": "حكم شرب الدخان وإمامة من يتجاهر به",
@@ -1245,7 +1340,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book examines Islamic teachings regarding smoking and prayer leadership. It prohibits smoking due to impurity and health risks, referencing Quranic verses and Hadiths. Smokers can lead prayers, but are not ideal imams. The work also includes global statistics on smoking's health impact and economic costs, emphasizing efforts to reduce tobacco use."
   },
   {
     "title_ar": "فضل أم المؤمنين عائشة لابن عساكر",
@@ -1258,7 +1354,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the life of Umm al-Mu'minin Aisha, emphasizing her strength during the Ifk incident. It discusses eleven women who accused her falsely and how she endured emotional distress with resilience. The Prophet Muhammad supported her, and divine revelation ultimately cleared her name, showcasing her unwavering faith."
   },
   {
     "title_ar": "أم المؤمنين مارية القبطية",
@@ -1271,7 +1368,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into Maryam's life from her journey in Egypt to Medina, her conversion to Islam, and her role as a concubine. It highlights her motherhood with the Prophet Muhammad, the tragic loss of their son Ibrahim, and the subsequent grief. The narrative also touches upon the jealousy among the Prophet's wives, divine revelations that address these tensions, and Maryam's eventual death after the Prophet."
   },
   {
     "title_ar": "بابات في علوم القرآن",
@@ -1284,7 +1382,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم القرآن",
-    "featured": false
+    "featured": false,
+    "description": "This book offers an in-depth exploration into various aspects of the Quran, including its definition, revelation process, compilation, arrangement, readings, abrogation, interpretation, and beautification. It examines historical context, linguistic nuances, and scholarly interpretations to provide a comprehensive understanding of Quranic studies."
   },
   {
     "title_ar": "جزء من أحاديث أبي عمر السلمي عن شيوخه",
@@ -1297,7 +1396,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This compilation of Hadiths, attributed to Prophet Muhammad, covers various themes including avoiding sin, seeking good omens, fulfilling vows, prayer, Hajj, honesty, and the consequences of lying. It offers moral and religious guidance for a righteous life according to Islamic teachings."
   },
   {
     "title_ar": "اختيارات شيخ الإسلام ابن تيمية لدى مترجميه",
@@ -1310,7 +1410,8 @@
     "type": "epub",
     "source": "url",
     "category": "فقه عام",
-    "featured": false
+    "featured": false,
+    "description": "This book examines the fiqhi choices made by Sheikh al-Islam Ibn Taymiyyah and the works documenting these rulings. It explores the contributions of his students, such as Ibn 'Abd al-Hadi and Ibn Rajab, who compiled specific issues in their books. The discussion includes various fatwas and legal opinions that differ from or align with established madhabs, covering topics like prayer, divorce, inheritance, and ritual purity. The text also delves into methodologies used to authenticate these rulings and the scholarly reception of Ibn Taymiyyah's contributions."
   },
   {
     "title_ar": "الغزو الفكري ووسائله",
@@ -1323,7 +1424,8 @@
     "type": "epub",
     "source": "url",
     "category": "الدعوة وأحوال المسلمين",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the concept of cognitive invasion, where one nation influences another through hidden means to control or sway its population. The author identifies three main invasions: Crusader Christian, Jewish, and atheistic communist. These invasions target the minds of Muslims, using education, media, missionary work, and cultural infiltration to erode Islamic values and replace them with foreign ideologies. The book emphasizes the danger of these invasions being more impactful than military ones due to their stealthy nature and long-term effects on society."
   },
   {
     "title_ar": "فوائد أبي بكر الشاشي",
@@ -1336,7 +1438,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into Islamic teachings and practices, emphasizing the importance of freeing Muslim souls, seeking Allah's pleasure, and the value of knowledge and good deeds. It examines key concepts like wealth, poverty, bravery, and justice through a father-son dialogue, offering deep insights into Jihad and its spiritual dimensions."
   },
   {
     "title_ar": "التحاكم إلى الكتاب والسنة في حفظ الأمن وحماية الأرواح",
@@ -1349,7 +1452,8 @@
     "type": "epub",
     "source": "url",
     "category": "الفتاوى",
-    "featured": false
+    "featured": false,
+    "description": "This book explores Islamic principles on security and life protection, denouncing acts like hijacking as grave sins. It stresses adherence to Shariah law, rejecting man-made laws, and urges governments and scholars to enforce divine rulings against such crimes."
   },
   {
     "title_ar": "مجلس إملاء في رؤية الله تعالى للدقاق",
@@ -1362,7 +1466,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into significant hadiths concerning the Day of Resurrection and the vision of Allah that awaits believers. It examines themes like the creation of idols, monotheism, the honor bestowed upon believers in Paradise, and the ultimate reunion of faithful followers with their Lord."
   },
   {
     "title_ar": "مجلس في التواضع للجوهري",
@@ -1375,7 +1480,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "In 'A Council in Humility,' Al-Jawhari delves into the significance of humility using various narrations and Hadiths. The book underscores that humility is a crucial virtue pleasing to Allah, leading to exaltation in both this world and the hereafter. It offers guidance on modest behavior, avoiding arrogance, and performing acts of kindness like feeding the hungry and clothing the naked. Additionally, it highlights the role of angels in guiding individuals toward humility, providing a comprehensive understanding of achieving righteousness through modesty."
   },
   {
     "title_ar": "أحاديث من أمالي أبي بكر ابن دوست - مخطوط (ن)",
@@ -1388,7 +1494,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles hadiths focusing on prayer etiquette, dealing with anger, divine decree (Qadar), and Paradise. It includes notable narrations from Prophet Muhammad about fearing only God and maintaining inner peace. The texts emphasize moral conduct, faith, and Islamic principles."
   },
   {
     "title_ar": "مسألة فيما إذا كان في العبد محبة لما هو خير وحق ومحمود في نفسه",
@@ -1401,7 +1508,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب ابن تيمية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "جزء في طرق حديث لا تسبوا أصحابي",
@@ -1414,7 +1522,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the meticulous analysis of a hadith concerning the prohibition against slandering Prophet Muhammad's companions. The author examines various transmission chains, particularly focusing on narrations from Abu Hurayrah and Abu Sa'eed. By evaluating scholars like Muslim and Ibn Majah, Ibn Hajar concludes that the hadith is more reliably transmitted through Abu Sa'ied. The text highlights the importance of accurate hadith preservation and reflects on early Islamic methodologies for verifying authenticity."
   },
   {
     "title_ar": "وجوب العدل وتحريم الظلم على الناس كافة",
@@ -1427,7 +1536,8 @@
     "type": "epub",
     "source": "url",
     "category": "الفتاوى",
-    "featured": false
+    "featured": false,
+    "description": "This book explores Islamic teachings on justice, opposing oppression and terrorism. It asserts that Islam prohibits targeting innocent civilians, including women, children, and the elderly. The author emphasizes following Shariah law, which condemns collective punishment and holds individuals accountable for their actions. Additionally, it highlights Saudi Arabia's Islamic stance against such crimes, advocating for justice."
   },
   {
     "title_ar": "أم المؤمنين زينب بنت خزيمة",
@@ -1440,7 +1550,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the life of Zaynab bint Khazimah, a companion of the Prophet Muhammad. It discusses her lineage, upbringing in corrupt Mecca, compassion for the poor, early exposure to Islam, marriages, and widowhood at Badr. The narrative emphasizes her piety, kindness, role as 'Mother of the Poor,' and brief marriage to the Prophet before her death."
   },
   {
     "title_ar": "أم المؤمنين ميمونة بنت الحارث",
@@ -1453,7 +1564,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book recounts the life of Maymuna bint al-Harith, a companion of Prophet Muhammad. It explores her lineage, upbringing in Mecca before Islam, marriage, conversion influenced by her sister and the Prophet's teachings, divorce from her first husband due to conflicting beliefs, acceptance into 'Abbas' household, participation in significant events like the Hudaybiyyah Treaty, and eventual marriage to the Prophet. The text highlights her role as a wife to the Prophet, contributions to the community, and her death several decades after his passing."
   },
   {
     "title_ar": "القراءة عند القبور لأبي بكر بن الخلال",
@@ -1466,7 +1578,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This work compiles various traditions and scholarly opinions about Quranic recitation near graves. It discusses practices like reciting specific surahs, sprinkling dust, and performing certain prayers, while also highlighting differing views among scholars such as Ahmad bin Hanbal, who criticized some practices as innovations."
   },
   {
     "title_ar": "الأحاديث الستة العراقية",
@@ -1479,7 +1592,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into six significant hadiths from Iraq, analyzing their transmission chains and examining themes such as belief, modesty, and the consequences of actions. It emphasizes the importance of these teachings in Islamic tradition."
   },
   {
     "title_ar": "في عمارة السورة القرآنية",
@@ -1492,7 +1606,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم القرآن",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the structural and thematic unity of Quranic surahs, examining how each is an interconnected artistic entity rather than a mere collection of verses. Dr. Bistany explores various forms of construction within surahs, emphasizing the interplay of ideas, topics, and literary elements like narrative and rhythm to highlight the Quran's architectural unity."
   },
   {
     "title_ar": "خمسة أحاديث مسلسلات لضياء الدين المقدسي",
@@ -1505,7 +1620,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book presents five serialized hadiths, examining their transmission chains and reliability. It explores themes such as seeking forgiveness, the power of supplication, Prophet Muhammad's love for Mu'adh ibn Jabal, and the importance of communal worship through Eid prayers."
   },
   {
     "title_ar": "الرباعي في الحديث لعبدالغني بن سعيد",
@@ -1518,7 +1634,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores a specific hadith structure featuring four companions linked in transmission chains. Through examples like service, obedience to the Quran, and prophecies about Gog and Magog, the author highlights the significance of hadith compilation in Islamic jurisprudence."
   },
   {
     "title_ar": "أبناؤنا والصلاة",
@@ -1531,7 +1648,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book emphasizes the importance of teaching prayer to children from an early age, using Quranic verses and prophetic traditions as a foundation. It provides specific guidelines for parents, such as introducing prayer at seven years old and gradually increasing discipline by ten. The text highlights spiritual benefits for both parents and children, encouraging fathers to set a righteous example and seek divine guidance in parenting."
   },
   {
     "title_ar": "مجلس من أمالي الباطرقاني - مخطوط (ن)",
@@ -1544,7 +1662,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript compiles Islamic traditions and teachings, featuring various narrations and hadiths from scholars. It covers topics such as prayer supplications, acts of worship like Hajj and Tayammum, Ramadan characteristics, Judgment Day descriptions, and divine mercy, serving as a valuable resource for understanding Islamic beliefs and practices."
   },
   {
     "title_ar": "القرآن يتحدى",
@@ -1557,7 +1676,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم القرآن",
-    "featured": false
+    "featured": false,
+    "description": "In this work, Muhammad Sayid Tantawi explores the Quran's divine origin and inimitability. He explains how its structure, eloquence, and wisdom are unmatched by human or idol-made works, reinforcing the Prophet Muhammad's truthfulness. The Quran is presented as a miraculous revelation, impossible to counterfeit, challenging non-believers to prove otherwise."
   },
   {
     "title_ar": "علة الحديث المسلسل في يوم العيدين لأبي محمد الجرجاني",
@@ -1570,7 +1690,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book critically examines defects in a continuous hadith concerning Eid al-Fitr and Eid al-Adha, focusing on sermon and prayer. It analyzes various narrations, their transmission chains, and source credibility. Authored by Abu Muhammad al-Jurjani and part of a collection edited by Dr. Mohammed bin Turki al-Turki, it was published in 1999 by Al-Dar Al-Watan Li An-Nashr."
   },
   {
     "title_ar": "هل أنت من المتوكلين على الله تعالى",
@@ -1583,7 +1704,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the concept of relying on Allah as a core aspect of Islamic faith. It examines the definitions and significance of trust in Allah, supported by Islamic teachings and examples from pious individuals. The text encourages believers to place their trust in Allah's provisions and support, emphasizing that true reliance enhances faith and leads to success in both this world and the Hereafter."
   },
   {
     "title_ar": "أحكام رؤية الهلال",
@@ -1596,7 +1718,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the Islamic guidelines surrounding the sighting of the Ramadan crescent and the rules for breaking fast. It underscores the significance of visual observation over astronomical methods, advocating for a unified approach to fasting across Muslim communities. The author addresses various practical scenarios, such as traveling during Ramadan and determining Eid al-Fitr and Arafah dates. Central themes include following prophetic traditions, avoiding unnecessary complexities, and fostering communal solidarity despite differing opinions."
   },
   {
     "title_ar": "قاعدة في المؤرخين",
@@ -1609,7 +1732,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم الحديث",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the fundamental principles and challenges faced by historians, focusing on the importance of truthfulness, impartiality, and a comprehensive understanding when recounting historical events and biographies. It critiques biases in historical works, such as excessive partisanship found in al-Zahabi's writings. The author outlines essential conditions for historians to be trustworthy, including knowledge of their subject, eloquence, fairness, and freedom from passion or undue influence. The text emphasizes the danger of partiality and urges historians to avoid omitting favorable information or overemphasizing faults due to personal bias."
   },
   {
     "title_ar": "ذكر المدلسين",
@@ -1622,7 +1746,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book discusses the issue of forgers and narrators who committed tadlis, focusing on concealment in the chain of transmission. Chapters 22 to 25 specifically detail four narrators reported by Imam Ibn Hajar as being identified by An-Nasa'i for their involvement in tadlis."
   },
   {
     "title_ar": "مجلس من أمالي ابن فنجويه في فضل رمضان",
@@ -1635,7 +1760,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This text explores the significance of Ramadan in Islamic tradition, emphasizing its excellence through discussions on fasting, Laylat al-Qadr, and spiritual practices. It includes narrations about the benefits of Ramadan, specific hadiths, and proper conduct during this holy month."
   },
   {
     "title_ar": "الموافقات العوالي للضياء المقدسي_1",
@@ -1648,7 +1774,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript, titled 'The High Approvals,' authored by Dhīya' ad-Dīn Abū 'Abd Allāh Muhammad bin 'Abd al-Wāḥid al-Maqdisī, compiles hadiths narrated by scholars like Qutaybah bin Sa'eed and Layth bin Sad. It covers topics such as marriage permissions, fighting for Zakah, the Prophet's sayings on manumission and inheritance, and rulings regarding a deceased woman with a fetus. The book is organized into chapters detailing these narrations."
   },
   {
     "title_ar": "جزء ابن الجلابي",
@@ -1661,7 +1788,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "عوالي أبي بكر بن عبد الدائم",
@@ -1674,7 +1802,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book traces the lineage of Abu Bakr bin 'Abd al-Da'im through various hadiths and scholarly works. It highlights themes such as lenient trading, the interconnectedness of shyness and faith, Muhammad's relationships with companions like Hassan bin Thabit, and key Islamic principles including prayer and martyrdom."
   },
   {
     "title_ar": "هل جاهدت نفسك",
@@ -1687,7 +1816,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the concept of Jihad, focusing on the internal struggle against one's soul. It explores three types of souls: commanding, reproaching, and tranquil, while emphasizing self-accountability, patience, and religious obligations. Drawing from Islamic teachings and historical figures like Abu Bakr al-Siddiq, it highlights the importance of this inner battle for achieving righteousness and eternal happiness."
   },
   {
     "title_ar": "هل أنت من المراقبين لله تعالى",
@@ -1700,7 +1830,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "The Quran is a sacred text emphasizing divine supervision in Islam. It highlights Allah's constant awareness of every action, encouraging believers to internalize this awareness for righteousness, excellence in worship (ihsan), and eternal blessings in Paradise. Remembering Allah's watchful presence helps individuals avoid sinning and maintain their faith's integrity."
   },
   {
     "title_ar": "الدرة السنية منظومة في علم الفرائض",
@@ -1713,7 +1844,8 @@
     "type": "epub",
     "source": "url",
     "category": "فقه مالكي",
-    "featured": false
+    "featured": false,
+    "description": "A treatise on inheritance law by Muhammad Bay Belalam, structured into sixteen chapters covering various aspects of inheritance, including causes, conditions, heirs, shares, divisions, and special cases. The book provides a comprehensive guide based on Islamic principles, detailing how inheritance is calculated and distributed according to Shafi'i jurisprudence."
   },
   {
     "title_ar": "هل شكرت الله على نعمه",
@@ -1726,7 +1858,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the significance of gratitude in Islam, urging readers to appreciate Allah's blessings through actions and words. Drawing from Islamic teachings and Hadiths, it emphasizes that ingratitude risks losing divine favors. The narrative concludes with calls for constant reflection on Allah's benevolences, inspiring a life of gratitude."
   },
   {
     "title_ar": "اللمعة في تحقيق الركعة لإدراك الجمعة",
@@ -1739,7 +1872,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "هل تفقدت قلبك",
@@ -1752,7 +1886,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the significance of examining and purifying one's heart to attain spiritual well-being. It delves into themes like sincere faith, gratitude, humility, fear of Allah, and avoiding sin. By referencing Quranic verses and Hadiths, it underscores that a healthy heart is crucial for a righteous life and cautions against neglecting spiritual matters."
   },
   {
     "title_ar": "الدرة الأرجوزة فى رسم الكلم المهموزة",
@@ -1765,7 +1900,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب اللغة",
-    "featured": false
+    "featured": false,
+    "description": "In 'The Pearl of Arjuzah,' Mahmoud Abu Sa'eed masterfully explores the complexities of Arabic calligraphy, specifically focusing on the hamza diacritic. Through twelve detailed chapters, he examines various forms and applications of the hamza across different word positions, offering precise guidelines for its correct placement and shape while highlighting exceptions to these rules. Written as a poetic ode, the book underscores the elegance and precision essential in Arabic script."
   },
   {
     "title_ar": "جزء من حديث الذهلي للدارقطني",
@@ -1778,7 +1914,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This compilation presents a selection of hadiths from Al-Zuhli's work, covering key aspects of Islamic teachings such as prayer, zakah, fasting, Hajj, and the Prophet Muhammad's life. It explores his character, supplication methods, incidents during battles like Uhud, and provides spiritual guidance, emphasizing adherence to divine commands and righteous deeds."
   },
   {
     "title_ar": "رسالة في اسم الفاعل",
@@ -1791,7 +1928,8 @@
     "type": "epub",
     "source": "url",
     "category": "النحو والصرف",
-    "featured": false
+    "featured": false,
+    "description": "This book is a scholarly exploration of the linguistic nuances of active participles in the Arabic language. The author examines their meanings, functions across tenses, and differing interpretations among scholars. It also discusses the distinctions between active and passive participles and their significance in understanding divine scripture and classical texts."
   },
   {
     "title_ar": "أم المؤمنين زينب بنت جحش",
@@ -1804,7 +1942,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the life of Zaynab bint Jahsh, focusing on her relationship with Prophet Muhammad. It details her marriage to Zaid ibn Harithah, a freed slave adopted by the Prophet before adoption was abolished in Islam. The narrative highlights Zaynab's noble background and her embrace of Islam, despite societal norms. Her marriages to Zaid and later to the Prophet, along with her charitable nature and legacy as one of his wives, are central themes. The book underscores equality, divine will, and the establishment of Islamic social norms."
   },
   {
     "title_ar": "أحاديث منتقاة في غرائب ألفاظ رسول الله مما يحتاج إلى استعماله",
@@ -1817,7 +1956,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles significant and rare hadiths from the Prophet Muhammad (peace be upon him), each offering unique insights into Islamic wisdom. Topics include sharing gifts, elements of happiness and misery, consequences of forbidden wealth, and maintaining faith. The hadiths are supported by multiple transmission chains, highlighting their authenticity within Islamic teachings."
   },
   {
     "title_ar": "ثلاثة مجالس من أمالي ابن بشران ومن حديث الطناجيري-مخطوط (ن)",
@@ -1830,7 +1970,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript compiles three councils from Abu al-Qasim ibn Bishran and ten Hadiths from Abi al-Farj al-Tunajiri. It delves into Islamic traditions, such as fasting during 'Ashura, the Prophet's commandments, and sayings of Muhammad and his companions. The text also assesses the trustworthiness of narrators and offers insights into early Islamic practices."
   },
   {
     "title_ar": "أم المؤمنين جويرية بنت الحارث",
@@ -1843,7 +1984,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book narrates the story of Bani al-Mustalik, a powerful group from the Khazraj tribe that challenged Prophet Muhammad's influence. It details the fierce Battle of Banu al-Mustaliq in 5th Hijrah year, where Muslims triumphed. The narrative centers on Juwayriyyah bint Harith, whose marriage to the Prophet led to captives' liberation and her father's embrace of Islam. The book highlights the Prophet's leadership, strategic decisions, and the role of women like Juwayriyyah in early Islamic society."
   },
   {
     "title_ar": "خبر شعر ووفادة النابغة الجعدي",
@@ -1856,7 +1998,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book recounts Al-Nabigha's visit to Prophet Muhammad, where he recites his poetry focusing on glory and hope for Paradise. The Prophet praises his skill, showcasing their interaction and the Prophet's encouragement of Al-Nabigha's artistic expression."
   },
   {
     "title_ar": "خطورة التسرع في التكفير والقيام بالتفجير وما ينشأ عنهما من سفك للدماء وتخريب للمنشآت",
@@ -1869,7 +2012,8 @@
     "type": "epub",
     "source": "url",
     "category": "الدعوة وأحوال المسلمين",
-    "featured": false
+    "featured": false,
+    "description": "This book addresses the serious consequences of hastily declaring apostasy (takfir) and committing violent acts. Authored by scholars under the Saudi Ministry of Endowments, it emphasizes that takfir is a divine judgment requiring clear Quranic and Hadith evidence. The text condemns such actions as leading to bloodshed and violating Islamic principles of life and property sanctity. It asserts that Islam forbids violence, urging adherence to teachings of justice, cooperation, and peace while seeking Allah's guidance for global harmony."
   },
   {
     "title_ar": "تأخير الظلامة إلى يوم القيامة للسيوطي - مخطوط (ن)",
@@ -1882,7 +2026,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the various aspects of zakat, using historical narrations and incidents from the companions of the Prophet ﷺ. It emphasizes themes such as justice, wealth management, divine retribution, and adherence to religious obligations. The text provides examples like Tha'labah ibn Hatib's downfall due to neglecting prayers amidst wealth, and discusses the Prophet's ﷺ teachings on zakat collection and its consequences. It also explores moral lessons in revenge, forgiveness, and staying true to faith despite personal challenges."
   },
   {
     "title_ar": "جزء فيه مجلس من فوائد الليث بن سعد",
@@ -1895,7 +2040,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the contributions of 8th-century scholar Al-Layth ibn Sa'd, examining various hadiths and providing scholarly commentary. It covers Thumamah ibn Uthal's conversion to Islam, discussions on faith, obedience, and the afterlife, offering moral and religious guidance."
   },
   {
     "title_ar": "المرأة قبل وبعد الإسلام",
@@ -1908,7 +2054,8 @@
     "type": "epub",
     "source": "url",
     "category": "الدعوة وأحوال المسلمين",
-    "featured": false
+    "featured": false,
+    "description": "This book examines the historical treatment of women in pre-Islamic societies such as Greece, Rome, and Arabia, where they faced severe oppression and had few rights. It contrasts this with the significant advancements for women under Islamic teachings, emphasizing equality in creation, legal rights, and religious responsibilities. The Quran is highlighted as a key text promoting gender equality, granting women inheritance, marriage choice, and participation in religious practices. Historical examples of influential women like Umm Habiba and Fatima demonstrate their crucial roles in spreading Islam despite societal challenges."
   },
   {
     "title_ar": "أحاديث منتقاة من جزء ابن الفرات انتقاء العلائي",
@@ -1921,7 +2068,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles selected hadiths from Ibn al-Furath's collection, focusing on Prophet Muhammad's advice regarding health and treatment. It includes discussions on various remedies like honey, cupping therapy, black seeds, and the importance of seeking medical care. The text also shares accounts of the Prophet's personal experiences with illness and his recommendations for maintaining good health."
   },
   {
     "title_ar": "تعس عبد الشهوات",
@@ -1934,7 +2082,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the internal conflict between human desires and spiritual well-being. It highlights how yielding to temptations leads to moral decay, while resisting them through patience and self-control fosters nobility and closeness to Allah. The text cautions against the illusion of fleeting pleasures, advocating for a life of asceticism and devotion to divine will."
   },
   {
     "title_ar": "أخبار ابن أبي ذئب لابن زبر الربعي",
@@ -1947,7 +2096,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "أخبار وحكايات من حديث محمد بن القاسم بن معروف -مخطوط (ن)",
@@ -1960,7 +2110,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript compiles various Hadiths and narratives centered around Muhammad bin al-Qasim bin Ma'aruf, highlighting his teachers and significant events in Islamic history. It features stories of Prophet Muhammad's interactions with companions, such as renaming 'Asir to Yaseer for positive meanings, discussions on virtues like maintaining good relations, and anecdotes involving figures like al-Hasan bin Ali and Ziyad. The collection emphasizes themes of leadership, justice, and the challenges faced by early Muslims."
   },
   {
     "title_ar": "أخلص العمل فإن الناقد بصير",
@@ -1973,7 +2124,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the essence of sincerity (ikhlas) in worship and righteous deeds. Drawing on insights from scholars and prophets, it emphasizes that sincere intentions are crucial for divine acceptance of actions. Through examples of pious individuals, the text illustrates how cultivating ikhlas leads to spiritual purification, closeness to God, and eternal salvation. Readers are encouraged to embody sincerity in all aspects of their lives."
   },
   {
     "title_ar": "احذر سوء الخاتمة",
@@ -1986,7 +2138,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the significance of fearing a negative outcome in life and the need for sincere repentance, drawing from Islamic teachings. It highlights the unpredictability of fate and warns against persisting in sin, using examples from righteous individuals who feared a bad ending and contrasted with those who did not. The text urges readers to amend their ways and align their actions with divine guidance to prepare for death."
   },
   {
     "title_ar": "تذكر رقابة الله تعالى",
@@ -1999,7 +2152,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This profound work delves into the core principles of spiritual awareness and ethical living. It underscores the detrimental effects of sin on the soul, leading to spiritual blindness and separation from Allah. The author emphasizes accountability before a just God, divine supervision, and the virtue of humility in worship. By urging reflection, repentance, and obedience, the book guides readers toward righteousness and closeness to God."
   },
   {
     "title_ar": "أم المؤمنين حفصة بنت عمر بن الخطاب",
@@ -2012,7 +2166,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book chronicles the life of Hafsah bint Umar ibn al-Khattab, a companion of Prophet Muhammad. Born into a noble family in Mecca, she was educated and pious. She married Khunays bin Hudhafa, migrated to Medina, became a widow after Uhud, and later married the Prophet. Known for her steadfastness in worship, she was respected as one of the Mothers of Believers. Her contributions to Islamic knowledge and community affairs were significant until her death."
   },
   {
     "title_ar": "أين تكون إذا نودي للصلاة",
@@ -2025,7 +2180,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "[Insert Description]"
   },
   {
     "title_ar": "احذر عاقبة الذنوب",
@@ -2038,7 +2194,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This compelling book explores the profound consequences of sinning, urging readers to reflect on their actions and the potential dire outcomes. It emphasizes gratitude for blessings, the impact of sins on personal and communal well-being, and the necessity of repentance. Drawing from various religious figures and scholars, it highlights themes of humility, mindfulness, and the fear of divine retribution. Ultimately, it serves as a moral awakening, encouraging adherence to righteous conduct to avoid spiritual and worldly ruin."
   },
   {
     "title_ar": "رسالة الخط والقلم",
@@ -2051,7 +2208,8 @@
     "type": "epub",
     "source": "url",
     "category": "الغريب والمعاجم ولغة الفقه",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "إغلاق الأبواب لمنع الحب والإعجاب",
@@ -2064,7 +2222,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book examines strategies to avoid suffering from love and admiration by identifying three key 'doors' through which these emotions enter. It emphasizes controlling the gaze, hearing, and avoiding singing as methods to prevent emotional pain."
   },
   {
     "title_ar": "من روى عن النبي من الصحابة في الكبائر للبرديجي - ط أطلس",
@@ -2077,7 +2236,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into major Islamic sins as narrated by companions of the Prophet. It includes hadiths from figures like 'Abdullah bin Mas'ud, Ibn 'Abbas, and Abu Hurayrah, detailing offenses such as polytheism, murder, adultery, false testimony, and disrespecting parents. The text underscores the gravity of these sins and their consequences."
   },
   {
     "title_ar": "تحفة الأطفال والغلمان في تجويد القرآن",
@@ -2090,7 +2250,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم القرآن",
-    "featured": false
+    "featured": false,
+    "description": "This book guides young learners through mastering Quranic recitation. It covers fundamental Arabic script pronunciation rules, such as stationary noon, tanween, doubled letters, elongation techniques, and specific 'lam' rules. The text also explores medd types—obligatory, permissible, and necessary—and includes a practical commentary by Sheikh Ali Mohammed Ad-Dabbagh to enhance understanding."
   },
   {
     "title_ar": "التعريف بالقرآن الكريم",
@@ -2103,7 +2264,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم القرآن",
-    "featured": false
+    "featured": false,
+    "description": "This comprehensive introduction to the Glorious Quran delves into its divine origin, role as a guide in Islamic legislation, and its superiority over previous scriptures. It explores the gradual revelation of the Quran to Prophet Muhammad, covering all aspects of human life. The book emphasizes understanding and applying the Quran through reflective reading, study, and adherence to the Prophetic Sunnah for personal and collective benefit."
   },
   {
     "title_ar": "حديث أبي نعيم عن أبي علي الصواف لأبي نعيم الأصبهاني",
@@ -2116,7 +2278,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This collection of hadiths explores supplications, the characteristics of Prophet Muhammad's community, incidents involving him and his companions, intercession, knowledge seeking, and divine decrees."
   },
   {
     "title_ar": "أيها المذنب بئس ما اخترت",
@@ -2129,7 +2292,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book excerpt emphasizes the importance of obedience to God and warns against sin. It highlights the nobility of righteous deeds compared to the低liness of sins, urging readers to reflect on their choices and prioritize acts pleasing Allah over worldly desires. The text discusses the consequences of disobedience, the role of reason and will in choosing the right path, and the moral rewards of piety. It concludes by stressing the eternal benefits of obedience both in this life and the Hereafter."
   },
   {
     "title_ar": "رسالة عمر بن عثمان بن العباس الجرسيفي في الحسبة",
@@ -2142,7 +2306,8 @@
     "type": "epub",
     "source": "url",
     "category": "السياسة الشرعية والقضاء",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "لا يخدعنك الشيطان",
@@ -2155,7 +2320,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the perpetual struggle against Satan's deceptions, emphasizing the importance of resisting temptations and adhering to religious obligations. It underscores the necessity of vigilance and righteousness, encouraging readers to seek refuge in Allah through acts of obedience."
   },
   {
     "title_ar": "رسالة فيمن يدعي أن من ذرية العباس حمزة الخلف للناجي",
@@ -2168,7 +2334,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "In this work, the author refutes claims by certain individuals asserting a lineage to Hamza al-Khalif, purportedly a descendant of Al-Abbas ibn 'Abd al-Muṭṭalib. Al-Nājī argues that no historical evidence or scholarly consensus supports the existence of such a figure, emphasizing accurate genealogy and warning against the dangers of false claims leading to misguidance and division. He cites various scholars and hadiths to strengthen his argument."
   },
   {
     "title_ar": "من وافق اسمه كنية أبيه للأزدي",
@@ -2181,7 +2348,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the tradition of naming individuals after their fathers' kunyas in Islamic culture. It delves into the lives of Companions of Prophet Muhammad, Followers, and scholars, highlighting their roles in preserving hadiths and Islamic knowledge across generations."
   },
   {
     "title_ar": "فوائد الفوائد لابن خزيمة",
@@ -2194,7 +2362,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores Islamic teachings, practices, and historical events through detailed summaries of several chapters. It delves into the conduct of Prophet Muhammad, emphasizing faith, prayer, charity, and social interactions. The text also shares stories about early Muslims, their conversions, and interactions with the Prophet, offering insights into the dynamics of the early Islamic community."
   },
   {
     "title_ar": "فوائد ابن جماعة",
@@ -2207,7 +2376,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript offers a detailed exploration of various Hadiths and their transmissions through scholars. It emphasizes Ibn Jumay'a's role as an Imam and Hafiz, discussing themes like mercy, marriage customs, lying about the Prophet, and increasing lifespan through righteous progeny. The text includes poetic verses, wisdom reflections, and multiple chains of transmission linking back to Prophet Muhammad."
   },
   {
     "title_ar": "تحقيق حقوق النساء في الإسلام",
@@ -2220,7 +2390,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب الألباني",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the interpretation of the Quran with a focus on women's rights in Islam as outlined by Muhammad Rashid Rida. It discusses Prophet Muhammad's emphasis on treating women with kindness, equality, and respect. Key aspects include dowries, societal roles, family contributions, Hadiths like 'Paradise lies beneath the feet of mothers,' and addresses issues like excessive dowry demands. The chapter advocates for balanced gender relations within Islamic teachings."
   },
   {
     "title_ar": "الأحاديث العيدية المسلسلة للسلفي",
@@ -2233,7 +2404,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles various hadiths related to Eid al-Fitr and Eid al-Adha, detailing narrations from scholars with their transmission chains. It emphasizes the tradition of delivering sermons between prayer and sermon on Eid days, highlighting the significance of these hadiths in Islamic practice."
   },
   {
     "title_ar": "تذكرة الطالبين في بيان الموضوع وأصناف الوضاعين",
@@ -2246,7 +2418,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم الحديث",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the classification and analysis of individuals who fabricate hadiths, exploring various motives such as heresy, innovation, fame, and profit. It emphasizes the importance of maintaining the authenticity of hadiths through rigorous scrutiny."
   },
   {
     "title_ar": "نظم اختيارات شيخ الإسلام ابن تيمية",
@@ -2259,7 +2432,8 @@
     "type": "epub",
     "source": "url",
     "category": "فقه عام",
-    "featured": false
+    "featured": false,
+    "description": "This book offers an organized selection of Imam Ibn Taymiyyah's works, focusing on Sulaiman ibn Suhman as a scholar. It details his background, education under notable sheikhs, and contributions to Islamic knowledge through various books. Key topics include purification, prayer, fasting, inheritance, and adherence to the Sunnah. The text emphasizes following authentic hadiths and avoiding innovations in religious practices."
   },
   {
     "title_ar": "حكايات عن أبي الشيخ الأصبهاني",
@@ -2272,7 +2446,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "جزء من أحاديث أبي بكر الصولي",
@@ -2285,7 +2460,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This collection compiles hadiths and poetic works, exploring themes like celestial events explained through Islamic teachings, leadership, moral virtues, fate, divine justice, love, loss, nature, and social interactions. It blends religious wisdom with artistic expression, offering insights into faith and human experiences."
   },
   {
     "title_ar": "أم المؤمنين سودة بنت زمعة",
@@ -2298,7 +2474,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the life of Sawda bint Zam'a, one of Prophet Muhammad's wives. It explores her background, marriage to the Prophet, and her significant contributions to the early Islamic community. The narrative highlights her migration to Abyssinia, return to Mecca, and her role as a compassionate Mother of the Believers who supported the Prophet and his family during challenging times."
   },
   {
     "title_ar": "أحاديث أبي الحسن الجوبري",
@@ -2311,7 +2488,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript compiles selections from a work by Abu al-Hasan Abdurrahman bin Yasir al-Jawbari, focusing on various hadiths and narrations. It introduces key Islamic scholars in the first chapter and delves into acts of worship like prayer rituals in subsequent chapters. The text also addresses prohibitions against intoxicants, guidelines on wealth and begging, and insights into the Prophet's concerns about materialism. Chapters 10 and 12 emphasize kindness in giving and scholarly forbearance."
   },
   {
     "title_ar": "بزوغ الهلال في الخصال الموجبة للظلال",
@@ -2324,7 +2502,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book explores themes of righteousness, compassion, and divine favor through hadiths about seven individuals who will be shaded by Allah on Judgment Day for their virtuous actions. It also discusses virtues like feeding the hungry, alleviating burdens, supporting orphans, and maintaining good character, emphasizing ethical behavior, justice, and piety as essential for divine favor."
   },
   {
     "title_ar": "الثاني من أمالي أبي الحسين بن بشران",
@@ -2337,7 +2516,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book is a detailed summary of Part Two, focusing on various hadiths and narrations. It discusses religious practices, moral advice, and historical incidents related to the Prophet and his companions. The text is structured into chapters highlighting different aspects of Islamic teachings, emphasizing piety, justice, and adherence to the Sunnah."
   },
   {
     "title_ar": "أم المؤمنين خديجة بنت خويلد",
@@ -2350,7 +2530,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book provides a detailed account of Khadijah bint Khuwaylid's life, emphasizing her lineage, upbringing, trade ventures, and marriage to Prophet Muhammad (PBUH). It highlights her exceptional qualities, business acumen, and unwavering support for the early Islamic mission. The narrative also covers significant events such as the rebuilding of the Ka'bah, the birth of their children, and Khadijah's pivotal role in the early years of Islam."
   },
   {
     "title_ar": "أصول الإيمان لابن باز",
@@ -2363,7 +2544,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the foundational principles of Islam, emphasizing faith as its cornerstone. It outlines six key beliefs derived from the Quran and Hadith, including belief in God, angels, scriptures, prophets, the Last Day, and divine decree. The author underscores that true faith integrates inner convictions with outward practices like prayer and Zakah. Disbelief or neglect of these principles is warned against, highlighting the distinction between 'Islam' (submission) and 'Iman' (faith). Ultimately, both are deemed essential for a genuine practice of Islam."
   },
   {
     "title_ar": "احذر اتباع الهوى",
@@ -2376,7 +2558,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the intense battle against inner desires, warning that indulgence leads to weakness and ruin. Drawing on religious teachings, it emphasizes self-control, discipline, and the fleeting nature of life. By citing prophets, the author motivates readers to resist temptations for spiritual growth and eternal reward."
   },
   {
     "title_ar": "الرسالة المفيدة",
@@ -2389,7 +2572,8 @@
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "This treatise by Muhammad ibn 'Abd al-Wahhab delves into the pillars of Islamic monotheism (Tawhid), exploring its three forms: Lordship, Divinity, and Essence/Names/Attributes. It examines various types of polytheism (shirk) and disbelief (kufr), discussing their consequences and supported by Quranic verses and Prophetic traditions."
   },
   {
     "title_ar": "فوائد حديث أبي عمير لابن القاص",
@@ -2402,7 +2586,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into a significant hadith featuring Prophet Muhammad ﷺ and a young boy named Abu 'Umayr. It examines various themes, including playful interaction with children, visiting the sick, ruler etiquette, prayer practices, family interactions, legal rulings, scholarly debates on hadith transmission, and deriving wisdom from minor Prophet incidents."
   },
   {
     "title_ar": "هل أنت من المسارعين إلى الخيرات",
@@ -2415,7 +2600,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book underscores the significance of hastening towards good deeds as a pathway to success in both this life and the Hereafter. It encourages readers to reflect on their actions, utilize time wisely, and prepare for the afterlife by engaging in acts of obedience and righteousness. Highlighting the transient nature of life and the consequences of neglecting spiritual responsibilities, it urges Muslims to prioritize deeds that draw them closer to Allah."
   },
   {
     "title_ar": "تذكر منزلك بعد الموت",
@@ -2428,7 +2614,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book contemplates life's impermanence, highlighting death, accountability, and afterlife preparation. It warns against prioritizing worldly distractions over spiritual duties, urging readers to focus on righteous deeds and remember the fate of the dead. Rich in religious reflections, quotes from Islamic figures, and moral lessons, it inspires introspection and devotion."
   },
   {
     "title_ar": "هل أنت من أهل الغفلة",
@@ -2441,7 +2628,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This text warns about the dangers of neglecting religious duties due to worldly distractions. It urges Muslims to stay vigilant against sin, maintain acts of worship, and remember their purpose to avoid estrangement from Allah. The chapter emphasizes self-accountability as a means to prevent negligence."
   },
   {
     "title_ar": "بسط الكف في إتمام الصف",
@@ -2454,7 +2642,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book emphasizes the significance of maintaining proper rows during Islamic prayer. It references hadiths from Prophet Muhammad encouraging straight and complete rows, discussing scholarly views on prayer validity and excellence when rows are not properly maintained. The author concludes that while prayers remain valid, their excellence may diminish if rows are incomplete or disorganized."
   },
   {
     "title_ar": "مجلس من حديث ابن العطار",
@@ -2467,7 +2656,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This anthology compiles Hadiths from various Islamic scholars and companions of Prophet Muhammad, covering themes like funeral rites, oaths, Hajj, ghusl, dietary restrictions, and biographies. Each chapter features Hadiths with their transmission chains (isnads) and commentary by scholars such as al-Bukhari and an-Nasa'i. Edited by Dr. Jamal Azoun, it was published by House of Tawhid in 2008."
   },
   {
     "title_ar": "البرعومة في النحو",
@@ -2480,7 +2670,8 @@
     "type": "epub",
     "source": "url",
     "category": "النحو والصرف",
-    "featured": false
+    "featured": false,
+    "description": "This book by Hazim Khanfar provides a comprehensive exploration of Arabic grammar, beginning with an introduction to its purpose as a concise aid for learners. It covers fundamental topics such as word types, inflection, structure, declension states, verb conjugation, and grammatical constructs like attributes and exceptions. Each chapter builds on the previous one, offering clear explanations and examples to guide readers from basic principles to more complex structures."
   },
   {
     "title_ar": "من مجالس أبي سعيد النقاش رواية أبي مطيع الصحاف - مخطوط (ن)",
@@ -2493,7 +2684,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book manuscript contains various hadiths (Prophetic traditions) narrated by Abu Sa'eed al-Naqash and others. It includes stories about the Prophet Muhammad's interactions with companions like Abu Bakr and 'Umar, descriptions of Gabriel's visits, and lessons on piety, generosity, and the consequences of sinning. The text also features discussions on prayer etiquette, charity, and the importance of following divine guidance."
   },
   {
     "title_ar": "السادس من فوائد أبي عثمان البحيري",
@@ -2506,7 +2698,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into Islamic teachings, traditions, and narrations through several chapters. Key themes include the abrogation of Quran verses, military expeditions by the Messenger of Allah, angels comforting believers in graves, paradise descriptions, prophecies about Dajjal, zuhud (asceticism), inquiry in seeking knowledge, and reflections on human behavior resembling contemporary times rather than ancestral heritage."
   },
   {
     "title_ar": "جزء من أحاديث القزاز عن شيوخه",
@@ -2519,7 +2712,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book is a collection of hadiths attributed to Prophet Muhammad ﷺ, compiled by Al-Qazzaz. These hadiths cover various topics including Friday prayers, marital rights, prohibitions in worship, intercession in Paradise, and specific supplications. The compilation is part of Ibn Mundah's larger work 'Fawa'id' and includes numerous chains of narration verifying the authenticity of each hadith."
   },
   {
     "title_ar": "حصر حرف الظاء",
@@ -2532,7 +2726,8 @@
     "type": "epub",
     "source": "url",
     "category": "الغريب والمعاجم ولغة الفقه",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the linguistic analysis of words starting with the Arabic letter 'ḍā'. Each chapter meticulously explores their meanings, derivations, and usage, referencing classical sources to provide a comprehensive understanding. It offers valuable insights for those studying classical Arabic texts."
   },
   {
     "title_ar": "أمهات النبي لابن حبيب",
@@ -2545,7 +2740,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book by Abu Jafar Muhammad ibn Habib al-Baghdadi explores the genealogy and maternal lineage of the Prophet Muhammad (peace be upon him). It details the names of his mothers, grandmothers, and great-grandmothers, while also examining broader family connections and significant ancestral figures. The comprehensive study offers insights into the historical background and familial ties shaping the Prophet's lineage."
   },
   {
     "title_ar": "بر الوالدين",
@@ -2558,7 +2754,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the Islamic obligations towards parents, detailing responsibilities such as obedience, financial support, and respectful communication. It highlights the rewards of fulfilling these duties, including closeness to Paradise and Allah's pleasure, supported by examples of devoted sons."
   },
   {
     "title_ar": "تسمية من لم يرو عنه غير رجل واحد",
@@ -2571,7 +2768,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book by An-Nasā'ī delves into the analysis of narrators in hadith traditions. It categorizes individuals based on their transmission chains, identifying those with single narrators, trustworthy stewards, well-known liars, and jurists across various cities. The work also outlines layers of companionship for key figures like al-A'mash and Malik ibn Anas, emphasizing the importance of verifying hadith authenticity through reliable chains."
   },
   {
     "title_ar": "الطريق المستقيم في نظم علامات الترقيم",
@@ -2584,7 +2782,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب اللغة",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the functions and roles of various punctuation marks, explaining how they enhance clarity and structure in written communication. Each chapter focuses on specific marks like periods, commas, and quotation marks, offering detailed analysis to guide proper usage."
   },
   {
     "title_ar": "مجلس من أمالي أبي سعد البغدادي",
@@ -2597,7 +2796,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This collection of notes by various Islamic scholars delves into key religious topics such as the fear of Hellfire, the significance of reciting the Qur'an, and the virtues of Prophet Muhammad's companions. It offers valuable insights into Islamic teachings, traditions, and spiritual guidance."
   },
   {
     "title_ar": "من حديث أبي محمد ابن الأكفاني - مخطوط (ن)",
@@ -2610,7 +2810,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "ملحق فتاوى لابن قداح لم تتضمنها مسائله",
@@ -2623,7 +2824,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book is a compilation of fatwas by Ibn Qudamah, covering various topics such as religious practices, financial obligations, and social issues within Islamic law. The text presents differing scholarly opinions on matters like prayer, bathing rituals, treatment of Dhimmis, animal slaughter, women's rights, and vaccination costs, reflecting diverse interpretations in Islamic jurisprudence."
   },
   {
     "title_ar": "حديث عيسى بن مريم والطير والضب لعبد الرحمن المقدسي-مخطوط (ن)",
@@ -2636,7 +2838,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This collection explores the lives and miracles of Jesus, Muhammad, and other Islamic figures. Through hadiths and stories, it examines themes of faith, submission to divine will, trust in God's mercy, and the consequences of actions. The book emphasizes Islam's role in guiding believers toward righteousness."
   },
   {
     "title_ar": "نبذة لطيفة ونصيحة شريفة",
@@ -2649,7 +2852,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This scholarly work explores Islamic teachings on faith, conduct, and spiritual growth. It emphasizes knowledge, righteous deeds, and adherence to Prophet Muhammad's teachings. The author offers advice on self-reflection, seeking forgiveness, contentment, patience, and maintaining good relations. The book highlights prayer, remembrance of God, and seeking scholars' guidance, concluding with a call for believers to strengthen their faith and excel in both religious and worldly pursuits."
   },
   {
     "title_ar": "حديث السلفي عن حاكم الكوفة",
@@ -2662,7 +2866,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles various Hadiths attributed to Prophet Muhammad, exploring his prayer practices, personal habits, moral guidance, and interactions. It covers topics such as recitation during prayers, specific supplications, modesty, family values, trade ethics, the importance of education, and social conduct advice. The collection features narrations from multiple sources in Kufa and other regions, offering diverse perspectives on his teachings."
   },
   {
     "title_ar": "درة القلوب الإخلاص",
@@ -2675,7 +2880,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book emphasizes the importance of sincerity and intention in Islamic worship. It encourages believers to focus on their hearts and intentions rather than external appearances or seeking praise from others. The text highlights aligning deeds with the Sunnah, warns against hypocrisy, and uses anecdotes to stress that true worship is inner purification and devotion to Allah without ulterior motives."
   },
   {
     "title_ar": "عباد الله اسلمو تسلموا",
@@ -2688,7 +2894,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This comprehensive guide explores Islam's core beliefs, practices, and consequences of adherence or deviation. It details the pillars of Islam—faith, prayer, zakah, fasting, and Hajj—and their significance. The book emphasizes spiritual and moral obligations, such as family ties, kindness to neighbors and animals, while warning against forbidden actions like zina, usury, and slander. It highlights purification through righteous deeds and concludes with rewards for the pious in Paradise and torments for disbelievers in Jahannam, urging all to embrace Islam for eternal bliss."
   },
   {
     "title_ar": "شروط الصلاة وأركانها وواجباتها (مطبوع ضمن مؤلفات الشيخ محمد بن عبد الوهاب، الجزء الثالث)",
@@ -2701,7 +2908,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "فضل شهر رمضان لابن عساكر",
@@ -2714,7 +2922,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the profound importance of Ramadan by compiling significant hadiths that highlight the spiritual benefits for Muslims during this holy month. It discusses the opening of Paradise gates, closing of Hell, chaining of devils, and increased divine mercy. The text emphasizes seeking forgiveness, having prayers answered, and gaining proximity to Allah."
   },
   {
     "title_ar": "الزهر الفياح قوت القلوب وغذاء الأرواح محبة الله جل وعز وعلاماتها",
@@ -2727,7 +2936,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book emphasizes the significance of loving Allah above all else for true happiness and peace. It warns against distractions and materialistic pursuits, encouraging believers to seek closeness with Allah through prayer, remembrance, and obedience. The text highlights blessings and rewards for sincere love, supported by Hadiths and Quranic verses."
   },
   {
     "title_ar": "رسالة في سجود السهو",
@@ -2740,7 +2950,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "داء النفوس وسموم القلوب المعاصي",
@@ -2753,7 +2964,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the profound impact of sins in Islam, stressing their consequences and urging believers to avoid them. It discusses Iblis's role in tempting humans and provides guidance on maintaining righteousness through fear of God, sincere intentions, self-restraint, and good company."
   },
   {
     "title_ar": "مجلس أبي نصر الغازي",
@@ -2766,7 +2978,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book examines a council led by Abu Nusayr al-Ghazzi, focusing on hadiths about Prophet Muhammad's visions of Allah. It explores various narrations and scholars' acceptance of these accounts. Subsequent chapters analyze specific hadiths, transmission chains, and the reliability of narrators like Naim ibn Hammad, emphasizing scholarly consensus on the validity of these visions and their theological implications."
   },
   {
     "title_ar": "حلية المتقين وثوب الصالحين الورع",
@@ -2779,7 +2992,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book emphasizes the importance of piety (taqwa) in Islam, showcasing it as a noble trait that enhances individuals' lives in both this world and the Hereafter. Through avoiding doubtful actions, adhering to Shariah, and emulating righteous figures, readers are encouraged to cultivate piety. The text is enriched with hadiths from Prophet Muhammad and insights from scholars, illustrating how piety leads to self-restraint and fear of Allah, guiding one's intentions and actions towards virtue."
   },
   {
     "title_ar": "الشمس في نصف الليل",
@@ -2792,7 +3006,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "In 'Prayer in the Polar Night,' Abdulatif G. Alghamdi recounts his experiences in polar regions, where the sun does not set for three months. The book reflects on adapting Islamic prayer times and fasting under constant daylight or darkness. Additionally, it describes visits to Andalusia's historical sites, particularly the Great Mosque of Cordoba, emphasizing its architectural grandeur and cultural significance."
   },
   {
     "title_ar": "فتح الكريم المنان في آداب حملة القرآن",
@@ -2805,7 +3020,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم القرآن",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "مناصحة الإمام وهب بن منبه لرجل تأثر بالخوارج",
@@ -2813,12 +3029,13 @@
     "title_tr": "Ratgeber des Imam Habib ibn Maimun an einen Mann, der sich von den Khawarij beeinflussen ließ",
     "author_tr": "Abdus-Salam ibn Burjus al-Abd al-Karim",
     "filename_tr": "Die Mahnung des Imam Habb b. Mansur an einen Mann, der sich den Khawarij angehörig fühlte - 'Abd al-Salam b. Barjas al-Abdal Karim.",
-    "filename_ar": "مناصحة-الإمام-وهب-بن-منبه-لرجل-تأثر-بالخوارج_عبد-السلام-بن-برجس-آل-عبد-الكريم.epub",
-    "id": "مناصحة-الإمام-وهب-بن-منبه-لرجل-تأثر-بالخوارج_عبد-السلام-بن-برجس-آل-عبد-الكريم",
+    "filename_ar": "مناصحة-الإمام-وهب-بن-منبه-لرجل-تأثر-بالخوارج_عبد-السلام-بن-برجس-آل-عبد.......epub",
+    "id": "مناصحة-الإمام-وهب-بن-منبه-لرجل-تأثر-بالخوارج_عبد-السلام-بن-برجس-آل-عبد......",
     "type": "epub",
     "source": "url",
     "category": "العقيدة",
-    "featured": false
+    "featured": false,
+    "description": "In this enlightening work, Imam Wahb ibn Munabbih provides crucial guidance on adhering to the Prophet's teachings and the Sunnah. He warns against the Khawarij doctrine, highlighting their disruptive influence on Muslim unity. The book stresses the importance of proper zakah distribution through legitimate authorities and cautions against religious innovations that could lead to division and chaos."
   },
   {
     "title_ar": "من وافق اسمه اسم أبيه للأزدي",
@@ -2831,7 +3048,8 @@
     "type": "epub",
     "source": "url",
     "category": "التراجم والطبقات",
-    "featured": false
+    "featured": false,
+    "description": "This book compiles biographies of 97 individuals from early Islam whose names matched their fathers', preserving historical connections and highlighting notable companions and successors of the Prophet Muhammad."
   },
   {
     "title_ar": "رسالة أبي داود إلى أهل مكة",
@@ -2844,7 +3062,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم الحديث",
-    "featured": false
+    "featured": false,
+    "description": "This book by Abu Dawood Sulaiman ibn al-Ash'as as-Sijistani delves into the methodology of hadith compilation and authentication. The author explains his approach in selecting authentic hadiths, discussing reasons for inclusion or exclusion based on factors like scarcity, reliance on specific narrators, clarity, and comparison with other scholars' works. He emphasizes the importance of well-known and connected chains of transmission to ensure authenticity. The book provides a structured overview, detailing the number of included hadiths and stressing the need for understanding context to prevent misinterpretation."
   },
   {
     "title_ar": "التدخين وكيف نحمي الجيل الجديد منه",
@@ -2857,7 +3076,8 @@
     "type": "epub",
     "source": "url",
     "category": "علوم أخرى",
-    "featured": false
+    "featured": false,
+    "description": "This insightful book examines the global impact of smoking, discussing statistics on production, consumption trends, and health consequences. It explores how different groups like doctors, teachers, and athletes are affected and analyzes the psychological factors behind addiction. The author proposes strategies including education, media campaigns, and community efforts to protect future generations from smoking's detrimental effects."
   },
   {
     "title_ar": "القرآن وعودة المجد",
@@ -2870,7 +3090,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "In 'The Quran and the Return of Glory', Mujdi al-Halali examines the historical decline of the Muslim world, linking it to a departure from Islamic principles. By reflecting on past glories, such as the Caliphate of Al-Andalus, and contrasting them with current struggles in regions like Iraq and Palestine, he identifies moral decay, materialism, and neglect of Quranic teachings as key factors. The book calls for a return to the Quran as a divine solution, urging collective action and reform to heal societal ailments and restore Muslim honor."
   },
   {
     "title_ar": "أسباب المغفرة",
@@ -2883,7 +3104,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book explores the three primary causes of forgiveness: supplication with hope, seeking Allah's forgiveness (istighfar), and Tawhid. It explains how sincere prayer, acknowledgment of sins, specific prayers, and belief in monotheism lead to divine mercy, even for great sins."
   },
   {
     "title_ar": "دواء القلوب وسرطان الذنوب التوبة",
@@ -2896,7 +3118,8 @@
     "type": "epub",
     "source": "url",
     "category": "الرقاق والآداب والأذكار",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the significance of repentance and seeking forgiveness from Allah, illustrating its transformative potential through real-life stories. It outlines the characteristics of sincere repentance and urges believers to embrace it as a path to expiate sins and strengthen their connection with Allah. The author also emphasizes the importance of avoiding procrastination in seeking forgiveness and highlights Allah's boundless mercy and compassion towards His servants."
   },
   {
     "title_ar": "طرق حديث النبي حيث كان في الحائط للضياء المقدسي - مخطوط (ن)",
@@ -2909,7 +3132,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This manuscript by Al-Maqdisi details various methods of narrating Hadiths about the Prophet Muhammad's encounters with his companions. It includes accounts of Abu Bakr, Umar, and Uthman seeking permission to enter the Prophet's presence, receiving glad tidings of Paradise, and their subsequent interactions."
   },
   {
     "title_ar": "خطورة التكفير وما يترتب عليه من أحكام",
@@ -2922,7 +3146,8 @@
     "type": "epub",
     "source": "url",
     "category": "الدعوة وأحوال المسلمين",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "ذم قرناء السوء لابن عساكر",
@@ -2935,7 +3160,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "Not Yet Generated"
   },
   {
     "title_ar": "مجلس من أمالي ابن الأنباري",
@@ -2948,7 +3174,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the intricate world of grammar and theology, combining linguistic explorations with narratives about Paradise. It features discussions on poetic language, debates among scholars, and anecdotes involving caliphate claims and interactions with slave girls, all reflecting themes of knowledge, community, and divine favor."
   },
   {
     "title_ar": "ثمرة التسارع إلى الحب في الله تعالى وترك التقاطع",
@@ -2961,7 +3188,8 @@
     "type": "epub",
     "source": "url",
     "category": "بحوث ومسائل",
-    "featured": false
+    "featured": false,
+    "description": "This book is a compilation of hadiths focusing on themes such as love for Allah, unity among believers, and the importance of reconciling differences. The author highlights the rewards for those who foster mutual love in the name of Allah and warns against discord and severed ties. Key hadiths include teachings on brotherhood, angels accompanying visitors of loved ones, and the significance of maintaining good relations in both this life and the Hereafter."
   },
   {
     "title_ar": "المقصور والممدود المنسوب لأبي عمر الزاهد",
@@ -2974,7 +3202,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب اللغة",
-    "featured": false
+    "featured": false,
+    "description": "This book offers an in-depth exploration of Arabic grammar, focusing on consonants, vowels, diacritics, and word elongation/shortening. Drawing from classical texts, Ghulam Tha'lab and Muhammad Jabbir al-Mayyibid provide comprehensive insights into the use of letters in poetry, literature, and everyday language, making it an essential resource for students of Arabic linguistics."
   },
   {
     "title_ar": "تحقيق صفة الفتوى",
@@ -2987,7 +3216,8 @@
     "type": "epub",
     "source": "url",
     "category": "كتب الألباني",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into the characteristics and significance of fatwas within Islamic law. It underscores the duty of those issuing fatwas, stressing that incorrect or ill-informed rulings lead to sin. The text cautions against seeking fatwas from unqualified individuals, as this can mislead both the seeker and issuer. Citing the Prophet Muhammad's sayings, it emphasizes adhering to authentic knowledge, following scholars' guidance, and avoiding doubtful matters."
   },
   {
     "title_ar": "الإباضية وهل هم خوارج",

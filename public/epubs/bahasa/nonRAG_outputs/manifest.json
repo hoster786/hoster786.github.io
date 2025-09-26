@@ -10,7 +10,8 @@
     "type": "epub",
     "source": "url",
     "category": "النحو والصرف",
-    "featured": false
+    "featured": false,
+    "description": "This book provides an in-depth exploration of Arabic grammar, covering fundamental concepts such as parts of speech (nouns, verbs, particles), inflection types, and noun/verb states. It details plural forms, rules for imperfect verbs, and the distinction between definite and indefinite nouns, offering a thorough understanding of the language's structure."
   },
   {
     "title_ar": "الكلام على حديث الإستلقاء لأبي موسى المديني - مخطوط (ن)",
@@ -23,7 +24,8 @@
     "type": "epub",
     "source": "url",
     "category": "مخطوطات حديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into various hadiths, providing deep insights and analysis. One section focuses on a hadith where Prophet Muhammad describes God's divine posture and forbids creatures from imitating it. A related anecdote involves Qatada squeezing Abu Sa'id's foot during a discussion about Islamic conduct based on the hadith."
   },
   {
     "title_ar": "حديث المصافحة للسلفي",
@@ -36,7 +38,8 @@
     "type": "epub",
     "source": "url",
     "category": "الأجزاء الحديثية",
-    "featured": false
+    "featured": false,
+    "description": "This book explores a hadith about the importance of shaking hands within the Salafi tradition, detailing its chain of narrators to establish authenticity. It describes Prophet Muhammad's hand as soft, like leather or wool, and underscores the need for preserving such traditions accurately."
   },
   {
     "title_ar": "التبري من معرة المعري",
@@ -49,6 +52,21 @@
     "type": "epub",
     "source": "url",
     "category": "الأدب والبلاغة",
-    "featured": false
+    "featured": false,
+    "description": "This book delves into linguistic aspects related to dogs, addressing misunderstandings about Abu al-'Ala' al-Ma'arri's statement on seventy dog names. It includes a poem enumerating various dog names."
+  },
+  {
+    "title_ar": "الأربعون حديثا في حق الفقراء لأبي طاهر السلفي - مخطوط (ن)",
+    "author_ar": "أبو طاهر السلفي",
+    "title_tr": "Empat Puluh Hadis Tentang Fakir miskin Oleh Abu Thahir As-Salafi - Naskah Tangan (N)",
+    "author_tr": "Abu Tahir Al-Salafi",
+    "filename_tr": "Empat Puluh Hadis Tentang Fakir Miskin Menurut Abu Thahir al-Salafi - Naskah Tangan (N) — Abu Thahir al-Salafi.epub",
+    "filename_ar": "الأربعون-حديثا-في-حق-الفقراء-لأبي-طاهر-السلفي_مخطوط-ن_أبو-طاهر-السلفي.epub",
+    "id": "الأربعون-حديثا-في-حق-الفقراء-لأبي-طاهر-السلفي_مخطوط-ن_أبو-طاهر-السلفي",
+    "type": "epub",
+    "source": "url",
+    "category": "مخطوطات حديثية",
+    "featured": false,
+    "description": "This book explores forty significant hadiths highlighting the poor's rights and the virtue of poverty, particularly focusing on Ahl al-Suffa. Authored by Abu Tahir al-Salafi in the 6th century AH, it traces the transmission of these teachings from Prophet Muhammad through scholars. The text begins with an invocation to Allah and includes stories about the garment of poverty, emphasizing its importance as a virtuous state."
   }
 ]
