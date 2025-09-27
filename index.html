@@ -121,8 +121,33 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <script>
-                     function playAudio(el) {
+                 <script>
+
+                    const table = document.getElementById('dm_chapters_table');
+
+
+                   //CHAPTERS TABLE CLICK EVENT
+                   table.addEventListener('click', function(event) {
+                        const td = event.target.closest('td');
+                        if (!td) return; // Clicked outside a td
+
+                        const audioAttr = td.getAttribute('data-audio');
+
+                        if (!audioAttr) return; // Ignore if data-audio is null, undefined, or empty string
+
+                        const tr = td.parentElement;
+                        const rowIndex = [...table.rows].indexOf(tr);
+                        const cellIndex = [...tr.cells].indexOf(td);
+
+                        console.log(`Clicked cell at row ${rowIndex}, column ${cellIndex}`);
+                        console.log(`data-audio value: ${audioAttr}`);
+                          playAudio(td);
+                  });
+
+
+
+
+                    function playAudio(el) {
 
                         //GET THE PARENT ELEMENT
                         const audioParentElm = el.parentElement;
@@ -189,8 +214,9 @@
 
                                                                 currentAudio.play()
                                                                     .then(() => {
-                                                                        btnContainer.innerHTML = 'Pause';
-                                                                     })
+                                                                        btnContainer.innerHTML = 'Stop audio';
+                                                                        console.log('Audio is playing...');
+                                                                    })
                                                                     .catch(error => {
                                                                         console.error('Playback failed:', error);
                                                                         currentAudio = null;
@@ -212,7 +238,8 @@
 
  
                     }
-  
-    </script>
+                </script>
+
+
   </body>
 </html>

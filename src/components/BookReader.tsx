@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect, useRef, useMemo } from "react"
-import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X, StepBack, SkipBack, LucideDatabaseBackup, CircleArrowLeft, CircleArrowRight, EyeClosedIcon, CircleX } from "lucide-react"
+import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X, StepBack, SkipBack, LucideDatabaseBackup, CircleArrowLeft, CircleArrowRight, EyeClosedIcon, CircleX, Search } from "lucide-react"
 import DmAlert from "./common/DmAlert"
 
 
@@ -973,19 +973,6 @@ useEffect(() => {
   return (
     <div className="fixed inset-0 bg-gray-900 z-50 flex flex-col">
 
-    <div className="fixed top-20 left-10 z-20">
-      <input
-        type="text"
-        placeholder="Search in book..."
-        className="border p-2 rounded w-[300px] mt-4"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
-      {searchResultsCount > 0 && (
-        <p className="text-sm text-gray-600 mt-1">{searchResultsCount} result(s) found</p>
-      )}
-    </div>
-
       {/* Header with Page Display */}
       <div className="bg-white shadow-lg border-b border-gray-200 p-4">
         <div className="flex items-center justify-between">
@@ -1001,10 +988,11 @@ useEffect(() => {
                       {/* Book Title */}
                     <div className="text-start mt-2 pe-3 border-e border-gray-600">
                       <h2 className="font-semibold text-gray-700 text-sm md:text-base truncate w-[160px] sm:w-auto">
-                        {showArabic ? book.title_ar : book.title_en}
+                        {/* {showArabic ? book.title_ar : book.title_en} */}
+                        {book.title_tr}
                       </h2>
                       <p className="text-xs text-gray-500 truncate">
-                        {showArabic ? `بقلم ${book.author_ar}` : `by ${book.author_en}`}
+                        {showArabic ? `بقلم ${book.author_tr}` : `by ${book.author_tr}`}
                       </p>
                     </div>
 
@@ -1024,8 +1012,33 @@ useEffect(() => {
 
 
           <div className="flex items-center space-x-2 flex-shrink-0">
+
+            <div className="relative w-[300px]">
+              {/* Input */}
+              <input
+                type="text"
+                placeholder="Search in book..."
+                className="border rounded pl-9 pr-2 py-2 w-full"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+
+              {/* Lucide Search Icon */}
+              <Search
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+                strokeWidth={2}
+              />
+
+              {/* Search results */}
+              {/* {searchResultsCount > 0 && (
+                <p className="text-sm text-gray-600 mt-1">
+                  {searchResultsCount} result(s) found
+                </p>
+              )} */}
+            </div>
+
             {/* Magnifier Toggle */}
-            <button
+            {/* <button
               onClick={toggleMagnifier}
               className={`hidden md:block p-2 rounded-lg transition-colors ${
                 magnifierActive ? "bg-amber-100 text-amber-700" : "hover:bg-gray-100"
@@ -1033,7 +1046,7 @@ useEffect(() => {
               title="Toggle Magnifier (M)"
             >
               <SearchIcon className="w-4 h-4" />
-            </button>
+            </button> */}
 
             {/* Zoom Controls */}
             <div className="hidden md:flex items-center space-x-1 bg-gray-100 rounded-lg p-1">
