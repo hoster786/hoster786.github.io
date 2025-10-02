@@ -994,7 +994,7 @@ const changeFileToJson = (filename) => {
 
             <div className="book-g-info flex gap-2 items-center">
                       {/* Book Title */}
-                    <div className="text-start mt-2 pe-3 border-e border-gray-600">
+                    <div className="text-start mt-2 pe-3 border-e border-gray-600 max-w-[300px]">
                       <h2 className="font-semibold text-gray-700 text-sm md:text-base truncate w-[160px] sm:w-auto">
                         {/* {showArabic ? book.title_ar : book.title_en} */}
                         {book.title_tr}
@@ -1021,7 +1021,8 @@ const changeFileToJson = (filename) => {
 
           <div className="flex items-center space-x-2 flex-shrink-0">
 
-            <div className="relative w-[300px]">
+           <div className="relative w-[300px] hidden sm:block">
+
               {/* Input */}
               <input
                 type="text"

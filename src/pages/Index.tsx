@@ -82,6 +82,7 @@ interface Book {
   title_id?: string
   author_id?: string
   cover?: string
+  category_id?: string
   description?: string
   description_ar?: string
   description_en?: string
@@ -192,7 +193,7 @@ const Index = () => {
         closeSidebar: "إغلاق الشريط الجانبي",
         searchingFor: "البحث عن:",
         clearSearch: "مسح البحث",
-
+        all_books: "كل الكتب",
         //OTHER TRANSLATIONS
         next: "التالي",
         page: "الصحيفة",
@@ -226,6 +227,7 @@ const Index = () => {
         closeSidebar: "Close Sidebar",
         searchingFor: "Searching for:",
         clearSearch: "Clear Search",
+        all_books: "All book",
         //OTHER TRANSLATIONS
         next: "Next",
         page: "Page",
@@ -258,6 +260,7 @@ const Index = () => {
         closeSidebar: "Cerrar Barra Lateral",
         searchingFor: "Buscando:",
         clearSearch: "Limpiar Búsqueda",
+        all_books: "Todos los libros",
         // OTRAS TRADUCCIONES
         next: "Siguiente",
         page: "Página",
@@ -290,6 +293,7 @@ const Index = () => {
         closeSidebar: "Seitenleiste schließen",
         searchingFor: "Suche nach:",
         clearSearch: "Suche löschen",
+        all_books: "Alle Bücher",
         // ANDERE ÜBERSETZUNGEN
         next: "Weiter",
         page: "Seite",
@@ -322,6 +326,8 @@ const Index = () => {
         closeSidebar: "Fechar Barra Lateral",
         searchingFor: "Procurando por:",
         clearSearch: "Limpar Pesquisa",
+        all_books: "Todos os livros",
+
         // OUTRAS TRADUÇÕES
         next: "Seguinte",
         page: "Página",
@@ -354,6 +360,8 @@ const Index = () => {
         closeSidebar: "سائیڈ بار بند کریں",
         searchingFor: "تلاش:",
         clearSearch: "تلاش صاف کریں",
+        all_books: "تمام کتابیں",
+
         // دیگر تراجم
         next: "اگلا",
         page: "صفحہ",
@@ -386,6 +394,8 @@ const Index = () => {
         closeSidebar: "Kenar Çubuğunu Kapat",
         searchingFor: "Aranıyor:",
         clearSearch: "Aramayı Temizle",
+        all_books: "Tüm kitaplar",
+
         // DİĞER ÇEVİRİLER
         next: "İleri",
         page: "Sayfa",
@@ -418,6 +428,7 @@ const Index = () => {
         closeSidebar: "Tutup Sidebar",
         searchingFor: "Mencari:",
         clearSearch: "Hapus Pencarian",
+        all_books: "Semua buku",
         // TERJEMAHAN LAIN
         next: "Berikutnya",
         page: "Halaman",
@@ -597,6 +608,7 @@ const Index = () => {
           author_ur: book.author_ur || book.author_ar,
           title_tr: book.title_tr || book.title_en || book.title_ar,
           cover: book.cover,
+          category_id: book.category_id,
           description_ar: book.description_ar || "",
           description: book.description || "",
           author_tr: book.author_tr || book.author_en || book.author_ar,
@@ -821,21 +833,21 @@ const Index = () => {
       return []
     }
 
-    console.log("🔍 FILTERING BOOKS:")
-    console.log("📊 Total books:", books.length)
-    console.log("🔍 Search query:", `"${searchQuery}"`)
-    console.log("📂 Selected category:", selectedCategory)
+    // console.log("🔍 FILTERING BOOKS:")
+    // console.log("📊 Total books:", books.length)
+    // console.log("🔍 Search query:", `"${searchQuery}"`)
+    // console.log("📂 Selected category:", selectedCategory)
 
     let result = [...books]
 
     // Apply category filter first
     if (selectedCategory !== "all") {
-      const categoryObj = categories.find((cat) => cat.id === selectedCategory)
-      const categoryName = categoryObj ? categoryObj.name : selectedCategory
-
+      const categoryObj = reversedCategories[selectedCategory]
+      const categoryName = categoryObj.category_id
+    console.log("🔍 FILTERING CATEGORIE ********************:", categoryObj.category_id)
       result = result.filter((book) => {
-        const bookCategory = book.category.trim().toLowerCase()
-        const targetCategory = categoryName.trim().toLowerCase()
+        const bookCategory = book.category_id
+        const targetCategory = categoryName
         return bookCategory === targetCategory
       })
 
@@ -915,8 +927,11 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
 
 
   // Filter categories based on search query
-  const filteredCategories = categories.filter((category) =>
-    category.name.toLowerCase().includes(categorySearchQuery.toLowerCase()),
+  const filteredCategories = Object.entries(reversedCategories).filter(
+    ([key, category]) =>
+      category[getStoredLanguage()]
+        .toLowerCase()
+        .includes(categorySearchQuery.toLowerCase())
   )
 
   const handleBookSelect = (book: Book) => {
@@ -999,6 +1014,28 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
 
   }
 
+
+
+//HANDLE ALL CATEGORY SELECT
+  const handleAllCategorySelect = (categoryId: string) => {
+     setSelectedCategory("all")
+    setSearchQuery("")
+    setCurrentPage("home")
+    trackUserFlow("category_select", "navigation", categoryId)
+
+    if (selectedBook) {
+      setSelectedBook(null)
+    }
+
+    if (isMobile) {
+      setTimeout(() => {
+        setSidebarCollapsed(true)
+      }, 150)
+    }
+  }
+
+ //HANDLE CATEGORY SELECT 
+ 
   const handleCategorySelect = (categoryId: string) => {
     console.log("Category selected:", categoryId)
     setSelectedCategory(categoryId)
@@ -1072,7 +1109,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
      setDirectionFromRTL(getStoredLanguage());
 
 
-     window.location.reload(); //RELOAD THE PAGE TO AVOID MANIFEST FETCHING ISSUES
+     window.location.reload(); 
+     //RELOAD THE PAGE TO AVOID MANIFEST FETCHING ISSUES
    
   }
 
@@ -1318,7 +1356,9 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                 </h2>
                 {selectedCategory !== "all" && (
                   <div className="text-base font-normal text-amber-700 mt-2">
-                    {t.category} {categories.find((cat) => cat.id === selectedCategory)?.name}
+                    {t.category} 
+                    { reversedCategories[selectedCategory]?.[getStoredLanguage()] || ''}
+                    {/* {categories.find((cat) => cat.id === selectedCategory)?.name} */}
                   </div>
                 )}
                 {searchQuery.trim() && (
@@ -1338,10 +1378,11 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
    
 
                 {currentBooks.map((book, index) => {
-                  const isFeatured =
-                    featuredBooks.some((title) => book.title_ar.includes(title)) &&
-                    !searchQuery.trim() &&
-                    selectedCategory === "all";
+                  // const isFeatured =
+                  //   featuredBooks.some((title) => book.title_ar.includes(title)) &&
+                  //   !searchQuery.trim() &&
+                  //   selectedCategory === "all";
+                  
 
                   return (
                                     // <div
@@ -1382,8 +1423,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                                  trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
                                    handleBookSelect(book)
                                   } }>
-                                       <BookCard key={index} cover={getBookCover(book)} cat={book.category} title={book.title_tr} description={book.description}
-                                        isFeatured={isFeatured} author={book.author_tr} translations={t}/>           
+                                       <BookCard key={index} cover={getBookCover(book)} cat={reversedCategories[book.category_id]?.[getStoredLanguage()] || 'Book has no category ID !'} title={book.title_tr} description={book.description}
+                                        isFeatured={book.featured} author={book.author_tr} translations={t} langCode={getStoredLanguage()}/>           
 
                             </div>
 
@@ -1518,15 +1559,34 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
             </div> */}
 
             <div className="space-y-2 overflow-auto h-[40vh] lg:h-[50vh]">
-              {Object.entries(reversedCategories).map(([key, category]) => {
+                  <button
+                    onClick={(e) => {
+                    handleAllCategorySelect("all")
+                    }}
+                    className={`w-full text-left px-3 py-3 rounded text-sm hover:bg-gray-100 transition-colors
+                    }`}
+                    style={{
+                      WebkitTapHighlightColor: "transparent",
+                      WebkitUserSelect: "none",
+                      userSelect: "none",
+                      touchAction: "manipulation",
+                    }}
+                  >
+                    <div className="flex items-center justify-between pointer-events-none">
+                      <div className="flex items-center min-w-0 flex-1">
+                        {/* Replace with a default icon or logic if needed */}
+                        <BookOpen className="w-4 h-4 me-2 flex-shrink-0" />
+                        <span className="truncate">{t.all_books}</span>
+                      </div>
+                      <span className="text-xs bg-amber-900 text-white px-2 py-1 rounded ms-2 flex-shrink-0">{books.length}</span>
+                    </div>
+                  </button>
+
+              {filteredCategories.map(([key, category]) => {
                 const bookCount =
                   key === "all"
                     ? books.length
-                    : books.filter((book) => {
-                        const bookCategory = book.category.trim().toLowerCase()
-                        const targetCategory = category.english.trim().toLowerCase()
-                        return bookCategory === targetCategory
-                      }).length
+                    : books.filter((book) => book.category_id === key).length
 
                 return (
                   <button
@@ -1534,8 +1594,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                     onClick={(e) => {
                       e.preventDefault()
                       e.stopPropagation()
-                      trackUserFlow("category_sidebar_select", "navigation", category.english)
-                      handleCategorySelect(key)
+                      trackUserFlow("category_sidebar_select", "navigation", category.category_id)
+                      handleCategorySelect(category.category_id)
                     }}
                     className={`w-full text-left px-3 py-3 rounded text-sm hover:bg-gray-100 transition-colors ${
                       selectedCategory === key ? "bg-gray-100" : ""
@@ -1551,7 +1611,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                       <div className="flex items-center min-w-0 flex-1">
                         {/* Replace with a default icon or logic if needed */}
                         <BookOpen className="w-4 h-4 me-2 flex-shrink-0" />
-                        <span className="truncate">{category.english}</span>
+                        <span className="truncate">{category[getStoredLanguage()]}</span>
                       </div>
                       <span className="text-xs bg-amber-900 text-white px-2 py-1 rounded ms-2 flex-shrink-0">{bookCount}</span>
                     </div>

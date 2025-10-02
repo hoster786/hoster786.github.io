@@ -10,7 +10,7 @@
     "type": "epub",
     "source": "url",
     "category_id": "C010",
-    "featured": false,
+    "featured": true,
     "description": "This book provides an in-depth exploration of Arabic grammar, covering fundamental concepts such as parts of speech (nouns, verbs, particles), inflection types, and noun/verb states. It details plural forms, rules for imperfect verbs, and the distinction between definite and indefinite nouns, offering a thorough understanding of the language's structure."
   },
   {
@@ -24,7 +24,7 @@
     "type": "epub",
     "source": "url",
     "category_id": "C015",
-    "featured": false,
+    "featured": true,
     "description": "This book delves into various hadiths, providing deep insights and analysis. One section focuses on a hadith where Prophet Muhammad describes God's divine posture and forbids creatures from imitating it. A related anecdote involves Qatada squeezing Abu Sa'id's foot during a discussion about Islamic conduct based on the hadith."
   },
   {
@@ -38,7 +38,7 @@
     "type": "epub",
     "source": "url",
     "category_id": "C042",
-    "featured": false,
+    "featured": true,
     "description": "This book explores a hadith about the importance of shaking hands within the Salafi tradition, detailing its chain of narrators to establish authenticity. It describes Prophet Muhammad's hand as soft, like leather or wool, and underscores the need for preserving such traditions accurately."
   },
   {
@@ -262,7 +262,7 @@
     "type": "epub",
     "source": "url",
     "category_id": "C011",
-    "featured": false,
+    "featured": true,
     "description": "This book delves into al-Bayquni's work, focusing on hadith classification and evaluation through his poem. It outlines criteria for authentic, good, weak, and fabricated traditions, emphasizing reliable narration chains. The poem serves as a concise guide to hadith studies, aiding scholars in discerning the validity of transmissions."
   },
   {

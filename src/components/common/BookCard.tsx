@@ -1,7 +1,54 @@
 import { User } from 'lucide-react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+ 
 
 
+ 
+//REVERSED CATEGORIES DATA
+import reversedCategoriesData from "./../../../public/reversed_map.json"
+
+
+
+export interface ReversedCategory {
+
+    [key: string]: {
+        category_id: string;
+        arabic: string;
+        english: string;
+        french: string;
+        spanish: string;
+        german: string;
+        italian: string;
+        portuguese: string;
+        turkish: string;
+        russian: string;
+        greek: string;
+        hindi: string;
+        bengali: string;
+        tamil: string;
+        telugu: string;
+        thai: string;
+        lao: string;
+        khmer: string;
+        burmese: string;
+        georgian: string;
+        armenian: string;
+        chinese: string;
+        japanese: string;
+        korean: string;
+        persian: string;
+        urdu: string;
+    }
+
+}
+
+
+
+
+
+
+
+//TRUNCATE TEXT
 function truncateText(text: string, maxLength: number = 40): string {
   if (text.length <= maxLength) {
     return text;
@@ -18,9 +65,27 @@ type BookProps = {
   isFeatured: boolean;
   author: string;
   translations?: { [key: string]: string };
+  langCode: string;
 };
 
-function BookCard({ cover, cat, title, description, isFeatured, author,translations }: BookProps) {
+function BookCard({ cover, cat, title, description, isFeatured, author,translations ,langCode}: BookProps) {
+// useEffect(() => {
+//     // Load categories from local JSON
+//       setReversedCategories(reversedCategoriesData as ReversedCategory);
+// }, []);
+
+
+
+//LOAD REVERSED CATEGORIES
+// const [reversedCategories, setReversedCategories] = useState<ReversedCategory>({});
+// useEffect(() => {
+//     // Load categories from local JSON
+//       setReversedCategories(reversedCategoriesData as ReversedCategory);
+// }, []);
+
+
+
+
   return (
         <div className="flex gap-4 w-full cursor-pointer sm:w-[440px] ">
 
@@ -42,7 +107,9 @@ function BookCard({ cover, cat, title, description, isFeatured, author,translati
                          {truncateText(description,150)}
                    </p>
 
-                   <span className='text-center bg-amber-900 text-white text-sm p-1 rounded pt-1'> { cat } </span>
+                   <span className='text-center bg-amber-900 text-white text-sm p-1 rounded pt-1'>
+                     { cat }
+                   </span>
                </div>
 
         </div>
