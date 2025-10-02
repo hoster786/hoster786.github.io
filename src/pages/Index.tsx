@@ -13,6 +13,55 @@ import BookCard from "@/components/common/BookCard"
 //TEST IMAGE COVER
 import CoverImg from "./../../assets/book.jpg";
 
+//REVERSED CATEGORIES DATA
+import reversedCategoriesData from "./../../public/reversed_map.json"
+
+
+
+
+export interface ReversedCategory {
+
+    [key: string]: {
+        category_id: string;
+        arabic: string;
+        english: string;
+        french: string;
+        spanish: string;
+        german: string;
+        italian: string;
+        portuguese: string;
+        turkish: string;
+        russian: string;
+        greek: string;
+        hindi: string;
+        bengali: string;
+        tamil: string;
+        telugu: string;
+        thai: string;
+        lao: string;
+        khmer: string;
+        burmese: string;
+        georgian: string;
+        armenian: string;
+        chinese: string;
+        japanese: string;
+        korean: string;
+        persian: string;
+        urdu: string;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 interface Book {
@@ -495,7 +544,24 @@ const Index = () => {
     loadFeaturedBooks()
   }, [])
 
-   
+
+
+
+
+
+  //LOAD REVERSED CATEGORIES
+    const [reversedCategories, setReversedCategories] = useState<ReversedCategory>({});
+
+  useEffect(() => {
+    // Load categories from local JSON
+      setReversedCategories(reversedCategoriesData as ReversedCategory);
+  }, []);
+
+
+
+
+
+ //LOADS ALL BOOKS 
   useEffect(() => {
 
     const epubBookUrlSegments = `/epubs/${getStoredLanguage()}/nonRAG_outputs/manifest.json`;
@@ -1452,27 +1518,27 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
             </div> */}
 
             <div className="space-y-2 overflow-auto h-[40vh] lg:h-[50vh]">
-              {filteredCategories.map((category) => {
+              {Object.entries(reversedCategories).map(([key, category]) => {
                 const bookCount =
-                  category.id === "all"
+                  key === "all"
                     ? books.length
                     : books.filter((book) => {
                         const bookCategory = book.category.trim().toLowerCase()
-                        const targetCategory = category.name.trim().toLowerCase()
+                        const targetCategory = category.english.trim().toLowerCase()
                         return bookCategory === targetCategory
                       }).length
 
                 return (
                   <button
-                    key={category.id}
+                    key={key}
                     onClick={(e) => {
                       e.preventDefault()
                       e.stopPropagation()
-                      trackUserFlow("category_sidebar_select", "navigation", category.name)
-                      handleCategorySelect(category.id)
+                      trackUserFlow("category_sidebar_select", "navigation", category.english)
+                      handleCategorySelect(key)
                     }}
                     className={`w-full text-left px-3 py-3 rounded text-sm hover:bg-gray-100 transition-colors ${
-                      selectedCategory === category.id ? "bg-gray-100" : ""
+                      selectedCategory === key ? "bg-gray-100" : ""
                     }`}
                     style={{
                       WebkitTapHighlightColor: "transparent",
@@ -1483,8 +1549,9 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                   >
                     <div className="flex items-center justify-between pointer-events-none">
                       <div className="flex items-center min-w-0 flex-1">
-                        <category.icon className="w-4 h-4 me-2 flex-shrink-0" />
-                        <span className="truncate">{category.name}</span>
+                        {/* Replace with a default icon or logic if needed */}
+                        <BookOpen className="w-4 h-4 me-2 flex-shrink-0" />
+                        <span className="truncate">{category.english}</span>
                       </div>
                       <span className="text-xs bg-amber-900 text-white px-2 py-1 rounded ms-2 flex-shrink-0">{bookCount}</span>
                     </div>

@@ -70,12 +70,7 @@ interface Chapter {
 }
 
 interface WordTranslation {
-  [key: string]: {
-    translation: string
-    transliteration?: string
-    root?: string
-    meaning?: string
-  }
+    word: string
 }
 
 
@@ -101,7 +96,7 @@ const BookReader = ({
   const [error, setError] = useState<string | null>(null)
   const [chapters, setChapters] = useState<Chapter[]>([])
   const [pageInput, setPageInput] = useState("1")
-  const [wordTranslations, setWordTranslations] = useState<WordTranslation>({})
+  const [wordTranslations, setWordTranslations] = useState<WordTranslation>()
   const [hoveredWord, setHoveredWord] = useState<string | null>(null)
   const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 })
   const [magnifierActive, setMagnifierActive] = useState(false)
@@ -469,15 +464,26 @@ useEffect(() => {
 
 
 
+//CHNAGE FILE FORMAT 
+const changeFileToJson = (filename) => {
+  return filename.replace(/\.epub$/i, '.json');
 
+}
 
+ 
 
-  // Load word translations - Enhanced with extended translations
+  // Load word translations - Enhanced with extended translations C:\Users\gmxtr\OneDrive\Desktop\SK Upwork\deenmastery\public\epubs\english\word_by_word
   useEffect(() => {
     const loadWordTranslations = async () => {
       try {
+
+        // Use the provided filename or fallback to book filename
+       const epubFilename = filename || book.filename
+      const epubBookUrlSegments = `/epubs/${getStoredLanguage()}/word_by_word`; 
+
         // Try to load extended translations first
-        let response = await fetch("/word-translations-extended.json")
+        let response = await fetch(`${epubBookUrlSegments}/${changeFileToJson(epubFilename)}`)
+        
         if (!response.ok) {
           // Fallback to basic translations
           response = await fetch("/word-translations.json")
@@ -485,6 +491,7 @@ useEffect(() => {
 
         if (response.ok) {
           const fetchedTranslations = await response.json()
+          console.log("TEST FETCHED", response.json())
           setWordTranslations(fetchedTranslations)
           console.log("Word translations loaded:", Object.keys(fetchedTranslations).length, "words")
         }
@@ -588,6 +595,7 @@ useEffect(() => {
 
 
            console.log("CLICKED ON WORD" , target)
+           console.log("FETCHED", wordTranslations)
 
         if (target.classList.contains("hoverable-word")) {
           setHoveredWord(null)
@@ -1244,11 +1252,11 @@ useEffect(() => {
               <span className="font-semibold">Root:</span> {wordTranslations[hoveredWord].root}
             </div>
           )}
-          {wordTranslations[hoveredWord].meaning && (
-            <div className="text-xs text-gray-300 border-t border-gray-600 pt-2">
-              {wordTranslations[hoveredWord].meaning}
+          {/* {wordTranslations[hoveredWord].meaning && ( */}
+            <div className="text-lg text-white border-t border-gray-600 pt-2">
+              {wordTranslations[hoveredWord]}
             </div>
-          )}
+          {/* )} */}
         </div>
       )}
 
