@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type AlertType = 'success' | 'error' | 'warning' | 'info';
 
@@ -10,6 +10,15 @@ type AlertProps = {
 
 function DmAlert({ type = 'info', message, instruction }: AlertProps) {
   const [visible, setVisible] = useState(true);
+
+  // Auto-hide after 5 seconds (5000ms)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(false);
+    }, 5000);
+
+    return () => clearTimeout(timer); // Cleanup if component unmounts
+  }, []);
 
   if (!visible) return null;
 
@@ -36,10 +45,11 @@ function DmAlert({ type = 'info', message, instruction }: AlertProps) {
         className="ms-1 me-2 text-md font-bold leading-none focus:outline-none"
         aria-label="Close alert"
       >
-       Got it!
+        Got it!
       </button>
     </div>
   );
 }
 
 export default DmAlert;
+

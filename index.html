@@ -123,121 +123,122 @@
 
                  <script>
 
-                    const table = document.getElementById('dm_chapters_table');
+                  //   const table = document.getElementById('dm_chapters_table');
 
 
-                   //CHAPTERS TABLE CLICK EVENT
-                   table.addEventListener('click', function(event) {
-                        const td = event.target.closest('td');
-                        if (!td) return; // Clicked outside a td
+                  //  //CHAPTERS TABLE CLICK EVENT
+                  //  table.addEventListener('click', function(event) {
+                  //   alert("CLICKED")
+                  //       const td = event.target.closest('td');
+                  //       if (!td) return; // Clicked outside a td
 
-                        const audioAttr = td.getAttribute('data-audio');
+                  //       const audioAttr = td.getAttribute('data-audio');
 
-                        if (!audioAttr) return; // Ignore if data-audio is null, undefined, or empty string
+                  //       if (!audioAttr) return; // Ignore if data-audio is null, undefined, or empty string
 
-                        const tr = td.parentElement;
-                        const rowIndex = [...table.rows].indexOf(tr);
-                        const cellIndex = [...tr.cells].indexOf(td);
+                  //       const tr = td.parentElement;
+                  //       const rowIndex = [...table.rows].indexOf(tr);
+                  //       const cellIndex = [...tr.cells].indexOf(td);
 
-                        console.log(`Clicked cell at row ${rowIndex}, column ${cellIndex}`);
-                        console.log(`data-audio value: ${audioAttr}`);
-                          playAudio(td);
-                  });
-
-
-
-
-                    function playAudio(el) {
-
-                        //GET THE PARENT ELEMENT
-                        const audioParentElm = el.parentElement;
-
-                         console.log(el.dataset.audio);
-
-                         //IF THERE IS NO AUDIO, DO NOTHING
-                         if (!el.dataset.audio || el.dataset.audio === "null" || el.dataset.audio.trim() === "") {
-                            console.log('No audio found.');
-                            return;
-                         }else{
-
-                            //HIDE IT IF ALREADY EXIST
+                  //       console.log(`Clicked cell at row ${rowIndex}, column ${cellIndex}`);
+                  //       console.log(`data-audio value: ${audioAttr}`);
+                  //         playAudio(td);
+                  // });
 
 
-                            //CREATE NEW TD
-                              const allTDs = audioParentElm.getElementsByTagName("td");
-
-                              if (allTDs.length === 0) return;  
-
-                              const lastTd = allTDs[allTDs.length - 1];
 
 
-                                //CHECK IF BUTTON EXISTS
-                              const buttonExists = lastTd.querySelector("button") !== null;
-                                    if (buttonExists) {
-                                        const btn = lastTd.querySelector("button");
-                                        btn.remove();
-                                    }else{
-                                            //CREATE DIV ELEMENT
-                                                const btnContainer = document.createElement("button");
+                    // function playAudio(el) {
 
-                                                btnContainer.style.cssText = "display:block;background: none; border: none; cursor: pointer; color: #0078f3; display: flex; flex-direction: row; align-items: center; gap: 4px;";
+                    //     //GET THE PARENT ELEMENT
+                    //     const audioParentElm = el.parentElement;
+
+                    //      console.log(el.dataset.audio);
+
+                    //      //IF THERE IS NO AUDIO, DO NOTHING
+                    //      if (!el.dataset.audio || el.dataset.audio === "null" || el.dataset.audio.trim() === "") {
+                    //         console.log('No audio found.');
+                    //         return;
+                    //      }else{
+
+                    //         //HIDE IT IF ALREADY EXIST
+
+
+                    //         //CREATE NEW TD
+                    //           const allTDs = audioParentElm.getElementsByTagName("td");
+
+                    //           if (allTDs.length === 0) return;  
+
+                    //           const lastTd = allTDs[allTDs.length - 1];
+
+
+                    //             //CHECK IF BUTTON EXISTS
+                    //           const buttonExists = lastTd.querySelector("button") !== null;
+                    //                 if (buttonExists) {
+                    //                     const btn = lastTd.querySelector("button");
+                    //                     btn.remove();
+                    //                 }else{
+                    //                         //CREATE DIV ELEMENT
+                    //                             const btnContainer = document.createElement("button");
+
+                    //                             btnContainer.style.cssText = "display:block;background: none; border: none; cursor: pointer; color: #0078f3; display: flex; flex-direction: row; align-items: center; gap: 4px;";
                                                 
-                                                btnContainer.innerHTML = `
-                                                   Listen
-                                                `;
+                    //                             btnContainer.innerHTML = `
+                    //                                Listen
+                    //                             `;
                                                 
-                                                lastTd.appendChild(btnContainer);
+                    //                             lastTd.appendChild(btnContainer);
 
 
 
-                                                //ON CLICK BTN
-                                                            let currentAudio = null;
+                    //                             //ON CLICK BTN
+                    //                                         let currentAudio = null;
 
-                                                            btnContainer.onclick = function () {
-                                                                const audioSrc = el.dataset.audio;
+                    //                                         btnContainer.onclick = function () {
+                    //                                             const audioSrc = el.dataset.audio;
 
-                                                                // If there's audio playing
-                                                                if (currentAudio) {
-                                                                    currentAudio.pause();
-                                                                    currentAudio.currentTime = 0; // reset to beginning
-                                                                    currentAudio = null;
-                                                                    btnContainer.innerHTML = 'Play audio';
-                                                                    console.log('Audio stopped.');
-                                                                    return;
-                                                                }
+                    //                                             // If there's audio playing
+                    //                                             if (currentAudio) {
+                    //                                                 currentAudio.pause();
+                    //                                                 currentAudio.currentTime = 0; // reset to beginning
+                    //                                                 currentAudio = null;
+                    //                                                 btnContainer.innerHTML = 'Play audio';
+                    //                                                 console.log('Audio stopped.');
+                    //                                                 return;
+                    //                                             }
 
     
 
-                                                                // Start new audio
-                                                                currentAudio = new Audio(audioSrc);
-                                                                btnContainer.innerHTML = 'Playing...';
+                    //                                             // Start new audio
+                    //                                             currentAudio = new Audio(audioSrc);
+                    //                                             btnContainer.innerHTML = 'Playing...';
 
-                                                                currentAudio.play()
-                                                                    .then(() => {
-                                                                        btnContainer.innerHTML = 'Stop audio';
-                                                                        console.log('Audio is playing...');
-                                                                    })
-                                                                    .catch(error => {
-                                                                        console.error('Playback failed:', error);
-                                                                        currentAudio = null;
-                                                                        btnContainer.innerHTML = 'Play audio';
-                                                                    });
+                    //                                             currentAudio.play()
+                    //                                                 .then(() => {
+                    //                                                     btnContainer.innerHTML = 'Stop audio';
+                    //                                                     console.log('Audio is playing...');
+                    //                                                 })
+                    //                                                 .catch(error => {
+                    //                                                     console.error('Playback failed:', error);
+                    //                                                     currentAudio = null;
+                    //                                                     btnContainer.innerHTML = 'Play audio';
+                    //                                                 });
 
-                                                                // Reset when audio ends naturally
-                                                                currentAudio.onended = function () {
-                                                                    btnContainer.innerHTML = 'Play audio';
-                                                                    currentAudio = null;
-                                                                };
-                                                            };
+                    //                                             // Reset when audio ends naturally
+                    //                                             currentAudio.onended = function () {
+                    //                                                 btnContainer.innerHTML = 'Play audio';
+                    //                                                 currentAudio = null;
+                    //                                             };
+                    //                                         };
 
-                                    }
+                    //                 }
  
 
 
-                         }
+                    //      }
 
  
-                    }
+                    // }
                 </script>
 
 

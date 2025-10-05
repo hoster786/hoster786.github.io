@@ -5,6 +5,7 @@ import type React from "react"
 import { useState, useEffect, useRef, useMemo } from "react"
 import { ZoomIn, ZoomOut, Download, RotateCcw, Home, BookOpen, SearchIcon, X, StepBack, SkipBack, LucideDatabaseBackup, CircleArrowLeft, CircleArrowRight, EyeClosedIcon, CircleX, Search } from "lucide-react"
 import DmAlert from "./common/DmAlert"
+import { useDebounce } from 'use-debounce' // debounce to prevent freezing
 
 
 
@@ -160,12 +161,20 @@ function highlightMatches(content: string, query: string): [string, number] {
 const [searchQuery, setSearchQuery] = useState("")
 const [searchResultsCount, setSearchResultsCount] = useState(0)
 
+const [debouncedSearchQuery] = useDebounce(searchQuery, 300)
+const [searchResults, setSearchResults] = useState<
+  { chapterIndex: number; chapterTitle: string; snippet: string }[]
+>([])
+
 
 const currentChapter = highlightedChapters[currentPage] || { content: "", title: "" }
 
 const [highlightedContent, matchCount] = useMemo(() => {
   return highlightMatches(currentChapter.content, searchQuery)
 }, [currentChapter.content, searchQuery])
+
+
+
 
 useEffect(() => {
   if (chapters.length === 0) return
@@ -185,6 +194,49 @@ useEffect(() => {
   setSearchResultsCount(totalMatches)
   setHighlightedChapters(updatedChapters)
 }, [chapters, searchQuery])
+
+
+
+
+
+useEffect(() => {
+  if (!debouncedSearchQuery || !chapters.length) {
+    setSearchResults([])
+    return
+  }
+
+  const query = debouncedSearchQuery.toLowerCase().trim()
+  const results: { chapterIndex: number; chapterTitle: string; snippet: string }[] = []
+
+  chapters.forEach((chapter, index) => {
+    const plainText = chapter.content.replace(/<[^>]+>/g, "") // strip HTML
+
+    const matchIndex = plainText.toLowerCase().indexOf(query)
+    if (matchIndex !== -1) {
+      const contextRadius = 30
+      const start = Math.max(0, matchIndex - contextRadius)
+      const end = Math.min(plainText.length, matchIndex + query.length + contextRadius)
+      const snippet = plainText.slice(start, end).replace(
+        new RegExp(`(${query})`, "gi"),
+        "<mark>$1</mark>"
+      )
+
+      results.push({
+        chapterIndex: index,
+        chapterTitle: chapter.title,
+        snippet,
+      })
+    }
+  })
+
+  setSearchResults(results)
+}, [debouncedSearchQuery, chapters])
+
+
+
+
+
+
 
 
  
@@ -355,9 +407,11 @@ useEffect(() => {
   }
 
   const handleDownload = () => {
+     const epubBookUrlSegments = `/epubs/${getStoredLanguage()}/nonRAG_outputs/`; 
+
     const downloadFilename = filename || book.filename
     const link = document.createElement("a")
-    link.href = `/epubs/${downloadFilename}`
+    link.href = `${downloadFilename}/${downloadFilename}`
     link.download = downloadFilename
     document.body.appendChild(link)
     link.click()
@@ -589,13 +643,19 @@ const changeFileToJson = (filename) => {
 
 
 
+    //CLICK ANYWHERE IN THE DOM
+    document.addEventListener("mousedown", () => {
+       setHoveredWord(null)
+    });
+
+
     //HANDLE WORD BY WORD translation
     const handleWordTranslation = (e: MouseEvent) => {
           const target = e.target as HTMLElement
 
 
-           console.log("CLICKED ON WORD" , target)
-           console.log("FETCHED", wordTranslations)
+          //  console.log("CLICKED ON WORD" , target)
+          //  console.log("FETCHED", wordTranslations)
 
         if (target.classList.contains("hoverable-word")) {
           setHoveredWord(null)
@@ -623,7 +683,7 @@ const changeFileToJson = (filename) => {
     const contentElement = contentRef.current
     if (contentElement) {
        contentElement.addEventListener("click", handleWordTranslation)
-
+        contentElement.addEventListener("mouseover", handleWordTranslation)
       // contentElement.addEventListener("mouseover", handleWordHover)
       // contentElement.addEventListener("mouseleave", handleWordLeave)
 
@@ -917,6 +977,210 @@ const changeFileToJson = (filename) => {
     }
   }, [isDragging, totalPages, currentPage])
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //GET TABLE BY ID AND USE GET ELEMENT BYID
+  useEffect(() => {
+    let intervalId = null;
+    let table = null;
+
+    const attachListener = () => {
+      table = document.getElementById('dm_chapters_table');
+      if (table) {
+        console.log('✅ Table found');
+        table.addEventListener('click', handleClick);
+        clearInterval(intervalId); // Stop polling once attached
+      }
+    };
+
+    const handleClick = () => {
+    
+            const target = event.target as Element;
+            const td = target.closest('td');
+
+            if (!td) return; // Clicked outside a td
+
+            const audioAttr = td.getAttribute('data-audio');
+            if (!audioAttr) return; // Ignore if data-audio is null, undefined, or empty string
+
+            const tr = td.parentElement as HTMLTableRowElement;
+            const table = document.getElementById('dm_chapters_table') as HTMLTableElement;
+
+            const rowIndex = [...table.rows].indexOf(tr);
+            const cellIndex = [...tr.cells].indexOf(td);
+
+            console.log(`Clicked cell at row ${rowIndex}, column ${cellIndex}`);
+            console.log(`data-audio value: ${audioAttr}`);
+
+            playAudio(td); // assuming playAudio is defined
+
+
+
+
+
+
+    };
+
+    intervalId = setInterval(attachListener, 500); // Poll every 0.5s
+
+    // Cleanup
+    return () => {
+      if (table) table.removeEventListener('click', handleClick);
+      clearInterval(intervalId);
+    };
+  }, []);
+
+
+
+
+
+
+  //PLAY AUDIO  FUNCTION
+                      function playAudio(el) {
+
+                        //GET THE PARENT ELEMENT
+                        const audioParentElm = el.parentElement;
+
+                         console.log(el.dataset.audio);
+
+                         //IF THERE IS NO AUDIO, DO NOTHING
+                         if (!el.dataset.audio || el.dataset.audio === "null" || el.dataset.audio.trim() === "") {
+                            console.log('No audio found.');
+                            return;
+                         }else{
+
+                            //HIDE IT IF ALREADY EXIST
+
+
+                            //CREATE NEW TD
+                              const allTDs = audioParentElm.getElementsByTagName("td");
+
+                              if (allTDs.length === 0) return;  
+
+                              const lastTd = allTDs[allTDs.length - 1];
+
+
+                                //CHECK IF BUTTON EXISTS
+                              const buttonExists = lastTd.querySelector("button") !== null;
+                                    if (buttonExists) {
+                                        const btn = lastTd.querySelector("button");
+                                        btn.remove();
+                                    }else{
+                                            //CREATE DIV ELEMENT
+                                                const btnContainer = document.createElement("button");
+
+                                                btnContainer.style.cssText = "display:block;background: none; border: none; cursor: pointer; color: #0078f3; display: flex; flex-direction: row; align-items: center; gap: 4px;";
+                                                
+                                                btnContainer.innerHTML = `
+                                                   Listen
+                                                `;
+                                                
+                                                lastTd.appendChild(btnContainer);
+
+
+
+                                                //ON CLICK BTN
+                                                            let currentAudio = null;
+
+                                                            btnContainer.onclick = function () {
+                                                            const audioSrc = `${window.location.origin}/epubs/english/audio/${el.dataset.audio}`;
+
+
+                                                                console.log('PLAYING CURRENT AUDIO',audioSrc);
+
+                                                                // If there's audio playing 
+                                                                if (currentAudio) {
+                                                                    currentAudio.pause();
+                                                                    currentAudio.currentTime = 0; // reset to beginning
+                                                                    currentAudio = null;
+                                                                    btnContainer.innerHTML = 'Play audio';
+                                                                    console.log('Audio stopped.');
+                                                                    return;
+                                                                }
+
+    
+
+                                                                // Start new audio
+                                                                currentAudio = new Audio(audioSrc);
+                                                                btnContainer.innerHTML = 'Playing...';
+
+                                                                currentAudio.play()
+                                                                    .then(() => {
+                                                                        btnContainer.innerHTML = 'Pause audio';
+                                                                        console.log('Audio is playing...');
+                                                                    })
+                                                                    .catch(error => {
+                                                                        console.error('Playback failed:', error);
+                                                                        currentAudio = null;
+                                                                        btnContainer.innerHTML = 'Play audio';
+                                                                    });
+
+                                                                // Reset when audio ends naturally
+                                                                currentAudio.onended = function () {
+                                                                    btnContainer.innerHTML = 'Play audio';
+                                                                    currentAudio = null;
+                                                                };
+                                                            };
+
+                                    }
+ 
+
+
+                         }
+
+ 
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//IF AN ERROR IN THE READER
   if (error) {
     return (
       <div className="fixed inset-0 bg-gray-900 z-50 flex flex-col">
@@ -997,7 +1261,8 @@ const changeFileToJson = (filename) => {
                     <div className="text-start mt-2 pe-3 border-e border-gray-600 max-w-[300px]">
                       <h2 className="font-semibold text-gray-700 text-sm md:text-base truncate w-[160px] sm:w-auto">
                         {/* {showArabic ? book.title_ar : book.title_en} */}
-                        {book.title_tr}
+                        {book.title_tr} <br />
+                        {getStoredLanguage() != 'arabic' ? book.title_ar : ''}
                       </h2>
                       <p className="text-xs text-gray-500 truncate">
                         {showArabic ? `بقلم ${book.author_tr}` : `by ${book.author_tr}`}
@@ -1031,6 +1296,30 @@ const changeFileToJson = (filename) => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
+
+
+              {searchResults.length > 0 && (
+                <ul className="absolute z-50 w-full bg-white border rounded mt-1 max-h-64 overflow-y-auto shadow-md">
+                  {searchResults.map((result, idx) => (
+                    <li
+                      key={idx}
+                      onClick={() => {
+                        setCurrentPage(result.chapterIndex)
+                        // setSearchQuery("") // Optional: clear input
+                        setSearchResults([]) // Optional: hide dropdown
+                      }}
+                      className="p-3 border-b last:border-0 cursor-pointer hover:bg-gray-100"
+                    >
+                      <div className="font-medium">{result.chapterTitle}</div>
+                      <div
+                        className="text-sm text-gray-600"
+                        dangerouslySetInnerHTML={{ __html: result.snippet }}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              )}
+
 
               {/* Lucide Search Icon */}
               <Search

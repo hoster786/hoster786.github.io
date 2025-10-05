@@ -163,6 +163,8 @@ const Index = () => {
   const mainContentRef = useRef<HTMLDivElement>(null)
   const searchInputRef = useRef<HTMLInputElement>(null)
 
+// ALL FEATURED BOOKS
+  const [allFeaturesBooks, setAllFeaturedBooks] = useState<Book[]>([])
 
 
 
@@ -539,6 +541,7 @@ const Index = () => {
 
   // Load featured books
   useEffect(() => {
+    
     const loadFeaturedBooks = async () => {
       try {
         const response = await fetch("/featured-books.json")
@@ -554,6 +557,82 @@ const Index = () => {
 
     loadFeaturedBooks()
   }, [])
+
+
+
+
+
+
+
+
+
+
+
+  //LOAD ALLL FEATURED BOOKS
+  //LOAD ALLL FEATURED BOOKS
+useEffect(() => {
+  const epubBookUrlSegments = `/epubs/${getStoredLanguage()}/nonRAG_outputs/manifest.json`;
+
+  const loadAllFeaturedBooks = async () => {
+    try {
+      const response = await fetch(epubBookUrlSegments);
+      if (response.ok) {
+        const books = await response.json();
+        // Filter only featured books
+        const featuredBooks = books.filter(book => book.featured === true);
+
+
+
+        
+        const transformedFeaturesBooks: Book[] = featuredBooks.map((book: any, index: number) => ({
+          title_ar: book.title_ar || "عنوان غير معروف",
+          author_ar: book.author_ar || "مؤلف غير معروف",
+          title_en: book.title_en || book.title_ar || "Unknown Title",
+          author_en: book.author_en || book.author_ar || "Unknown Author",
+          title_es: book.title_es || book.title_en || book.title_ar,
+          author_es: book.author_es || book.author_en || book.author_ar,
+          title_de: book.title_de || book.title_en || book.title_ar,
+          author_de: book.author_de || book.author_en || book.author_ar,
+          title_pt: book.title_pt || book.title_en || book.title_ar,
+          author_pt: book.author_pt || book.author_en || book.author_ar,
+          title_ur: book.title_ur || book.title_ar,
+          author_ur: book.author_ur || book.author_ar,
+          title_tr: book.title_tr || book.title_en || book.title_ar,
+          cover: book.cover,
+          category_id: book.category_id,
+          description_ar: book.description_ar || "",
+          description: book.description || "",
+          author_tr: book.author_tr || book.author_en || book.author_ar,
+          title_id: book.title_id || book.title_en || book.title_ar,
+          author_id: book.author_id || book.author_en || book.author_ar,
+          filename: book.filename || book.filename_ar || book.filename_en || "",
+          filename_ar: book.filename_ar || book.filename,
+          filename_en: book.filename_en || book.filename,
+          filename_es: book.filename_es || book.filename_en || book.filename,
+          filename_de: book.filename_de || book.filename_en || book.filename,
+          filename_pt: book.filename_pt || book.filename_en || book.filename,
+          filename_ur: book.filename_ur || book.filename_ar || book.filename,
+          filename_tr: book.filename_tr || book.filename_en || book.filename,
+          filename_id: book.filename_id || book.filename_en || book.filename,
+          coverText: book.coverText || "كتاب",
+          type: book.type || "epub",
+          source: book.source || "local",
+          category: book.category || "Miscellaneous",
+          id: book.id || index + 1,
+          featured: book.featured || false,
+        }))
+
+
+        setAllFeaturedBooks(transformedFeaturesBooks);
+      }
+    } catch (error) {
+      console.warn("Could not load featured books:", error);
+    }
+  };
+
+  loadAllFeaturedBooks();
+}, []);
+
 
 
 
@@ -593,7 +672,10 @@ const Index = () => {
         const manifestBooks = await response.json()
         console.log("Loaded books from manifest:", manifestBooks.length)
 
-        const transformedBooks: Book[] = manifestBooks.map((book: any, index: number) => ({
+  const nonFeaturedBooks = manifestBooks.filter(book => book.featured != true);
+
+
+        const transformedBooks: Book[] = nonFeaturedBooks.map((book: any, index: number) => ({
           title_ar: book.title_ar || "عنوان غير معروف",
           author_ar: book.author_ar || "مؤلف غير معروف",
           title_en: book.title_en || book.title_ar || "Unknown Title",
@@ -1166,6 +1248,24 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                       <p className="text-md font-bold text-amber-900">{t.deenMastery}</p>
                       <p className="text-xs text-amber-600">{t.knowledgeMadeAccessible}</p>
                     </div>
+
+                  {/* Language Dropdown */}
+                  <div className="relative block md:hidden">
+                    <select
+                      value={getStoredLanguage()}
+                      onChange={(e) => handleLanguageChange(e.target.value as keyof typeof languageConfig)}
+                      className="appearance-none bg-white border-none rounded-lg px-1 py-2 pr-8 text-sm focus:outline-none focus:border-gray-500 min-w-[20px]"
+                    >
+                      {Object.entries(languageConfig).map(([key, lang]) => (
+                        
+                        <option key={key} value={key}>
+                          {key == getStoredLanguage() ? '' : lang.name }
+                        </option>
+                      ))}
+                    </select>
+                    <Globe className="absolute end-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                  </div>
+
                   </div>
              </div>
 
@@ -1375,7 +1475,25 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
 
               {/* BOOKS GRID - This now uses the useMemo filteredBooks which is guaranteed to work */}
               <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-6">
-   
+
+                {/* DISPLAY FEATURED BOOKS FIRS */}
+        
+               {
+                 allFeaturesBooks.map((book,index) => {
+                     return (
+                            <div onClick={ () => {
+                                 trackUserFlow("book_card_click", "interaction", getBookTitle(book), index)
+                                   handleBookSelect(book)
+                                  } }>
+                                       <BookCard key={index} cover={getBookCover(book)} cat={reversedCategories[book.category_id]?.[getStoredLanguage()] || 'Book has no category ID !'} title={book.title_tr} description={book.description}
+                                        isFeatured={book.featured} author={book.author_tr} translations={t} langCode={getStoredLanguage()}/>           
+
+                            </div>
+
+                     )
+                 })
+               }
+         
 
                 {currentBooks.map((book, index) => {
                   // const isFeatured =
@@ -1671,21 +1789,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
               <div className="block sm:hidden ms-1 mb-1">
                 {/* LANGUAGE ON MOBILE  */}
                  <div className="flex sm:hidden items-center space-x-3">
-                  {/* Language Dropdown */}
-                  <div className="flex relative">
-                    <select
-                      value={getStoredLanguage()}
-                      onChange={(e) => handleLanguageChange(e.target.value as keyof typeof languageConfig)}
-                      className="appearance-none bg-white border border-gray-200 rounded-lg px-3 py-2 pr-8 text-sm focus:outline-none focus:border-gray-500 min-w-[120px]"
-                    >
-                      {Object.entries(languageConfig).map(([key, lang]) => (
-                        <option key={key} value={key}>
-                          {lang.name}
-                        </option>
-                      ))}
-                    </select>
-                    <Globe className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
-                  </div>
+
                 </div>
             
               </div>
