@@ -672,10 +672,10 @@ useEffect(() => {
         const manifestBooks = await response.json()
         console.log("Loaded books from manifest:", manifestBooks.length)
 
-  const nonFeaturedBooks = manifestBooks.filter(book => book.featured != true);
+  // const nonFeaturedBooks = manifestBooks.filter(book => book.featured != true);
 
 
-        const transformedBooks: Book[] = nonFeaturedBooks.map((book: any, index: number) => ({
+        const transformedBooks: Book[] = manifestBooks.map((book: any, index: number) => ({
           title_ar: book.title_ar || "عنوان غير معروف",
           author_ar: book.author_ar || "مؤلف غير معروف",
           title_en: book.title_en || book.title_ar || "Unknown Title",
@@ -1478,7 +1478,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
 
                 {/* DISPLAY FEATURED BOOKS FIRS */}
         
-               {
+               {!searchQuery.trim() && selectedCategory == "all" && (
                  allFeaturesBooks.map((book,index) => {
                      return (
                             <div onClick={ () => {
@@ -1486,13 +1486,14 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                                    handleBookSelect(book)
                                   } }>
                                        <BookCard key={index} cover={getBookCover(book)} cat={reversedCategories[book.category_id]?.[getStoredLanguage()] || 'Book has no category ID !'} title={book.title_tr} description={book.description}
-                                        isFeatured={book.featured} author={book.author_tr} translations={t} langCode={getStoredLanguage()}/>           
+                                        isFeatured={book.featured} author={book.author_tr} translations={t} langCode={getStoredLanguage()} isInFeaturedArr={true}/>           
 
                             </div>
 
                      )
                  })
-               }
+
+               )}
          
 
                 {currentBooks.map((book, index) => {
@@ -1542,7 +1543,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                                    handleBookSelect(book)
                                   } }>
                                        <BookCard key={index} cover={getBookCover(book)} cat={reversedCategories[book.category_id]?.[getStoredLanguage()] || 'Book has no category ID !'} title={book.title_tr} description={book.description}
-                                        isFeatured={book.featured} author={book.author_tr} translations={t} langCode={getStoredLanguage()}/>           
+                                        isFeatured={book.featured} author={book.author_tr} translations={t} langCode={getStoredLanguage()} isInFeaturedArr={false}/>           
 
                             </div>
 

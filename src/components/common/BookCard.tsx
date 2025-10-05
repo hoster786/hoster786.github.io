@@ -66,9 +66,10 @@ type BookProps = {
   author: string;
   translations?: { [key: string]: string };
   langCode: string;
+  isInFeaturedArr: boolean;
 };
 
-function BookCard({ cover, cat, title, description, isFeatured, author,translations ,langCode}: BookProps) {
+function BookCard({ cover, cat, title, description, isFeatured, author,translations ,langCode , isInFeaturedArr}: BookProps) {
 // useEffect(() => {
 //     // Load categories from local JSON
 //       setReversedCategories(reversedCategoriesData as ReversedCategory);
@@ -92,7 +93,7 @@ function BookCard({ cover, cat, title, description, isFeatured, author,translati
               {/* IMAGE */}
                <div className='relative w-[140px] h-[180px] sm:h-[220px]'>
                  <img src={cover} alt={cover} className='h-[100%] w-[100%]'/>
-              { isFeatured ?  <span className="absolute top-0 left-0 bg-green-600 text-white text-xs font-bold px-2 py-1 shadow">{ translations.featured }</span> : '' }
+              { isInFeaturedArr && isFeatured ?  <span className="absolute top-0 left-0 bg-green-600 text-white text-xs font-bold px-2 py-1 shadow">{ translations.featured }</span> : '' }
 
                </div>
 

@@ -411,7 +411,7 @@ useEffect(() => {
 
     const downloadFilename = filename || book.filename
     const link = document.createElement("a")
-    link.href = `${downloadFilename}/${downloadFilename}`
+    link.href = `${epubBookUrlSegments}/${downloadFilename}`
     link.download = downloadFilename
     document.body.appendChild(link)
     link.click()
@@ -1010,7 +1010,7 @@ const changeFileToJson = (filename) => {
       if (table) {
         console.log('✅ Table found');
         table.addEventListener('click', handleClick);
-        clearInterval(intervalId); // Stop polling once attached
+        // clearInterval(intervalId); // Stop polling once attached
       }
     };
 
@@ -1104,7 +1104,7 @@ const changeFileToJson = (filename) => {
                                                             let currentAudio = null;
 
                                                             btnContainer.onclick = function () {
-                                                            const audioSrc = `${window.location.origin}/epubs/english/audio/${el.dataset.audio}`;
+                                                            const audioSrc = `${window.location.origin}/epubs/${getStoredLanguage()}/audio/${el.dataset.audio}`;
 
 
                                                                 console.log('PLAYING CURRENT AUDIO',audioSrc);
