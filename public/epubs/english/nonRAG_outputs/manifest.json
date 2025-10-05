@@ -38972,7 +38972,7 @@
     "type": "epub",
     "source": "url",
     "category_id": "C003",
-    "featured": false,
+    "featured": true,
     "description": "Ibn Khaldun's 'The Muqaddimah' is a monumental work of historical analysis, offering insights into the rise and fall of civilizations. It explores themes such as governance, economics, culture, and human behavior, providing a comprehensive framework for understanding history. The book combines empirical observation with philosophical reflection, making it a foundational text in the fields of sociology and historiography."
   }
 ]
