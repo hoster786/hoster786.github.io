@@ -1032,6 +1032,8 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
     const value = e.target.value
     console.log("🔍 Search input changed to:", `"${value}"`)
     setSearchQuery(value)
+    setInputSetPage(1)
+   setCurrentBookPage(1)
 
     if (value.length > 2) {
       trackUserFlow("search_input", "search", value, value.length)
