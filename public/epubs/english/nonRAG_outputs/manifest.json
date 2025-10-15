@@ -38972,7 +38972,7 @@
     "type": "epub",
     "source": "url",
     "category_id": "C003",
-    "featured": false,
+    "featured": true,
     "description": "Ibn Khaldun's 'The Muqaddimah' is a monumental work of historical analysis, offering insights into the rise and fall of civilizations. It explores themes such as governance, economics, culture, and human behavior, providing a comprehensive framework for understanding history. The book combines empirical observation with philosophical reflection, making it a foundational text in the fields of sociology and historiography."
   },
   {
@@ -58742,5 +58742,89 @@
     "category_id": "C022",
     "featured": false,
     "description": "This book vividly describes Paradise as a place of eternal bliss, with celestial gardens, pearls, rubies, and rivers flowing with water, milk, honey, and wine. Inhabitants enjoy youthful vitality, seamless garments made from musk, and the company of fair-eyed virgins (hur). The highest level, Firdaws, is under the Throne. Paradise offers unimaginable treasures, divine blessings, and eternal peace in Allah's mercy."
+  },
+  {
+    "title_ar": "فتح الباري لابن حجر",
+    "author_ar": "ابن حجر العسقلاني",
+    "title_tr": "Bukhari's Tafsir",
+    "author_tr": "Ibn Hajar al-Asqalani",
+    "filename_tr": "Bulleted List",
+    "filename_ar": "فتح-الباري-لابن-حجر_ابن-حجر-العسقلاني.epub",
+    "book_id": "1749594cc1ef73d5b02ea0731a6de587",
+    "type": "epub",
+    "source": "url",
+    "category_id": "C006",
+    "featured": false,
+    "description": "A comprehensive commentary on Imam Bukhari's 'Sahih,' this book delves into the compilation process, methodology, and authenticity of hadiths. It covers themes such as isnaad continuity, classification of hadith types, and defenses against criticisms of Bukhari's work. The text also explores Islamic traditions, jurisprudence, rituals, and historical events, providing insights into early Islamic practices and beliefs."
+  },
+  {
+    "title_ar": "اسماء الكتب المتمم لكشف الظنون",
+    "author_ar": "رياض زاده",
+    "title_tr": "Names of the books complementary to Kashf al-Zinun",
+    "author_tr": "Riyad Zadeh",
+    "filename_tr": "Names of Books Completing Kashf al-Zunun — Riazadah.epub",
+    "filename_ar": "اسماء-الكتب-المتمم-لكشف-الظنون_رياض-زاده.epub",
+    "book_id": "ad18043cd16947149cfa7e6e6b7b7f9c",
+    "type": "epub",
+    "source": "url",
+    "category_id": "C033",
+    "featured": false,
+    "description": "This comprehensive compilation by Riyad Zadeh delves into the intellectual heritage of the Islamic Golden Age, showcasing scholars like al-Ghazali, Ibn Rushd, and al-Zamakhshari. It covers a wide range of disciplines including jurisprudence, grammar, hadith, tafsir, medicine, and logic. Edited by Dr. Muhammed al-Tunaji and published by Dar al-Fikr in Damascus, the work highlights the depth and breadth of Islamic scholarly contributions."
+  },
+  {
+    "title_ar": "تعريف بالأماكن الواردة في البداية والنهاية لابن كثير",
+    "author_ar": "-",
+    "title_tr": "Introduction to the places mentioned in The Beginning and the End by Ibn Kathir",
+    "author_tr": "-",
+    "filename_tr": "Introduction to the places mentioned in The Beginning and the End by Ibn Kathir -- -.epub",
+    "filename_ar": "تعريف-بالأماكن-الواردة-في-البداية-والنهاية-لابن-كثير_.epub",
+    "book_id": "d47107c4fe5bdb267854f418894bfca5",
+    "type": "epub",
+    "source": "url",
+    "category_id": "C004",
+    "featured": false,
+    "description": "This comprehensive geographical account by Ibn Kathir details cities, regions, and historical sites across the Islamic world, from Spain to India. It covers key locations like Cairo, Constantinople, Baghdad, Mecca, and Medina, highlighting their roles in Islamic history, military campaigns, cultural development, trade, and notable figures."
+  },
+  {
+    "title_ar": "البداية والنهاية ط الفكر",
+    "author_ar": "ابن كثير",
+    "title_tr": "The Beginning and the End of Thought",
+    "author_tr": "Ibn Kathir",
+    "filename_tr": "The Beginning and the End of Thought - Ibn Kathir.epub",
+    "filename_ar": "البداية-والنهاية-ط-الفكر_ابن-كثير.epub",
+    "book_id": "95d853bd37784bade04a7fc3a68cbd18",
+    "type": "epub",
+    "source": "url",
+    "category_id": "C003",
+    "featured": false,
+    "description": "A comprehensive historical and religious work chronicling creation, prophets, Islamic history, and key events from the life of Prophet Muhammad."
+  },
+  {
+    "title_ar": "البداية والنهاية ط إحياء التراث",
+    "author_ar": "ابن كثير",
+    "title_tr": "The Beginning and the End, Volume Edition of Revival of Heritage",
+    "author_tr": "Ibn Kathir",
+    "filename_tr": "The Beginning and the End - Ibn Kathir's Revival of Heritage.epub",
+    "filename_ar": "البداية-والنهاية-ط-إحياء-التراث_ابن-كثير.epub",
+    "book_id": "e291a12aba8557b7e351686adf7d0943",
+    "type": "epub",
+    "source": "url",
+    "category_id": "C003",
+    "featured": false,
+    "description": "Ibn Kathir's 'The Beginning and the End' is a monumental work that chronicles Islamic history from creation to key events in early Islam, including prophetic traditions, battles, governance, and significant figures. The book weaves together scriptural references with historical narratives to provide a comprehensive view of Islamic cosmology and history."
+  },
+  {
+    "title_ar": "البداية والنهاية ط هجر",
+    "author_ar": "ابن كثير",
+    "title_tr": "The Beginning and the End, Volume H-J",
+    "author_tr": "Ibn Kathir",
+    "filename_tr": "The Beginning and the End - Volume H-J - Ibn Kathir.epub",
+    "filename_ar": "البداية-والنهاية-ط-هجر_ابن-كثير.epub",
+    "book_id": "d9e055a22b0eedd43996d467fd278340",
+    "type": "epub",
+    "source": "url",
+    "category_id": "C003",
+    "featured": true,
+    "description": "This book presents a comprehensive overview of Islamic beliefs, creation narratives, prophetic stories, early Islamic history, the life of Prophet Muhammad (PBUH), and eschatological events. It delves into divine attributes, religious narratives about prophets, battles, leadership transitions, and signs of the end times."
   }
 ]
