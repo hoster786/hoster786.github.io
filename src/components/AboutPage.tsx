@@ -86,7 +86,7 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
         supportedLanguages: "Supported Languages",
         languageList: ["English", "Spanish", "German", "Portuguese", "Urdu", "Turkish", "Bahasa", "Arabic"],
         legacy:
-          "This project builds on over 15 years of pioneering work in Qur'anic accessibility across English, Spanish, French, German, and Bahasa. With Deen Mastery, we extend that legacy to a broader range of Islamic literature—offering not only multilingual resources, but also translations in regional dialects and vernacular forms of major world languages.",
+          "This project builds on over 15 years of pioneering work in Qur'anic accessibility across English, Spanish, French, German, and Bahasa. With Nadwa.ai, we extend that legacy to a broader range of Islamic literature—offering not only multilingual resources, but also translations in regional dialects and vernacular forms of major world languages.",
         whetherYouAre: "Whether you are:",
         parent: "a parent seeking storybooks for your family,",
         academic: "an academic in need of reliable reference translations, or",
