@@ -71,7 +71,7 @@ const App = () => {
     }
     window.gtag("js", new Date())
     window.gtag("config", "G-XXXXXXXXXX", {
-      page_title: "Deen Mastery Library",
+      page_title: "Nadwa.ai Library",
       page_location: window.location.href,
       custom_map: {
         custom_parameter_1: 'session_id'
