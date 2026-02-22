@@ -50,7 +50,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
         errorMessage: "❌ حدث خطأ في إرسال رسالتك. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة.",
         contactInformation: "معلومات الاتصال",
         email: "البريد الإلكتروني",
-        emailContact: "contact@deenmastery.com",
+        emailContact: "contact@nadwa.ai",
         responseTime: "وقت الاستجابة",
         responseTimeDetails: "الاثنين - الجمعة: 9 صباحاً - 6 مساءً بتوقيت شرق الولايات المتحدة",
         weekendNote: "رسائل نهاية الأسبوع يتم الرد عليها يوم الاثنين",
@@ -93,7 +93,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
         errorMessage: "❌ There was an error sending your message. Please try again or contact us directly.",
         contactInformation: "Contact Information",
         email: "Email",
-        emailContact: "contact@deenmastery.com",
+        emailContact: "contact@nadwa.ai",
         responseTime: "Response Time",
         responseTimeDetails: "Monday - Friday: 9 AM - 6 PM EST",
         weekendNote: "Weekend messages answered on Monday",
@@ -108,7 +108,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
         faqAnswer2:
           "Yes! We welcome qualified translators. Please contact us with your credentials and language expertise.",
         faqQuestion3: "Is the library free to use?",
-        faqAnswer3: "Yes, Deen Mastery is completely free. Our mission is to democratize access to Islamic knowledge.",
+        faqAnswer3: "Yes, Nadwa.ai is completely free. Our mission is to democratize access to Islamic knowledge.",
         faqQuestion4: "How do I report an error in translation?",
         faqAnswer4: "Please email us with the specific book, page, and error details. We take accuracy very seriously.",
         followUs: "Follow Us",
@@ -138,7 +138,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
         errorMessage: "❌ Hubo un error al enviar tu mensaje. Por favor intenta de nuevo o contáctanos directamente.",
         contactInformation: "Información de Contacto",
         email: "Correo Electrónico",
-        emailContact: "contact@deenmastery.com",
+        emailContact: "contact@nadwa.ai",
         responseTime: "Tiempo de Respuesta",
         responseTimeDetails: "Lunes - Viernes: 9 AM - 6 PM EST",
         weekendNote: "Mensajes de fin de semana respondidos el lunes",
@@ -154,7 +154,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
           "¡Sí! Damos la bienvenida a traductores calificados. Por favor contáctanos con tus credenciales y experiencia lingüística.",
         faqQuestion3: "¿Es gratuito usar la biblioteca?",
         faqAnswer3:
-          "Sí, Deen Mastery es completamente gratuito. Nuestra misión es democratizar el acceso al conocimiento islámico.",
+          "Sí, Nadwa.ai es completamente gratuito. Nuestra misión es democratizar el acceso al conocimiento islámico.",
         faqQuestion4: "¿Cómo reporto un error en la traducción?",
         faqAnswer4:
           "Por favor envíanos un correo con el libro específico, página y detalles del error. Tomamos la precisión muy en serio.",
@@ -186,7 +186,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
           "❌ Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
         contactInformation: "Kontaktinformationen",
         email: "E-Mail",
-        emailContact: "contact@deenmastery.com",
+        emailContact: "contact@nadwa.ai",
         responseTime: "Antwortzeit",
         responseTimeDetails: "Montag - Freitag: 9 - 18 Uhr EST",
         weekendNote: "Wochenend-Nachrichten werden am Montag beantwortet",
@@ -202,7 +202,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
           "Ja! Wir begrüßen qualifizierte Übersetzer. Bitte kontaktieren Sie uns mit Ihren Referenzen und Sprachkenntnissen.",
         faqQuestion3: "Ist die Bibliothek kostenlos zu nutzen?",
         faqAnswer3:
-          "Ja, Deen Mastery ist völlig kostenlos. Unsere Mission ist es, den Zugang zu islamischem Wissen zu demokratisieren.",
+          "Ja, Nadwa.ai ist völlig kostenlos. Unsere Mission ist es, den Zugang zu islamischem Wissen zu demokratisieren.",
         faqQuestion4: "Wie melde ich einen Übersetzungsfehler?",
         faqAnswer4:
           "Bitte senden Sie uns eine E-Mail mit dem spezifischen Buch, der Seite und den Fehlerdetails. Wir nehmen Genauigkeit sehr ernst.",
@@ -234,7 +234,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
           "❌ Houve um erro ao enviar sua mensagem. Por favor tente novamente ou entre em contato conosco diretamente.",
         contactInformation: "Informações de Contato",
         email: "E-mail",
-        emailContact: "contact@deenmastery.com",
+        emailContact: "contact@nadwa.ai",
         responseTime: "Tempo de Resposta",
         responseTimeDetails: "Segunda - Sexta: 9h - 18h EST",
         weekendNote: "Mensagens de fim de semana respondidas na segunda-feira",
@@ -250,7 +250,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
           "Sim! Damos as boas-vindas a tradutores qualificados. Por favor entre em contato conosco com suas credenciais e experiência linguística.",
         faqQuestion3: "A biblioteca é gratuita para usar?",
         faqAnswer3:
-          "Sim, Deen Mastery é completamente gratuito. Nossa missão é democratizar o acesso ao conhecimento islâmico.",
+          "Sim, Nadwa.ai é completamente gratuito. Nossa missão é democratizar o acesso ao conhecimento islâmico.",
         faqQuestion4: "Como reporto um erro na tradução?",
         faqAnswer4:
           "Por favor nos envie um e-mail com o livro específico, página e detalhes do erro. Levamos a precisão muito a sério.",
@@ -281,7 +281,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
         errorMessage: "❌ آپ کا پیغام بھیجنے میں خرابی ہوئی۔ براہ کرم دوبارہ کوشش کریں یا براہ راست ہم سے رابطہ کریں۔",
         contactInformation: "رابطے کی معلومات",
         email: "ای میل",
-        emailContact: "contact@deenmastery.com",
+        emailContact: "contact@nadwa.ai",
         responseTime: "جواب کا وقت",
         responseTimeDetails: "پیر - جمعہ: صبح 9 - شام 6 EST",
         weekendNote: "ہفتے کے آخر کے پیغامات پیر کو جواب دیے جاتے ہیں",
@@ -328,7 +328,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
           "❌ Mesajınızı gönderirken bir hata oluştu. Lütfen tekrar deneyin veya doğrudan bizimle iletişime geçin.",
         contactInformation: "İletişim Bilgileri",
         email: "E-posta",
-        emailContact: "contact@deenmastery.com",
+        emailContact: "contact@nadwa.ai",
         responseTime: "Yanıt Süresi",
         responseTimeDetails: "Pazartesi - Cuma: 09:00 - 18:00 EST",
         weekendNote: "Hafta sonu mesajları Pazartesi günü yanıtlanır",
@@ -343,7 +343,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
         faqAnswer2:
           "Evet! Nitelikli çevirmenleri memnuniyetle karşılıyoruz. Lütfen kimlik bilgileriniz ve dil uzmanlığınızla bizimle iletişime geçin.",
         faqQuestion3: "Kütüphaneyi kullanmak ücretsiz mi?",
-        faqAnswer3: "Evet, Deen Mastery tamamen ücretsizdir. Misyonumuz İslami bilgiye erişimi demokratikleştirmektir.",
+        faqAnswer3: "Evet, Nadwa.ai tamamen ücretsizdir. Misyonumuz İslami bilgiye erişimi demokratikleştirmektir.",
         faqQuestion4: "Çevirideki bir hatayı nasıl bildirebilirim?",
         faqAnswer4:
           "Lütfen belirli kitap, sayfa ve hata ayrıntılarıyla bize e-posta gönderin. Doğruluğu çok ciddiye alıyoruz.",
@@ -374,7 +374,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
         errorMessage: "❌ Terjadi kesalahan saat mengirim pesan Anda. Silakan coba lagi atau hubungi kami langsung.",
         contactInformation: "Informasi Kontak",
         email: "Email",
-        emailContact: "contact@deenmastery.com",
+        emailContact: "contact@nadwa.ai",
         responseTime: "Waktu Respons",
         responseTimeDetails: "Senin - Jumat: 9 AM - 6 PM EST",
         weekendNote: "Pesan akhir pekan dijawab pada hari Senin",
@@ -389,7 +389,7 @@ const ContactPage = ({ onBack, currentLanguage = "english" }: ContactPageProps) 
         faqAnswer2:
           "Ya! Kami menyambut penerjemah yang berkualitas. Silakan hubungi kami dengan kredensial dan keahlian bahasa Anda.",
         faqQuestion3: "Apakah perpustakaan gratis untuk digunakan?",
-        faqAnswer3: "Ya, Deen Mastery sepenuhnya gratis. Misi kami adalah mendemokratisasi akses ke pengetahuan Islam.",
+        faqAnswer3: "Ya, Nadwa.ai sepenuhnya gratis. Misi kami adalah mendemokratisasi akses ke pengetahuan Islam.",
         faqQuestion4: "Bagaimana saya melaporkan kesalahan dalam terjemahan?",
         faqAnswer4:
           "Silakan email kami dengan buku spesifik, halaman, dan detail kesalahan. Kami sangat serius tentang akurasi.",
