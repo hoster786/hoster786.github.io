@@ -1,6 +1,6 @@
 # Book Manifest Update Guide
 
-This guide will help you update the book list and manifest for the Deen Mastery Digital Library.
+This guide will help you update the book list and manifest for the Nadwa.ai Digital Library.
 
 ## Overview
 
