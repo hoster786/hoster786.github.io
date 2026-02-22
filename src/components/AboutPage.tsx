@@ -78,9 +78,9 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
       code: "en",
       name: "English",
       translations: {
-        aboutDeenMastery: "About Deen Mastery",
+        aboutDeenMastery: "About Nadwa.ai",
         panLingualLibrary:
-          "Deen Mastery is the world's first pan-lingual, externally validated library of classical Islamic texts. We are committed to democratizing access to works that were previously locked behind language barriers and scholarly gatekeeping—making them available to readers at all levels of expertise.",
+          "Nadwa.ai is the world's first pan-lingual, externally validated library of classical Islamic texts. We are committed to democratizing access to works that were previously locked behind language barriers and scholarly gatekeeping—making them available to readers at all levels of expertise.",
         shamela:
           "To date, we have integrated the Shamela corpus, with additional classical and contemporary corpora planned as we continue to expand.",
         supportedLanguages: "Supported Languages",
@@ -91,7 +91,7 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
         parent: "a parent seeking storybooks for your family,",
         academic: "an academic in need of reliable reference translations, or",
         learner: "a lifelong learner on a personal journey of growth,",
-        designedForYou: "Deen Mastery is designed to meet your needs.",
+        designedForYou: "Nadwa.ai is designed to meet your needs.",
         qualityAccuracy: "Quality & Accuracy",
         currentDevelopment:
           "This library is currently in active development. Our proprietary LLM pipeline excels at contextual nuance, archaic words, unusual sentence structure. That means it's perfectly suited at the task of classical Arabic translation….and only getting better.",
@@ -135,20 +135,20 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
       code: "es",
       name: "Español",
       translations: {
-        aboutDeenMastery: "Acerca de Deen Mastery",
+        aboutDeenMastery: "Acerca de Nadwa.ai",
         panLingualLibrary:
-          "Deen Mastery es la primera biblioteca pan-lingüística y externamente validada del mundo de textos islámicos clásicos. Estamos comprometidos a democratizar el acceso a obras que anteriormente estaban bloqueadas detrás de barreras idiomáticas y custodia académica, haciéndolas disponibles para lectores de todos los niveles de experiencia.",
+          "Nadwa.ai es la primera biblioteca pan-lingüística y externamente validada del mundo de textos islámicos clásicos. Estamos comprometidos a democratizar el acceso a obras que anteriormente estaban bloqueadas detrás de barreras idiomáticas y custodia académica, haciéndolas disponibles para lectores de todos los niveles de experiencia.",
         shamela:
           "Hasta la fecha, hemos integrado el corpus Shamela, con corpus clásicos y contemporáneos adicionales planeados mientras continuamos expandiéndonos.",
         supportedLanguages: "Idiomas Soportados",
         languageList: ["Inglés", "Español", "Alemán", "Portugués", "Urdu", "Turco", "Bahasa", "Árabe"],
         legacy:
-          "Este proyecto se basa en más de 15 años de trabajo pionero en accesibilidad coránica a través del inglés, español, francés, alemán y bahasa. Con Deen Mastery, extendemos ese legado a una gama más amplia de literatura islámica, ofreciendo no solo recursos multilingües, sino también traducciones en dialectos regionales y formas vernáculas de los principales idiomas mundiales.",
+          "Este proyecto se basa en más de 15 años de trabajo pionero en accesibilidad coránica a través del inglés, español, francés, alemán y bahasa. Con Nadwa.ai, extendemos ese legado a una gama más amplia de literatura islámica, ofreciendo no solo recursos multilingües, sino también traducciones en dialectos regionales y formas vernáculas de los principales idiomas mundiales.",
         whetherYouAre: "Ya seas:",
         parent: "un padre buscando libros de cuentos para tu familia,",
         academic: "un académico que necesita traducciones de referencia confiables, o",
         learner: "un aprendiz de por vida en un viaje personal de crecimiento,",
-        designedForYou: "Deen Mastery está diseñado para satisfacer tus necesidades.",
+        designedForYou: "Nadwa.ai está diseñado para satisfacer tus necesidades.",
         qualityAccuracy: "Calidad y Precisión",
         currentDevelopment:
           "Esta biblioteca está actualmente en desarrollo activo. Nuestro pipeline LLM propietario sobresale en matices contextuales, palabras arcaicas, estructura de oraciones inusuales. Eso significa que está perfectamente adaptado para la tarea de traducción árabe clásica... y solo mejorando.",
@@ -192,20 +192,20 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
       code: "de",
       name: "Deutsch",
       translations: {
-        aboutDeenMastery: "Über Deen Mastery",
+        aboutDeenMastery: "Über Nadwa.ai",
         panLingualLibrary:
-          "Deen Mastery ist die weltweit erste pan-linguale, extern validierte Bibliothek klassischer islamischer Texte. Wir sind verpflichtet, den Zugang zu Werken zu demokratisieren, die zuvor hinter Sprachbarrieren und wissenschaftlicher Bevormundung eingesperrt waren - und sie Lesern aller Erfahrungsstufen zugänglich zu machen.",
+          "Nadwa.ai ist die weltweit erste pan-linguale, extern validierte Bibliothek klassischer islamischer Texte. Wir sind verpflichtet, den Zugang zu Werken zu demokratisieren, die zuvor hinter Sprachbarrieren und wissenschaftlicher Bevormundung eingesperrt waren - und sie Lesern aller Erfahrungsstufen zugänglich zu machen.",
         shamela:
           "Bis heute haben wir das Shamela-Korpus integriert, mit zusätzlichen klassischen und zeitgenössischen Korpora geplant, während wir weiter expandieren.",
         supportedLanguages: "Unterstützte Sprachen",
         languageList: ["Englisch", "Spanisch", "Deutsch", "Portugiesisch", "Urdu", "Türkisch", "Bahasa", "Arabisch"],
         legacy:
-          "Dieses Projekt baut auf über 15 Jahren Pionierarbeit in der Koran-Zugänglichkeit über Englisch, Spanisch, Französisch, Deutsch und Bahasa auf. Mit Deen Mastery erweitern wir dieses Erbe auf eine breitere Palette islamischer Literatur - bieten nicht nur mehrsprachige Ressourcen, sondern auch Übersetzungen in regionalen Dialekten und umgangssprachlichen Formen der wichtigsten Weltsprachen.",
+          "Dieses Projekt baut auf über 15 Jahren Pionierarbeit in der Koran-Zugänglichkeit über Englisch, Spanisch, Französisch, Deutsch und Bahasa auf. Mit Nadwa.ai erweitern wir dieses Erbe auf eine breitere Palette islamischer Literatur - bieten nicht nur mehrsprachige Ressourcen, sondern auch Übersetzungen in regionalen Dialekten und umgangssprachlichen Formen der wichtigsten Weltsprachen.",
         whetherYouAre: "Ob Sie sind:",
         parent: "ein Elternteil, der Geschichtenbücher für Ihre Familie sucht,",
         academic: "ein Akademiker, der zuverlässige Referenzübersetzungen benötigt, oder",
         learner: "ein lebenslanger Lerner auf einer persönlichen Wachstumsreise,",
-        designedForYou: "Deen Mastery ist darauf ausgelegt, Ihre Bedürfnisse zu erfüllen.",
+        designedForYou: "Nadwa.ai ist darauf ausgelegt, Ihre Bedürfnisse zu erfüllen.",
         qualityAccuracy: "Qualität & Genauigkeit",
         currentDevelopment:
           "Diese Bibliothek befindet sich derzeit in aktiver Entwicklung. Unsere proprietäre LLM-Pipeline zeichnet sich durch kontextuelle Nuancen, archaische Wörter und ungewöhnliche Satzstrukturen aus. Das bedeutet, sie ist perfekt für die Aufgabe der klassischen arabischen Übersetzung geeignet... und wird nur besser.",
@@ -248,20 +248,20 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
       code: "pt",
       name: "Português",
       translations: {
-        aboutDeenMastery: "Sobre Deen Mastery",
+        aboutDeenMastery: "Sobre Nadwa.ai",
         panLingualLibrary:
-          "Deen Mastery é a primeira biblioteca pan-linguística e externamente validada do mundo de textos islâmicos clássicos. Estamos comprometidos em democratizar o acesso a obras que anteriormente estavam trancadas atrás de barreiras linguísticas e tutela acadêmica - tornando-as disponíveis para leitores de todos os níveis de experiência.",
+          "Nadwa.ai é a primeira biblioteca pan-linguística e externamente validada do mundo de textos islâmicos clássicos. Estamos comprometidos em democratizar o acesso a obras que anteriormente estavam trancadas atrás de barreiras linguísticas e tutela acadêmica - tornando-as disponíveis para leitores de todos os níveis de experiência.",
         shamela:
           "Até o momento, integramos o corpus Shamela, com corpus clássicos e contemporâneos adicionais planejados conforme continuamos a expandir.",
         supportedLanguages: "Idiomas Suportados",
         languageList: ["Inglês", "Espanhol", "Alemão", "Português", "Urdu", "Turco", "Bahasa", "Árabe"],
         legacy:
-          "Este projeto se baseia em mais de 15 anos de trabalho pioneiro em acessibilidade corânica através do inglês, espanhol, francês, alemão e bahasa. Com Deen Mastery, estendemos esse legado para uma gama mais ampla de literatura islâmica - oferecendo não apenas recursos multilíngues, mas também traduções em dialetos regionais e formas vernáculas das principais línguas mundiais.",
+          "Este projeto se baseia em mais de 15 anos de trabalho pioneiro em acessibilidade corânica através do inglês, espanhol, francês, alemão e bahasa. Com Nadwa.ai, estendemos esse legado para uma gama mais ampla de literatura islâmica - oferecendo não apenas recursos multilíngues, mas também traduções em dialetos regionais e formas vernáculas das principais línguas mundiais.",
         whetherYouAre: "Seja você:",
         parent: "um pai procurando livros de histórias para sua família,",
         academic: "um acadêmico precisando de traduções de referência confiáveis, ou",
         learner: "um aprendiz vitalício em uma jornada pessoal de crescimento,",
-        designedForYou: "Deen Mastery é projetado para atender suas necessidades.",
+        designedForYou: "Nadwa.ai é projetado para atender suas necessidades.",
         qualityAccuracy: "Qualidade e Precisão",
         currentDevelopment:
           "Esta biblioteca está atualmente em desenvolvimento ativo. Nosso pipeline LLM proprietário se destaca em nuances contextuais, palavras arcaicas, estrutura de frases incomuns. Isso significa que é perfeitamente adequado para a tarefa de tradução árabe clássica... e só melhorando.",
@@ -304,7 +304,7 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
       code: "ur",
       name: "اردو",
       translations: {
-        aboutDeenMastery: "دین میں مہارت کے بارے میں",
+        aboutDeenMastery: "Nadwa.ai کے بارے میں",
         panLingualLibrary:
           "دین میں مہارت دنیا کی پہلی کثیر لسانی، بیرونی طور پر تصدیق شدہ کلاسیکی اسلامی متون کی لائبریری ہے۔ ہم ان کاموں تک رسائی کو جمہوری بنانے کے لیے پرعزم ہیں جو پہلے زبان کی رکاوٹوں اور علمی نگہبانی کے پیچھے بند تھے - انہیں تمام سطح کے تجربے کے قارئین کے لیے دستیاب بناتے ہوئے۔",
         shamela:
@@ -358,20 +358,20 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
       code: "tr",
       name: "Türkçe",
       translations: {
-        aboutDeenMastery: "Deen Mastery Hakkında",
+        aboutDeenMastery: "Nadwa.ai Hakkında",
         panLingualLibrary:
-          "Deen Mastery, dünyanın ilk çok dilli, harici olarak doğrulanmış klasik İslami metinler kütüphanesidir. Daha önce dil engelleri ve akademik vesayet arkasında kilitli olan eserlere erişimi demokratikleştirmeye kararlıyız - onları her deneyim seviyesindeki okuyuculara erişilebilir kılarak.",
+          "Nadwa.ai, dünyanın ilk çok dilli, harici olarak doğrulanmış klasik İslami metinler kütüphanesidir. Daha önce dil engelleri ve akademik vesayet arkasında kilitli olan eserlere erişimi demokratikleştirmeye kararlıyız - onları her deneyim seviyesindeki okuyuculara erişilebilir kılarak.",
         shamela:
           "Bugüne kadar Shamela korpusunu entegre ettik, genişlemeye devam ederken ek klasik ve çağdaş korpuslar planlanıyor.",
         supportedLanguages: "Desteklenen Diller",
         languageList: ["İngilizce", "İspanyolca", "Almanca", "Portekizce", "Urduca", "Türkçe", "Bahasa", "Arapça"],
         legacy:
-          "Bu proje, İngilizce, İspanyolca, Fransızca, Almanca ve Bahasa'da Kur'an erişilebilirliğinde 15 yılı aşkın öncü çalışma üzerine inşa edilmiştir. Deen Mastery ile bu mirası daha geniş bir İslami edebiyat yelpazesine genişletiyoruz - sadece çok dilli kaynaklar sunmakla kalmayıp, aynı zamanda bölgesel lehçelerde ve büyük dünya dillerinin yerel formlarında çeviriler de sunuyoruz.",
+          "Bu proje, İngilizce, İspanyolca, Fransızca, Almanca ve Bahasa'da Kur'an erişilebilirliğinde 15 yılı aşkın öncü çalışma üzerine inşa edilmiştir. Nadwa.ai ile bu mirası daha geniş bir İslami edebiyat yelpazesine genişletiyoruz - sadece çok dilli kaynaklar sunmakla kalmayıp, aynı zamanda bölgesel lehçelerde ve büyük dünya dillerinin yerel formlarında çeviriler de sunuyoruz.",
         whetherYouAre: "İster:",
         parent: "aileniz için hikaye kitapları arayan bir ebeveyn,",
         academic: "güvenilir referans çevirilere ihtiyaç duyan bir akademisyen, ya da",
         learner: "kişisel büyüme yolculuğunda yaşam boyu öğrenen biri olun,",
-        designedForYou: "Deen Mastery ihtiyaçlarınızı karşılamak için tasarlanmıştır.",
+        designedForYou: "Nadwa.ai ihtiyaçlarınızı karşılamak için tasarlanmıştır.",
         qualityAccuracy: "Kalite ve Doğruluk",
         currentDevelopment:
           "Bu kütüphane şu anda aktif geliştirme aşamasındadır. Özel LLM hattımız bağlamsal nüanslar, arkaik kelimeler, olağandışı cümle yapısında mükemmeldir. Bu, klasik Arapça çeviri görevine mükemmel şekilde uygun olduğu anlamına gelir... ve sadece daha da iyileşiyor.",
@@ -412,20 +412,20 @@ const AboutPage = ({ onBack, onCategorySelect, currentLanguage = "english" }: Ab
       code: "id",
       name: "Bahasa",
       translations: {
-        aboutDeenMastery: "Tentang Deen Mastery",
+        aboutDeenMastery: "Tentang Nadwa.ai",
         panLingualLibrary:
-          "Deen Mastery adalah perpustakaan teks-teks Islam klasik pan-lingual pertama di dunia yang divalidasi secara eksternal. Kami berkomitmen untuk mendemokratisasi akses ke karya-karya yang sebelumnya terkunci di balik hambatan bahasa dan penjagaan akademis—membuatnya tersedia bagi pembaca di semua tingkat keahlian.",
+          "Nadwa.ai adalah perpustakaan teks-teks Islam klasik pan-lingual pertama di dunia yang divalidasi secara eksternal. Kami berkomitmen untuk mendemokratisasi akses ke karya-karya yang sebelumnya terkunci di balik hambatan bahasa dan penjagaan akademis—membuatnya tersedia bagi pembaca di semua tingkat keahlian.",
         shamela:
           "Hingga saat ini, kami telah mengintegrasikan korpus Shamela, dengan korpus klasik dan kontemporer tambahan direncanakan saat kami terus berkembang.",
         supportedLanguages: "Bahasa yang Didukung",
         languageList: ["Inggris", "Spanyol", "Jerman", "Portugis", "Urdu", "Turki", "Bahasa", "Arab"],
         legacy:
-          "Proyek ini dibangun atas lebih dari 15 tahun kerja perintis dalam aksesibilitas Al-Qur'an di seluruh bahasa Inggris, Spanyol, Prancis, Jerman, dan Bahasa. Dengan Deen Mastery, kami memperluas warisan itu ke rentang literatur Islam yang lebih luas—menawarkan tidak hanya sumber daya multibahasa, tetapi juga terjemahan dalam dialek regional dan bentuk vernakular bahasa-bahasa dunia utama.",
+          "Proyek ini dibangun atas lebih dari 15 tahun kerja perintis dalam aksesibilitas Al-Qur'an di seluruh bahasa Inggris, Spanyol, Prancis, Jerman, dan Bahasa. Dengan Nadwa.ai, kami memperluas warisan itu ke rentang literatur Islam yang lebih luas—menawarkan tidak hanya sumber daya multibahasa, tetapi juga terjemahan dalam dialek regional dan bentuk vernakular bahasa-bahasa dunia utama.",
         whetherYouAre: "Apakah Anda:",
         parent: "orang tua yang mencari buku cerita untuk keluarga Anda,",
         academic: "akademisi yang membutuhkan terjemahan referensi yang dapat diandalkan, atau",
         learner: "pembelajar seumur hidup dalam perjalanan pertumbuhan pribadi,",
-        designedForYou: "Deen Mastery dirancang untuk memenuhi kebutuhan Anda.",
+        designedForYou: "Nadwa.ai dirancang untuk memenuhi kebutuhan Anda.",
         qualityAccuracy: "Kualitas & Akurasi",
         currentDevelopment:
           "Perpustakaan ini saat ini dalam pengembangan aktif. Pipeline LLM proprietary kami unggul dalam nuansa kontekstual, kata-kata kuno, struktur kalimat yang tidak biasa. Itu berarti sangat cocok untuk tugas terjemahan Arab klasik... dan hanya semakin baik.",
