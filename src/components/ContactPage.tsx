@@ -111,7 +111,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
         faqAnswer2:
           "Yes! We welcome qualified translators. Please contact us with your credentials and language expertise.",
         faqQuestion3: "Is the library free to use?",
-        faqAnswer3: "Yes, Deen Mastery is completely free. Our mission is to democratize access to Islamic knowledge.",
+        faqAnswer3: "Yes, Nadwa.ai is completely free. Our mission is to democratize access to Islamic knowledge.",
         faqQuestion4: "How do I report an error in translation?",
         faqAnswer4: "Please email us with the specific book, page, and error details. We take accuracy very seriously.",
         followUs: "Follow Us",
@@ -159,7 +159,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
           "¡Sí! Damos la bienvenida a traductores calificados. Por favor contáctanos con tus credenciales y experiencia lingüística.",
         faqQuestion3: "¿Es gratuito usar la biblioteca?",
         faqAnswer3:
-          "Sí, Deen Mastery es completamente gratuito. Nuestra misión es democratizar el acceso al conocimiento islámico.",
+          "Sí, Nadwa.ai es completamente gratuito. Nuestra misión es democratizar el acceso al conocimiento islámico.",
         faqQuestion4: "¿Cómo reporto un error en la traducción?",
         faqAnswer4:
           "Por favor envíanos un correo con el libro específico, página y detalles del error. Tomamos la precisión muy en serio.",
@@ -209,7 +209,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
           "Ja! Wir begrüßen qualifizierte Übersetzer. Bitte kontaktieren Sie uns mit Ihren Referenzen und Sprachkenntnissen.",
         faqQuestion3: "Ist die Bibliothek kostenlos zu nutzen?",
         faqAnswer3:
-          "Ja, Deen Mastery ist völlig kostenlos. Unsere Mission ist es, den Zugang zu islamischem Wissen zu demokratisieren.",
+          "Ja, Nadwa.ai ist völlig kostenlos. Unsere Mission ist es, den Zugang zu islamischem Wissen zu demokratisieren.",
         faqQuestion4: "Wie melde ich einen Übersetzungsfehler?",
         faqAnswer4:
           "Bitte senden Sie uns eine E-Mail mit dem spezifischen Buch, der Seite und den Fehlerdetails. Wir nehmen Genauigkeit sehr ernst.",
@@ -259,7 +259,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
           "Sim! Damos as boas-vindas a tradutores qualificados. Por favor entre em contato conosco com suas credenciais e experiência linguística.",
         faqQuestion3: "A biblioteca é gratuita para usar?",
         faqAnswer3:
-          "Sim, Deen Mastery é completamente gratuito. Nossa missão é democratizar o acesso ao conhecimento islâmico.",
+          "Sim, Nadwa.ai é completamente gratuito. Nossa missão é democratizar o acesso ao conhecimento islâmico.",
         faqQuestion4: "Como reporto um erro na tradução?",
         faqAnswer4:
           "Por favor nos envie um e-mail com o livro específico, página e detalhes do erro. Levamos a precisão muito a sério.",
@@ -356,7 +356,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
         faqAnswer2:
           "Evet! Nitelikli çevirmenleri memnuniyetle karşılıyoruz. Lütfen kimlik bilgileriniz ve dil uzmanlığınızla bizimle iletişime geçin.",
         faqQuestion3: "Kütüphaneyi kullanmak ücretsiz mi?",
-        faqAnswer3: "Evet, Deen Mastery tamamen ücretsizdir. Misyonumuz İslami bilgiye erişimi demokratikleştirmektir.",
+        faqAnswer3: "Evet, Nadwa.ai tamamen ücretsizdir. Misyonumuz İslami bilgiye erişimi demokratikleştirmektir.",
         faqQuestion4: "Çevirideki bir hatayı nasıl bildirebilirim?",
         faqAnswer4:
           "Lütfen belirli kitap, sayfa ve hata ayrıntılarıyla bize e-posta gönderin. Doğruluğu çok ciddiye alıyoruz.",
@@ -404,7 +404,7 @@ const ContactPage = ({ onBack, currentLanguage = "english", onLanguageChange }: 
         faqAnswer2:
           "Ya! Kami menyambut penerjemah yang berkualitas. Silakan hubungi kami dengan kredensial dan keahlian bahasa Anda.",
         faqQuestion3: "Apakah perpustakaan gratis untuk digunakan?",
-        faqAnswer3: "Ya, Deen Mastery sepenuhnya gratis. Misi kami adalah mendemokratisasi akses ke pengetahuan Islam.",
+        faqAnswer3: "Ya, Nadwa.ai sepenuhnya gratis. Misi kami adalah mendemokratisasi akses ke pengetahuan Islam.",
         faqQuestion4: "Bagaimana saya melaporkan kesalahan dalam terjemahan?",
         faqAnswer4:
           "Silakan email kami dengan buku spesifik, halaman, dan detail kesalahan. Kami sangat serius tentang akurasi.",
