@@ -18,7 +18,7 @@ const AboutPage = ({ onBack }: AboutPageProps) => {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Library
           </Button>
-          <h1 className="text-2xl font-bold text-amber-900">About Deen Mastery</h1>
+          <h1 className="text-2xl font-bold text-amber-900">About Nadwa.ai</h1>
         </div>
       </div>
 
@@ -30,9 +30,9 @@ const AboutPage = ({ onBack }: AboutPageProps) => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-600 text-white rounded-full mb-6">
               <BookOpen className="w-10 h-10" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">About Deen Mastery</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">About Nadwa.ai</h2>
             <p className="text-xl text-amber-700 mb-6 max-w-4xl mx-auto leading-relaxed">
-              Deen Mastery is the world's first pan-lingual, externally validated library of classical Islamic texts. We
+              Nadwa.ai is the world's first pan-lingual, externally validated library of classical Islamic texts. We
               are committed to democratizing access to works that were previously locked behind language barriers and
               scholarly gatekeeping—making them available to readers at all levels of expertise.
             </p>
@@ -62,7 +62,7 @@ const AboutPage = ({ onBack }: AboutPageProps) => {
 
             <p className="text-gray-700 leading-relaxed mb-6">
               This project builds on over 15 years of pioneering work in Qur'anic accessibility across English, Spanish,
-              French, German, and Bahasa. With Deen Mastery, we extend that legacy to a broader range of Islamic
+              French, German, and Bahasa. With Nadwa.ai, we extend that legacy to a broader range of Islamic
               literature—offering not only multilingual resources, but also translations in regional dialects and
               vernacular forms of major world languages.
             </p>
@@ -84,7 +84,7 @@ const AboutPage = ({ onBack }: AboutPageProps) => {
                   <span>a lifelong learner on a personal journey of growth,</span>
                 </li>
               </ul>
-              <p className="mt-4 font-medium text-amber-900">Deen Mastery is designed to meet your needs.</p>
+              <p className="mt-4 font-medium text-amber-900">Nadwa.ai is designed to meet your needs.</p>
             </div>
           </div>
 
