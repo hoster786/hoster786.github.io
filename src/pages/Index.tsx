@@ -189,7 +189,7 @@ const Index = () => {
         filterByCategory: "تصفية حسب الفئة",
         contactSocialMedia: "التواصل ووسائل التواصل الاجتماعي",
         contactInfo: "معلومات الاتصال",
-        email: "البريد الإلكتروني: contact@deenmastery.com",
+        email: "البريد الإلكتروني: contact@nadwa.ai",
         knowledgeMadeAccessible: "المعرفة في متناول الجميع",
         deenMastery: "إتقان الدين",
         closeSidebar: "إغلاق الشريط الجانبي",
@@ -223,9 +223,9 @@ const Index = () => {
         filterByCategory: "Filter by Category",
         contactSocialMedia: "Contact & Social Media",
         contactInfo: "Contact Info",
-        email: "Email: contact@deenmastery.com",
+        email: "Email: contact@nadwa.ai",
         knowledgeMadeAccessible: "Knowledge Made Accessible",
-        deenMastery: "Deen Mastery",
+        deenMastery: "Nadwa.ai",
         closeSidebar: "Close Sidebar",
         searchingFor: "Searching for:",
         clearSearch: "Clear Search",
@@ -256,7 +256,7 @@ const Index = () => {
         filterByCategory: "Filtrar por Categoría",
         contactSocialMedia: "Contacto y Redes Sociales",
         contactInfo: "Información de Contacto",
-        email: "Email: contact@deenmastery.com",
+        email: "Email: contact@nadwa.ai",
         knowledgeMadeAccessible: "Conocimiento Accesible",
         deenMastery: "Dominio del Din",
         closeSidebar: "Cerrar Barra Lateral",
@@ -289,9 +289,9 @@ const Index = () => {
         filterByCategory: "Nach Kategorie filtern",
         contactSocialMedia: "Kontakt & Social Media",
         contactInfo: "Kontaktinformationen",
-        email: "E-Mail: contact@deenmastery.com",
+        email: "E-Mail: contact@nadwa.ai",
         knowledgeMadeAccessible: "Wissen Zugänglich Gemacht",
-        deenMastery: "Deen Meisterschaft",
+        deenMastery: "Nadwa.ai",
         closeSidebar: "Seitenleiste schließen",
         searchingFor: "Suche nach:",
         clearSearch: "Suche löschen",
@@ -322,7 +322,7 @@ const Index = () => {
         filterByCategory: "Filtrar por Categoria",
         contactSocialMedia: "Contato e Redes Sociais",
         contactInfo: "Informações de Contato",
-        email: "Email: contact@deenmastery.com",
+        email: "Email: contact@nadwa.ai",
         knowledgeMadeAccessible: "Conhecimento Acessível",
         deenMastery: "Domínio do Din",
         closeSidebar: "Fechar Barra Lateral",
@@ -356,7 +356,7 @@ const Index = () => {
         filterByCategory: "قسم کے ذریعے فلٹر کریں",
         contactSocialMedia: "رابطہ اور سوشل میڈیا",
         contactInfo: "رابطے کی معلومات",
-        email: "ای میل: contact@deenmastery.com",
+        email: "ای میل: contact@nadwa.ai",
         knowledgeMadeAccessible: "علم کو قابل رسائی بنایا گیا",
         deenMastery: "دین میں مہارت",
         closeSidebar: "سائیڈ بار بند کریں",
@@ -390,7 +390,7 @@ const Index = () => {
         filterByCategory: "Kategoriye Göre Filtrele",
         contactSocialMedia: "İletişim ve Sosyal Medya",
         contactInfo: "İletişim Bilgileri",
-        email: "E-posta: contact@deenmastery.com",
+        email: "E-posta: contact@nadwa.ai",
         knowledgeMadeAccessible: "Bilgi Erişilebilir Kılındı",
         deenMastery: "Din Ustalığı",
         closeSidebar: "Kenar Çubuğunu Kapat",
@@ -424,7 +424,7 @@ const Index = () => {
         filterByCategory: "Filter berdasarkan Kategori",
         contactSocialMedia: "Kontak & Media Sosial",
         contactInfo: "Info Kontak",
-        email: "Email: contact@deenmastery.com",
+        email: "Email: contact@nadwa.ai",
         knowledgeMadeAccessible: "Pengetahuan Dibuat Dapat Diakses",
         deenMastery: "Penguasaan Din",
         closeSidebar: "Tutup Sidebar",
@@ -469,7 +469,7 @@ const Index = () => {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'GTM-5T55452N', { 
-        page_title: 'Deen Mastery Library',
+        page_title: 'Nadwa.ai Library',
         page_location: window.location.href,
         custom_map: {
           custom_parameter_1: 'session_id'
@@ -1242,7 +1242,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
                     <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
                       <img
                         src="/lovable-uploads/brand.png"
-                        alt="Deen Mastery Logo"
+                        alt="Nadwa.ai Logo"
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -1414,7 +1414,7 @@ const currentBooks = filteredBooks.slice(startIndex, endIndex);
               <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 mb-1 md:mb-2">
                 <img
                   src="/lovable-uploads/brand.png"
-                  alt="Deen Mastery Logo"
+                  alt="Nadwa.ai Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
