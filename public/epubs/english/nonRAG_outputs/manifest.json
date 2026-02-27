@@ -12,6 +12,7 @@
     "category_id": "C010",
     "featured": false,
     "description": "This book provides an in-depth exploration of Arabic grammar, covering fundamental concepts such as parts of speech (nouns, verbs, particles), inflection types, and noun/verb states. It details plural forms, rules for imperfect verbs, and the distinction between definite and indefinite nouns, offering a thorough understanding of the language's structure."
+
   },
   {
     "title_ar": "الكلام على حديث الإستلقاء لأبي موسى المديني - مخطوط (ن)",
@@ -38889,7 +38890,8 @@
     "source": "url",
     "category_id": "C028",
     "featured": true,
-    "description": "Explores Islamic principles on justice, governance, wealth distribution, prescribed punishments (hudud), charity, Jihad, and leadership, emphasizing fairness, equality, and adherence to religious obligations."
+    "description": "Explores Islamic principles on justice, governance, wealth distribution, prescribed punishments (hudud), charity, Jihad, and leadership, emphasizing fairness, equality, and adherence to religious obligations.",
+    "cover": "output_cover_السياسة-الشرعية-في-إصلاح-الراعي-والرعية_ابن-تيمية.jpg"
   },
   {
     "title_ar": "طبقات الصوفية للسلمي ويليه ذكر النسوة المتعبدات الصوفيات",
