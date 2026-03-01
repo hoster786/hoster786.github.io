@@ -215,6 +215,45 @@ const AboutPage = ({ onBack }: AboutPageProps) => {
             </div>
           </div>
 
+          {/* License Agreement Section */}
+          <div className="bg-white rounded-lg shadow-sm border border-amber-200 p-8 mb-12">
+            <h3 className="text-2xl font-bold text-amber-900 mb-6 text-center flex items-center justify-center">
+              <Zap className="w-6 h-6 mr-3" />
+              License & Usage Terms
+            </h3>
+            <p className="text-gray-700 text-center mb-6 leading-relaxed">
+              All books, translations, and related materials available on this platform are provided free of charge for 
+              personal, non-commercial use only. By accessing or using this site, you agree to comply with the terms 
+              outlined below.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+              <div className="p-4 bg-amber-50 rounded-lg">
+                <div className="font-semibold text-amber-900 mb-1">Permitted Use</div>
+                <div className="text-sm text-amber-700">
+                  Individual reading, private study, and personal research. Limited excerpts may be shared for non-commercial 
+                  educational discussion with proper attribution.
+                </div>
+              </div>
+              <div className="p-4 bg-amber-50 rounded-lg">
+                <div className="font-semibold text-amber-900 mb-1">Prohibited Use</div>
+                <div className="text-sm text-amber-700">
+                  Institutional use, commercial use, redistribution, republication, reproduction, hosting, data scraping, 
+                  bulk downloading, derivative works, or integration into paid or publicly distributed products without 
+                  explicit written permission.
+                </div>
+              </div>
+              <div className="p-4 bg-amber-50 rounded-lg">
+                <div className="font-semibold text-amber-900 mb-1">Intellectual Property</div>
+                <div className="text-sm text-amber-700">
+                  All content remains the property of its respective rights holders. Access does not grant ownership, 
+                  licensing rights, or permission to modify, sublicense, or distribute the materials. Violation of these 
+                  terms may result in access termination and legal action.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+                    
           {/* Call to Action */}
           <div className="text-center bg-amber-100 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-amber-900 mb-4">Join Our Mission</h3>
